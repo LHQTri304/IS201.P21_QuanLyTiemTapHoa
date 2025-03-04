@@ -16,5 +16,13 @@ namespace QuanLyTiemTapHoa
         {
             InitializeComponent();
         }
+
+        private void btnLogin_Click(object sender, EventArgs e)
+        {
+            fDashboard f = new fDashboard();
+            this.Hide();
+            f.ShowDialog();
+            this.Show();
+        }
     }
 }

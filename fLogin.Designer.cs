@@ -91,6 +91,7 @@
             this.btnLogin.TabIndex = 4;
             this.btnLogin.Text = "Đăng Nhập";
             this.btnLogin.UseVisualStyleBackColor = true;
+            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
             // 
             // fLogin
             // 
