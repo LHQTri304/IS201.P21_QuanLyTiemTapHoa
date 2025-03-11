@@ -24,5 +24,13 @@ namespace QuanLyTiemTapHoa.DAO
             DataTable result = DataProvider.Instance.ExecuteQuery(query);
             return result.Rows.Count > 0;
         }
+
+        public DataTable GetDataAllAccounts()
+        {
+            string query = "SELECT * FROM quanlytiemtaphoa.users;";
+
+            DataTable result = DataProvider.Instance.ExecuteQuery(query);
+            return result;
+        }
     }
 }

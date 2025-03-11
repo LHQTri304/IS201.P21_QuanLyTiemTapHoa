@@ -46,7 +46,7 @@
             this.button26 = new System.Windows.Forms.Button();
             this.textBox34 = new System.Windows.Forms.TextBox();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgvAccounts = new System.Windows.Forms.DataGridView();
             this.panel4 = new System.Windows.Forms.Panel();
             this.button30 = new System.Windows.Forms.Button();
             this.button29 = new System.Windows.Forms.Button();
@@ -60,7 +60,7 @@
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.panel6 = new System.Windows.Forms.Panel();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.dgvCustomers = new System.Windows.Forms.DataGridView();
             this.panel7 = new System.Windows.Forms.Panel();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.button5 = new System.Windows.Forms.Button();
@@ -79,7 +79,7 @@
             this.button8 = new System.Windows.Forms.Button();
             this.button9 = new System.Windows.Forms.Button();
             this.panel10 = new System.Windows.Forms.Panel();
-            this.dataGridView3 = new System.Windows.Forms.DataGridView();
+            this.dgvCategories = new System.Windows.Forms.DataGridView();
             this.panel11 = new System.Windows.Forms.Panel();
             this.textBox8 = new System.Windows.Forms.TextBox();
             this.button10 = new System.Windows.Forms.Button();
@@ -98,7 +98,7 @@
             this.button13 = new System.Windows.Forms.Button();
             this.button14 = new System.Windows.Forms.Button();
             this.panel14 = new System.Windows.Forms.Panel();
-            this.dataGridView4 = new System.Windows.Forms.DataGridView();
+            this.dgvProducts = new System.Windows.Forms.DataGridView();
             this.panel15 = new System.Windows.Forms.Panel();
             this.textBox13 = new System.Windows.Forms.TextBox();
             this.button15 = new System.Windows.Forms.Button();
@@ -117,7 +117,7 @@
             this.button18 = new System.Windows.Forms.Button();
             this.button19 = new System.Windows.Forms.Button();
             this.panel18 = new System.Windows.Forms.Panel();
-            this.dataGridView5 = new System.Windows.Forms.DataGridView();
+            this.dgvOrders = new System.Windows.Forms.DataGridView();
             this.panel19 = new System.Windows.Forms.Panel();
             this.textBox18 = new System.Windows.Forms.TextBox();
             this.button20 = new System.Windows.Forms.Button();
@@ -157,28 +157,28 @@
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvAccounts)).BeginInit();
             this.panel4.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel6.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCustomers)).BeginInit();
             this.panel7.SuspendLayout();
             this.panel8.SuspendLayout();
             this.panel9.SuspendLayout();
             this.panel10.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCategories)).BeginInit();
             this.panel11.SuspendLayout();
             this.panel12.SuspendLayout();
             this.panel13.SuspendLayout();
             this.panel14.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvProducts)).BeginInit();
             this.panel15.SuspendLayout();
             this.panel16.SuspendLayout();
             this.panel17.SuspendLayout();
             this.panel18.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvOrders)).BeginInit();
             this.panel19.SuspendLayout();
             this.panel20.SuspendLayout();
             this.panel21.SuspendLayout();
@@ -390,23 +390,23 @@
             // 
             // panel3
             // 
-            this.panel3.Controls.Add(this.dataGridView1);
+            this.panel3.Controls.Add(this.dgvAccounts);
             this.panel3.Location = new System.Drawing.Point(4, 110);
             this.panel3.Margin = new System.Windows.Forms.Padding(2);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(480, 559);
             this.panel3.TabIndex = 10;
             // 
-            // dataGridView1
+            // dgvAccounts
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(2, 2);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 62;
-            this.dataGridView1.RowTemplate.Height = 28;
-            this.dataGridView1.Size = new System.Drawing.Size(476, 541);
-            this.dataGridView1.TabIndex = 0;
+            this.dgvAccounts.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvAccounts.Location = new System.Drawing.Point(2, 2);
+            this.dgvAccounts.Margin = new System.Windows.Forms.Padding(2);
+            this.dgvAccounts.Name = "dgvAccounts";
+            this.dgvAccounts.RowHeadersWidth = 62;
+            this.dgvAccounts.RowTemplate.Height = 28;
+            this.dgvAccounts.Size = new System.Drawing.Size(476, 541);
+            this.dgvAccounts.TabIndex = 0;
             // 
             // panel4
             // 
@@ -544,23 +544,23 @@
             // 
             // panel6
             // 
-            this.panel6.Controls.Add(this.dataGridView2);
+            this.panel6.Controls.Add(this.dgvCustomers);
             this.panel6.Location = new System.Drawing.Point(4, 112);
             this.panel6.Margin = new System.Windows.Forms.Padding(2);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(480, 559);
             this.panel6.TabIndex = 14;
             // 
-            // dataGridView2
+            // dgvCustomers
             // 
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Location = new System.Drawing.Point(2, 2);
-            this.dataGridView2.Margin = new System.Windows.Forms.Padding(2);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.RowHeadersWidth = 62;
-            this.dataGridView2.RowTemplate.Height = 28;
-            this.dataGridView2.Size = new System.Drawing.Size(476, 541);
-            this.dataGridView2.TabIndex = 0;
+            this.dgvCustomers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvCustomers.Location = new System.Drawing.Point(2, 2);
+            this.dgvCustomers.Margin = new System.Windows.Forms.Padding(2);
+            this.dgvCustomers.Name = "dgvCustomers";
+            this.dgvCustomers.RowHeadersWidth = 62;
+            this.dgvCustomers.RowTemplate.Height = 28;
+            this.dgvCustomers.Size = new System.Drawing.Size(476, 541);
+            this.dgvCustomers.TabIndex = 0;
             // 
             // panel7
             // 
@@ -740,23 +740,23 @@
             // 
             // panel10
             // 
-            this.panel10.Controls.Add(this.dataGridView3);
+            this.panel10.Controls.Add(this.dgvCategories);
             this.panel10.Location = new System.Drawing.Point(4, 112);
             this.panel10.Margin = new System.Windows.Forms.Padding(2);
             this.panel10.Name = "panel10";
             this.panel10.Size = new System.Drawing.Size(480, 559);
             this.panel10.TabIndex = 14;
             // 
-            // dataGridView3
+            // dgvCategories
             // 
-            this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView3.Location = new System.Drawing.Point(2, 2);
-            this.dataGridView3.Margin = new System.Windows.Forms.Padding(2);
-            this.dataGridView3.Name = "dataGridView3";
-            this.dataGridView3.RowHeadersWidth = 62;
-            this.dataGridView3.RowTemplate.Height = 28;
-            this.dataGridView3.Size = new System.Drawing.Size(476, 541);
-            this.dataGridView3.TabIndex = 0;
+            this.dgvCategories.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvCategories.Location = new System.Drawing.Point(2, 2);
+            this.dgvCategories.Margin = new System.Windows.Forms.Padding(2);
+            this.dgvCategories.Name = "dgvCategories";
+            this.dgvCategories.RowHeadersWidth = 62;
+            this.dgvCategories.RowTemplate.Height = 28;
+            this.dgvCategories.Size = new System.Drawing.Size(476, 541);
+            this.dgvCategories.TabIndex = 0;
             // 
             // panel11
             // 
@@ -936,23 +936,23 @@
             // 
             // panel14
             // 
-            this.panel14.Controls.Add(this.dataGridView4);
+            this.panel14.Controls.Add(this.dgvProducts);
             this.panel14.Location = new System.Drawing.Point(4, 112);
             this.panel14.Margin = new System.Windows.Forms.Padding(2);
             this.panel14.Name = "panel14";
             this.panel14.Size = new System.Drawing.Size(480, 559);
             this.panel14.TabIndex = 14;
             // 
-            // dataGridView4
+            // dgvProducts
             // 
-            this.dataGridView4.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView4.Location = new System.Drawing.Point(2, 2);
-            this.dataGridView4.Margin = new System.Windows.Forms.Padding(2);
-            this.dataGridView4.Name = "dataGridView4";
-            this.dataGridView4.RowHeadersWidth = 62;
-            this.dataGridView4.RowTemplate.Height = 28;
-            this.dataGridView4.Size = new System.Drawing.Size(476, 541);
-            this.dataGridView4.TabIndex = 0;
+            this.dgvProducts.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvProducts.Location = new System.Drawing.Point(2, 2);
+            this.dgvProducts.Margin = new System.Windows.Forms.Padding(2);
+            this.dgvProducts.Name = "dgvProducts";
+            this.dgvProducts.RowHeadersWidth = 62;
+            this.dgvProducts.RowTemplate.Height = 28;
+            this.dgvProducts.Size = new System.Drawing.Size(476, 541);
+            this.dgvProducts.TabIndex = 0;
             // 
             // panel15
             // 
@@ -1132,23 +1132,23 @@
             // 
             // panel18
             // 
-            this.panel18.Controls.Add(this.dataGridView5);
+            this.panel18.Controls.Add(this.dgvOrders);
             this.panel18.Location = new System.Drawing.Point(4, 112);
             this.panel18.Margin = new System.Windows.Forms.Padding(2);
             this.panel18.Name = "panel18";
             this.panel18.Size = new System.Drawing.Size(480, 559);
             this.panel18.TabIndex = 14;
             // 
-            // dataGridView5
+            // dgvOrders
             // 
-            this.dataGridView5.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView5.Location = new System.Drawing.Point(2, 2);
-            this.dataGridView5.Margin = new System.Windows.Forms.Padding(2);
-            this.dataGridView5.Name = "dataGridView5";
-            this.dataGridView5.RowHeadersWidth = 62;
-            this.dataGridView5.RowTemplate.Height = 28;
-            this.dataGridView5.Size = new System.Drawing.Size(476, 541);
-            this.dataGridView5.TabIndex = 0;
+            this.dgvOrders.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvOrders.Location = new System.Drawing.Point(2, 2);
+            this.dgvOrders.Margin = new System.Windows.Forms.Padding(2);
+            this.dgvOrders.Name = "dgvOrders";
+            this.dgvOrders.RowHeadersWidth = 62;
+            this.dgvOrders.RowTemplate.Height = 28;
+            this.dgvOrders.Size = new System.Drawing.Size(476, 541);
+            this.dgvOrders.TabIndex = 0;
             // 
             // panel19
             // 
@@ -1491,34 +1491,34 @@
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.panel3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvAccounts)).EndInit();
             this.panel4.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage2.ResumeLayout(false);
             this.panel5.ResumeLayout(false);
             this.panel6.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCustomers)).EndInit();
             this.panel7.ResumeLayout(false);
             this.panel7.PerformLayout();
             this.panel8.ResumeLayout(false);
             this.panel8.PerformLayout();
             this.panel9.ResumeLayout(false);
             this.panel10.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCategories)).EndInit();
             this.panel11.ResumeLayout(false);
             this.panel11.PerformLayout();
             this.panel12.ResumeLayout(false);
             this.panel12.PerformLayout();
             this.panel13.ResumeLayout(false);
             this.panel14.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvProducts)).EndInit();
             this.panel15.ResumeLayout(false);
             this.panel15.PerformLayout();
             this.panel16.ResumeLayout(false);
             this.panel16.PerformLayout();
             this.panel17.ResumeLayout(false);
             this.panel18.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvOrders)).EndInit();
             this.panel19.ResumeLayout(false);
             this.panel19.PerformLayout();
             this.panel20.ResumeLayout(false);
@@ -1544,7 +1544,7 @@
         private System.Windows.Forms.Button button29;
         private System.Windows.Forms.Button button30;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgvAccounts;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.TextBox textBox34;
         private System.Windows.Forms.Button button26;
@@ -1564,7 +1564,7 @@
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Panel panel6;
-        private System.Windows.Forms.DataGridView dataGridView2;
+        private System.Windows.Forms.DataGridView dgvCustomers;
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Button button5;
@@ -1584,7 +1584,7 @@
         private System.Windows.Forms.Button button8;
         private System.Windows.Forms.Button button9;
         private System.Windows.Forms.Panel panel10;
-        private System.Windows.Forms.DataGridView dataGridView3;
+        private System.Windows.Forms.DataGridView dgvCategories;
         private System.Windows.Forms.Panel panel11;
         private System.Windows.Forms.TextBox textBox8;
         private System.Windows.Forms.Button button10;
@@ -1604,7 +1604,7 @@
         private System.Windows.Forms.Button button13;
         private System.Windows.Forms.Button button14;
         private System.Windows.Forms.Panel panel14;
-        private System.Windows.Forms.DataGridView dataGridView4;
+        private System.Windows.Forms.DataGridView dgvProducts;
         private System.Windows.Forms.Panel panel15;
         private System.Windows.Forms.TextBox textBox13;
         private System.Windows.Forms.Button button15;
@@ -1624,7 +1624,7 @@
         private System.Windows.Forms.Button button18;
         private System.Windows.Forms.Button button19;
         private System.Windows.Forms.Panel panel18;
-        private System.Windows.Forms.DataGridView dataGridView5;
+        private System.Windows.Forms.DataGridView dgvOrders;
         private System.Windows.Forms.Panel panel19;
         private System.Windows.Forms.TextBox textBox18;
         private System.Windows.Forms.Button button20;
