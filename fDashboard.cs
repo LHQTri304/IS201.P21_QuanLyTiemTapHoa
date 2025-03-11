@@ -2,14 +2,11 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
-using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using MySql.Data.MySqlClient;
-using QuanLyTiemTapHoa.DAO;
 
 namespace QuanLyTiemTapHoa
 {
@@ -18,16 +15,19 @@ namespace QuanLyTiemTapHoa
         public fDashboard()
         {
             InitializeComponent();
-            LoadUserList();
         }
 
-        void LoadUserList()
+        private void adminToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            string query = "CALL USP_GetUsersByUsernames(\"'admin', 'johndoe'\")";
+            fAdmin f = new fAdmin(); 
+            this.Hide(); 
+            f.ShowDialog(); 
+            this.Show();
+        }
 
-            DataProvider provider = new DataProvider();
-
-            dtgvUser.DataSource = provider.ExecuteQuery(query);
+        private void tsmLogout_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

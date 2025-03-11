@@ -1,16 +1,28 @@
 ﻿using MySql.Data.MySqlClient;
 using System;
-using System.Collections.Generic;
 using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace QuanLyTiemTapHoa.DAO
 {
     internal class DataProvider
     {
-        string connetionString = "server=localhost;database=quanlytiemtaphoa;uid=root;pwd=Qtmysql3045!;";
+        private static DataProvider instance;
+        private string connetionString = "server=localhost;database=quanlytiemtaphoa;uid=root;pwd=Qtmysql3045!;";
+
+        public static DataProvider Instance
+        {
+            get
+            {
+                if (instance == null)
+                {
+                    instance = new DataProvider();
+                }
+                return instance;
+            }
+            private set => instance = value;
+        }
+
+        private DataProvider() { }
 
         public DataTable ExecuteQuery(string query)
         {
@@ -53,7 +65,7 @@ namespace QuanLyTiemTapHoa.DAO
 
                     MySqlCommand cmd = new MySqlCommand(query, cnn);
 
-                    data = cmd.ExecuteNonQuery();                    
+                    data = cmd.ExecuteNonQuery();
 
                     cnn.Close();
 
