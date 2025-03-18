@@ -39,7 +39,7 @@ namespace QuanLyTiemTapHoa
 
         private void LoadDataCategories()
         {
-            dgvCategories.DataSource = CategorieDAO.Instance.GetDataAllCategories();
+            dgvCategories.DataSource = CategoryDAO.Instance.GetDataAllCategories();
         }
 
         private void LoadDataProducts()
