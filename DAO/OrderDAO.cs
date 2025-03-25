@@ -17,7 +17,15 @@ namespace QuanLyTiemTapHoa.DAO
 
         public DataTable GetDataAllOrders()
         {
-            string query = "SELECT * FROM quanlytiemtaphoa.orders;";
+            string query = "SELECT o.OrderID, c.FullName as CustomerName, u.FullName as StaffName, o.OrderDate, o.Status FROM quanlytiemtaphoa.orders as o, quanlytiemtaphoa.users as u, quanlytiemtaphoa.customers as c where o.CustomerID = c.CustomerID and o.UserID = u.UserID";
+
+            DataTable result = DataProvider.Instance.ExecuteQuery(query);
+            return result;
+        }
+
+        public DataTable GetCompletedOrderByDates(string dateStart, string dateEnd)
+        {
+            string query = "SELECT c.FullName as CustomerName, u.FullName as StaffName, o.OrderDate, o.Status FROM quanlytiemtaphoa.orders as o, quanlytiemtaphoa.users as u, quanlytiemtaphoa.customers as c where o.CustomerID = c.CustomerID and o.UserID = u.UserID and o.Status = 'completed' and o.OrderDate >= '" + dateStart + "' and o.OrderDate <= '" + dateEnd + "'";
 
             DataTable result = DataProvider.Instance.ExecuteQuery(query);
             return result;

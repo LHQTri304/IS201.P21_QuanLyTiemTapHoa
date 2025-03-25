@@ -98,22 +98,22 @@
             // columnHeader1
             // 
             this.columnHeader1.Text = "Tên sản phẩm";
-            this.columnHeader1.Width = 640;
+            this.columnHeader1.Width = 530;
             // 
             // columnHeader2
             // 
             this.columnHeader2.Text = "Số lượng";
-            this.columnHeader2.Width = 115;
+            this.columnHeader2.Width = 111;
             // 
             // columnHeader3
             // 
             this.columnHeader3.Text = "Đơn giá";
-            this.columnHeader3.Width = 255;
+            this.columnHeader3.Width = 313;
             // 
             // columnHeader4
             // 
             this.columnHeader4.Text = "Thành tiền";
-            this.columnHeader4.Width = 255;
+            this.columnHeader4.Width = 316;
             // 
             // menuStrip1
             // 
