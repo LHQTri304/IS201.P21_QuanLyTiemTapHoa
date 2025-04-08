@@ -55,7 +55,7 @@ CREATE TABLE Products (
     CategoryID INT,
     Price DECIMAL(10,2) NOT NULL,
     StockQuantity INT DEFAULT 0,
-    FOREIGN KEY (CategoryID) REFERENCES Categories(CategoryID)
+    FOREIGN KEY (CategoryID) REFERENCES Categories(CategoryID) ON DELETE CASCADE
 );
 
 INSERT INTO Products (ProductName, CategoryID, Price, StockQuantity) VALUES
@@ -72,8 +72,8 @@ CREATE TABLE Orders (
     UserID INT,
     OrderDate TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     Status ENUM('pending', 'completed', 'cancelled') DEFAULT 'pending',
-    FOREIGN KEY (CustomerID) REFERENCES Customers(CustomerID),
-    FOREIGN KEY (UserID) REFERENCES Users(UserID)
+    FOREIGN KEY (CustomerID) REFERENCES Customers(CustomerID) ON DELETE CASCADE,
+    FOREIGN KEY (UserID) REFERENCES Users(UserID) ON DELETE CASCADE
 );
 
 INSERT INTO Orders (CustomerID, UserID, Status) VALUES
@@ -90,8 +90,8 @@ CREATE TABLE OrderDetails (
     OrderID INT,
     ProductID INT,
     Quantity INT NOT NULL,
-    FOREIGN KEY (OrderID) REFERENCES Orders(OrderID),
-    FOREIGN KEY (ProductID) REFERENCES Products(ProductID)
+    FOREIGN KEY (OrderID) REFERENCES Orders(OrderID) ON DELETE CASCADE,
+    FOREIGN KEY (ProductID) REFERENCES Products(ProductID) ON DELETE CASCADE
 );
 
 INSERT INTO OrderDetails (OrderID, ProductID, Quantity) VALUES

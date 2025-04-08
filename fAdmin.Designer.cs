@@ -33,10 +33,13 @@
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.dgvAccounts = new System.Windows.Forms.DataGridView();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.cbbUserRole = new System.Windows.Forms.ComboBox();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.btnUpdateUser = new System.Windows.Forms.Button();
+            this.btnRemoveUser = new System.Windows.Forms.Button();
+            this.btnAddUser = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.button6 = new System.Windows.Forms.Button();
-            this.tbUserRole = new System.Windows.Forms.TextBox();
+            this.tbFindUsers = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.tbUserEmail = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
@@ -49,9 +52,11 @@
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.dgvCustomers = new System.Windows.Forms.DataGridView();
             this.panel6 = new System.Windows.Forms.Panel();
+            this.panel8 = new System.Windows.Forms.Panel();
+            this.btnUpdateCustomer = new System.Windows.Forms.Button();
+            this.btnRemoveCustomer = new System.Windows.Forms.Button();
+            this.btnAddCustomer = new System.Windows.Forms.Button();
             this.panel20 = new System.Windows.Forms.Panel();
-            this.textBox10 = new System.Windows.Forms.TextBox();
-            this.button14 = new System.Windows.Forms.Button();
             this.tbCusCreatedAt = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.tbCusEmail = new System.Windows.Forms.TextBox();
@@ -65,9 +70,11 @@
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.dgvCategories = new System.Windows.Forms.DataGridView();
             this.panel9 = new System.Windows.Forms.Panel();
+            this.panel10 = new System.Windows.Forms.Panel();
+            this.btnUpdateCategory = new System.Windows.Forms.Button();
+            this.btnRemoveCategory = new System.Windows.Forms.Button();
+            this.btnAddCategory = new System.Windows.Forms.Button();
             this.panel11 = new System.Windows.Forms.Panel();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.button17 = new System.Windows.Forms.Button();
             this.tbCategoryName = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
             this.tbCategoryID = new System.Windows.Forms.TextBox();
@@ -75,9 +82,11 @@
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.dgvProducts = new System.Windows.Forms.DataGridView();
             this.panel12 = new System.Windows.Forms.Panel();
+            this.panel13 = new System.Windows.Forms.Panel();
+            this.btnUpdateProduct = new System.Windows.Forms.Button();
+            this.btnRemoveProduct = new System.Windows.Forms.Button();
+            this.btnAddProduct = new System.Windows.Forms.Button();
             this.panel14 = new System.Windows.Forms.Panel();
-            this.textBox21 = new System.Windows.Forms.TextBox();
-            this.button21 = new System.Windows.Forms.Button();
             this.tbProductCateID = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
             this.tbProductStockQuantity = new System.Windows.Forms.TextBox();
@@ -103,8 +112,6 @@
             this.button5 = new System.Windows.Forms.Button();
             this.button8 = new System.Windows.Forms.Button();
             this.panel7 = new System.Windows.Forms.Panel();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.button9 = new System.Windows.Forms.Button();
             this.tbStaffName = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
             this.tbStatus = new System.Windows.Forms.TextBox();
@@ -126,38 +133,35 @@
             this.dtpStart = new System.Windows.Forms.DateTimePicker();
             this.btnExport = new System.Windows.Forms.Button();
             this.dgvCompletedOrders = new System.Windows.Forms.DataGridView();
-            this.panel13 = new System.Windows.Forms.Panel();
-            this.button7 = new System.Windows.Forms.Button();
-            this.button18 = new System.Windows.Forms.Button();
-            this.button19 = new System.Windows.Forms.Button();
-            this.panel10 = new System.Windows.Forms.Panel();
-            this.button10 = new System.Windows.Forms.Button();
-            this.button15 = new System.Windows.Forms.Button();
-            this.button16 = new System.Windows.Forms.Button();
-            this.panel8 = new System.Windows.Forms.Panel();
-            this.button11 = new System.Windows.Forms.Button();
-            this.button12 = new System.Windows.Forms.Button();
-            this.button13 = new System.Windows.Forms.Button();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.tbFindCustomers = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.tbFindCategories = new System.Windows.Forms.TextBox();
+            this.label30 = new System.Windows.Forms.Label();
+            this.tbFindProducts = new System.Windows.Forms.TextBox();
+            this.label31 = new System.Windows.Forms.Label();
+            this.tbFindOrders = new System.Windows.Forms.TextBox();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAccounts)).BeginInit();
             this.panel4.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCustomers)).BeginInit();
             this.panel6.SuspendLayout();
+            this.panel8.SuspendLayout();
             this.panel20.SuspendLayout();
             this.tabPage3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCategories)).BeginInit();
             this.panel9.SuspendLayout();
+            this.panel10.SuspendLayout();
             this.panel11.SuspendLayout();
             this.tabPage4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProducts)).BeginInit();
             this.panel12.SuspendLayout();
+            this.panel13.SuspendLayout();
             this.panel14.SuspendLayout();
             this.tabPage5.SuspendLayout();
             this.panel17.SuspendLayout();
@@ -169,10 +173,6 @@
             this.panel19.SuspendLayout();
             this.panel18.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCompletedOrders)).BeginInit();
-            this.panel13.SuspendLayout();
-            this.panel10.SuspendLayout();
-            this.panel8.SuspendLayout();
-            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -185,7 +185,7 @@
             this.tabControl1.Controls.Add(this.tabPage6);
             this.tabControl1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabControl1.Location = new System.Drawing.Point(11, 1);
-            this.tabControl1.Margin = new System.Windows.Forms.Padding(2);
+            this.tabControl1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(986, 717);
@@ -196,9 +196,9 @@
             this.tabPage1.Controls.Add(this.dgvAccounts);
             this.tabPage1.Controls.Add(this.panel4);
             this.tabPage1.Location = new System.Drawing.Point(4, 34);
-            this.tabPage1.Margin = new System.Windows.Forms.Padding(2);
+            this.tabPage1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(2);
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tabPage1.Size = new System.Drawing.Size(978, 679);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Nhân viên";
@@ -215,7 +215,7 @@
             this.dgvAccounts.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dgvAccounts.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvAccounts.Location = new System.Drawing.Point(4, 233);
-            this.dgvAccounts.Margin = new System.Windows.Forms.Padding(2);
+            this.dgvAccounts.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dgvAccounts.Name = "dgvAccounts";
             this.dgvAccounts.ReadOnly = true;
             this.dgvAccounts.RowHeadersWidth = 62;
@@ -225,9 +225,9 @@
             // 
             // panel4
             // 
+            this.panel4.Controls.Add(this.cbbUserRole);
             this.panel4.Controls.Add(this.panel1);
             this.panel4.Controls.Add(this.panel3);
-            this.panel4.Controls.Add(this.tbUserRole);
             this.panel4.Controls.Add(this.label3);
             this.panel4.Controls.Add(this.tbUserEmail);
             this.panel4.Controls.Add(this.label6);
@@ -238,48 +238,89 @@
             this.panel4.Controls.Add(this.tbUserID);
             this.panel4.Controls.Add(this.label25);
             this.panel4.Location = new System.Drawing.Point(4, 4);
-            this.panel4.Margin = new System.Windows.Forms.Padding(2);
+            this.panel4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(970, 225);
             this.panel4.TabIndex = 16;
             // 
+            // cbbUserRole
+            // 
+            this.cbbUserRole.FormattingEnabled = true;
+            this.cbbUserRole.Items.AddRange(new object[] {
+            "admin",
+            "staff"});
+            this.cbbUserRole.Location = new System.Drawing.Point(87, 85);
+            this.cbbUserRole.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cbbUserRole.Name = "cbbUserRole";
+            this.cbbUserRole.Size = new System.Drawing.Size(393, 33);
+            this.cbbUserRole.TabIndex = 21;
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.btnUpdateUser);
+            this.panel1.Controls.Add(this.btnRemoveUser);
+            this.panel1.Controls.Add(this.btnAddUser);
+            this.panel1.Location = new System.Drawing.Point(642, 122);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(328, 50);
+            this.panel1.TabIndex = 20;
+            // 
+            // btnUpdateUser
+            // 
+            this.btnUpdateUser.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnUpdateUser.BackgroundImage")));
+            this.btnUpdateUser.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnUpdateUser.Location = new System.Drawing.Point(210, 2);
+            this.btnUpdateUser.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnUpdateUser.Name = "btnUpdateUser";
+            this.btnUpdateUser.Size = new System.Drawing.Size(100, 38);
+            this.btnUpdateUser.TabIndex = 2;
+            this.btnUpdateUser.UseVisualStyleBackColor = true;
+            this.btnUpdateUser.Click += new System.EventHandler(this.btnUpdateUser_Click);
+            // 
+            // btnRemoveUser
+            // 
+            this.btnRemoveUser.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnRemoveUser.BackgroundImage")));
+            this.btnRemoveUser.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnRemoveUser.Location = new System.Drawing.Point(106, 2);
+            this.btnRemoveUser.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnRemoveUser.Name = "btnRemoveUser";
+            this.btnRemoveUser.Size = new System.Drawing.Size(100, 38);
+            this.btnRemoveUser.TabIndex = 1;
+            this.btnRemoveUser.UseVisualStyleBackColor = true;
+            this.btnRemoveUser.Click += new System.EventHandler(this.btnRemoveUser_Click);
+            // 
+            // btnAddUser
+            // 
+            this.btnAddUser.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnAddUser.BackgroundImage")));
+            this.btnAddUser.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnAddUser.Enabled = false;
+            this.btnAddUser.Location = new System.Drawing.Point(2, 2);
+            this.btnAddUser.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnAddUser.Name = "btnAddUser";
+            this.btnAddUser.Size = new System.Drawing.Size(100, 38);
+            this.btnAddUser.TabIndex = 0;
+            this.btnAddUser.UseVisualStyleBackColor = true;
+            // 
             // panel3
             // 
-            this.panel3.Controls.Add(this.textBox1);
-            this.panel3.Controls.Add(this.button6);
+            this.panel3.Controls.Add(this.label8);
+            this.panel3.Controls.Add(this.tbFindUsers);
             this.panel3.Location = new System.Drawing.Point(472, 174);
-            this.panel3.Margin = new System.Windows.Forms.Padding(2);
+            this.panel3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(496, 50);
             this.panel3.TabIndex = 17;
             // 
-            // textBox1
+            // tbFindUsers
             // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(2, 2);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(349, 38);
-            this.textBox1.TabIndex = 5;
-            // 
-            // button6
-            // 
-            this.button6.Location = new System.Drawing.Point(358, 4);
-            this.button6.Margin = new System.Windows.Forms.Padding(2);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(126, 38);
-            this.button6.TabIndex = 4;
-            this.button6.Text = "Tìm";
-            this.button6.UseVisualStyleBackColor = true;
-            // 
-            // tbUserRole
-            // 
-            this.tbUserRole.Location = new System.Drawing.Point(89, 81);
-            this.tbUserRole.Margin = new System.Windows.Forms.Padding(2);
-            this.tbUserRole.Name = "tbUserRole";
-            this.tbUserRole.ReadOnly = true;
-            this.tbUserRole.Size = new System.Drawing.Size(391, 31);
-            this.tbUserRole.TabIndex = 14;
+            this.tbFindUsers.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbFindUsers.Location = new System.Drawing.Point(146, 2);
+            this.tbFindUsers.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbFindUsers.Name = "tbFindUsers";
+            this.tbFindUsers.Size = new System.Drawing.Size(348, 38);
+            this.tbFindUsers.TabIndex = 5;
+            this.tbFindUsers.TextChanged += new System.EventHandler(this.tbFindUsers_TextChanged);
             // 
             // label3
             // 
@@ -295,9 +336,8 @@
             // tbUserEmail
             // 
             this.tbUserEmail.Location = new System.Drawing.Point(599, 81);
-            this.tbUserEmail.Margin = new System.Windows.Forms.Padding(2);
+            this.tbUserEmail.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tbUserEmail.Name = "tbUserEmail";
-            this.tbUserEmail.ReadOnly = true;
             this.tbUserEmail.Size = new System.Drawing.Size(351, 31);
             this.tbUserEmail.TabIndex = 12;
             // 
@@ -315,9 +355,8 @@
             // tbUserPhone
             // 
             this.tbUserPhone.Location = new System.Drawing.Point(585, 48);
-            this.tbUserPhone.Margin = new System.Windows.Forms.Padding(2);
+            this.tbUserPhone.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tbUserPhone.Name = "tbUserPhone";
-            this.tbUserPhone.ReadOnly = true;
             this.tbUserPhone.Size = new System.Drawing.Size(365, 31);
             this.tbUserPhone.TabIndex = 10;
             // 
@@ -335,9 +374,8 @@
             // tbUserFullName
             // 
             this.tbUserFullName.Location = new System.Drawing.Point(124, 48);
-            this.tbUserFullName.Margin = new System.Windows.Forms.Padding(2);
+            this.tbUserFullName.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tbUserFullName.Name = "tbUserFullName";
-            this.tbUserFullName.ReadOnly = true;
             this.tbUserFullName.Size = new System.Drawing.Size(356, 31);
             this.tbUserFullName.TabIndex = 6;
             // 
@@ -355,7 +393,7 @@
             // tbUserID
             // 
             this.tbUserID.Location = new System.Drawing.Point(407, 10);
-            this.tbUserID.Margin = new System.Windows.Forms.Padding(2);
+            this.tbUserID.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tbUserID.Name = "tbUserID";
             this.tbUserID.ReadOnly = true;
             this.tbUserID.Size = new System.Drawing.Size(300, 31);
@@ -377,9 +415,9 @@
             this.tabPage2.Controls.Add(this.dgvCustomers);
             this.tabPage2.Controls.Add(this.panel6);
             this.tabPage2.Location = new System.Drawing.Point(4, 34);
-            this.tabPage2.Margin = new System.Windows.Forms.Padding(2);
+            this.tabPage2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(2);
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tabPage2.Size = new System.Drawing.Size(978, 679);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Khách hàng";
@@ -396,7 +434,7 @@
             this.dgvCustomers.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dgvCustomers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvCustomers.Location = new System.Drawing.Point(4, 233);
-            this.dgvCustomers.Margin = new System.Windows.Forms.Padding(2);
+            this.dgvCustomers.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dgvCustomers.Name = "dgvCustomers";
             this.dgvCustomers.ReadOnly = true;
             this.dgvCustomers.RowHeadersWidth = 62;
@@ -419,46 +457,73 @@
             this.panel6.Controls.Add(this.tbCustomerID);
             this.panel6.Controls.Add(this.label7);
             this.panel6.Location = new System.Drawing.Point(4, 4);
-            this.panel6.Margin = new System.Windows.Forms.Padding(2);
+            this.panel6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(970, 225);
             this.panel6.TabIndex = 18;
             // 
+            // panel8
+            // 
+            this.panel8.Controls.Add(this.btnUpdateCustomer);
+            this.panel8.Controls.Add(this.btnRemoveCustomer);
+            this.panel8.Controls.Add(this.btnAddCustomer);
+            this.panel8.Location = new System.Drawing.Point(640, 122);
+            this.panel8.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel8.Name = "panel8";
+            this.panel8.Size = new System.Drawing.Size(328, 50);
+            this.panel8.TabIndex = 20;
+            // 
+            // btnUpdateCustomer
+            // 
+            this.btnUpdateCustomer.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnUpdateCustomer.BackgroundImage")));
+            this.btnUpdateCustomer.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnUpdateCustomer.Location = new System.Drawing.Point(210, 2);
+            this.btnUpdateCustomer.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnUpdateCustomer.Name = "btnUpdateCustomer";
+            this.btnUpdateCustomer.Size = new System.Drawing.Size(100, 38);
+            this.btnUpdateCustomer.TabIndex = 2;
+            this.btnUpdateCustomer.UseVisualStyleBackColor = true;
+            this.btnUpdateCustomer.Click += new System.EventHandler(this.btnUpdateCustomer_Click);
+            // 
+            // btnRemoveCustomer
+            // 
+            this.btnRemoveCustomer.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnRemoveCustomer.BackgroundImage")));
+            this.btnRemoveCustomer.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnRemoveCustomer.Location = new System.Drawing.Point(106, 2);
+            this.btnRemoveCustomer.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnRemoveCustomer.Name = "btnRemoveCustomer";
+            this.btnRemoveCustomer.Size = new System.Drawing.Size(100, 38);
+            this.btnRemoveCustomer.TabIndex = 1;
+            this.btnRemoveCustomer.UseVisualStyleBackColor = true;
+            this.btnRemoveCustomer.Click += new System.EventHandler(this.btnRemoveCustomer_Click);
+            // 
+            // btnAddCustomer
+            // 
+            this.btnAddCustomer.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnAddCustomer.BackgroundImage")));
+            this.btnAddCustomer.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnAddCustomer.Location = new System.Drawing.Point(2, 2);
+            this.btnAddCustomer.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnAddCustomer.Name = "btnAddCustomer";
+            this.btnAddCustomer.Size = new System.Drawing.Size(100, 38);
+            this.btnAddCustomer.TabIndex = 0;
+            this.btnAddCustomer.UseVisualStyleBackColor = true;
+            this.btnAddCustomer.Click += new System.EventHandler(this.btnAddCustomer_Click);
+            // 
             // panel20
             // 
-            this.panel20.Controls.Add(this.textBox10);
-            this.panel20.Controls.Add(this.button14);
+            this.panel20.Controls.Add(this.label9);
+            this.panel20.Controls.Add(this.tbFindCustomers);
             this.panel20.Location = new System.Drawing.Point(472, 174);
-            this.panel20.Margin = new System.Windows.Forms.Padding(2);
+            this.panel20.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel20.Name = "panel20";
             this.panel20.Size = new System.Drawing.Size(496, 50);
             this.panel20.TabIndex = 17;
             // 
-            // textBox10
-            // 
-            this.textBox10.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox10.Location = new System.Drawing.Point(2, 2);
-            this.textBox10.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(349, 38);
-            this.textBox10.TabIndex = 5;
-            // 
-            // button14
-            // 
-            this.button14.Location = new System.Drawing.Point(358, 4);
-            this.button14.Margin = new System.Windows.Forms.Padding(2);
-            this.button14.Name = "button14";
-            this.button14.Size = new System.Drawing.Size(126, 38);
-            this.button14.TabIndex = 4;
-            this.button14.Text = "Tìm";
-            this.button14.UseVisualStyleBackColor = true;
-            // 
             // tbCusCreatedAt
             // 
             this.tbCusCreatedAt.Location = new System.Drawing.Point(207, 81);
-            this.tbCusCreatedAt.Margin = new System.Windows.Forms.Padding(2);
+            this.tbCusCreatedAt.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tbCusCreatedAt.Name = "tbCusCreatedAt";
-            this.tbCusCreatedAt.ReadOnly = true;
             this.tbCusCreatedAt.Size = new System.Drawing.Size(273, 31);
             this.tbCusCreatedAt.TabIndex = 14;
             // 
@@ -476,9 +541,8 @@
             // tbCusEmail
             // 
             this.tbCusEmail.Location = new System.Drawing.Point(599, 81);
-            this.tbCusEmail.Margin = new System.Windows.Forms.Padding(2);
+            this.tbCusEmail.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tbCusEmail.Name = "tbCusEmail";
-            this.tbCusEmail.ReadOnly = true;
             this.tbCusEmail.Size = new System.Drawing.Size(351, 31);
             this.tbCusEmail.TabIndex = 12;
             // 
@@ -496,9 +560,8 @@
             // tbCusPhone
             // 
             this.tbCusPhone.Location = new System.Drawing.Point(585, 48);
-            this.tbCusPhone.Margin = new System.Windows.Forms.Padding(2);
+            this.tbCusPhone.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tbCusPhone.Name = "tbCusPhone";
-            this.tbCusPhone.ReadOnly = true;
             this.tbCusPhone.Size = new System.Drawing.Size(365, 31);
             this.tbCusPhone.TabIndex = 10;
             // 
@@ -516,9 +579,8 @@
             // tbCusFullName
             // 
             this.tbCusFullName.Location = new System.Drawing.Point(124, 48);
-            this.tbCusFullName.Margin = new System.Windows.Forms.Padding(2);
+            this.tbCusFullName.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tbCusFullName.Name = "tbCusFullName";
-            this.tbCusFullName.ReadOnly = true;
             this.tbCusFullName.Size = new System.Drawing.Size(356, 31);
             this.tbCusFullName.TabIndex = 6;
             // 
@@ -536,7 +598,7 @@
             // tbCustomerID
             // 
             this.tbCustomerID.Location = new System.Drawing.Point(407, 10);
-            this.tbCustomerID.Margin = new System.Windows.Forms.Padding(2);
+            this.tbCustomerID.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tbCustomerID.Name = "tbCustomerID";
             this.tbCustomerID.ReadOnly = true;
             this.tbCustomerID.Size = new System.Drawing.Size(300, 31);
@@ -558,9 +620,9 @@
             this.tabPage3.Controls.Add(this.dgvCategories);
             this.tabPage3.Controls.Add(this.panel9);
             this.tabPage3.Location = new System.Drawing.Point(4, 34);
-            this.tabPage3.Margin = new System.Windows.Forms.Padding(2);
+            this.tabPage3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Padding = new System.Windows.Forms.Padding(2);
+            this.tabPage3.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tabPage3.Size = new System.Drawing.Size(978, 679);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Danh mục";
@@ -577,7 +639,7 @@
             this.dgvCategories.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dgvCategories.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvCategories.Location = new System.Drawing.Point(4, 233);
-            this.dgvCategories.Margin = new System.Windows.Forms.Padding(2);
+            this.dgvCategories.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dgvCategories.Name = "dgvCategories";
             this.dgvCategories.ReadOnly = true;
             this.dgvCategories.RowHeadersWidth = 62;
@@ -594,46 +656,73 @@
             this.panel9.Controls.Add(this.tbCategoryID);
             this.panel9.Controls.Add(this.label12);
             this.panel9.Location = new System.Drawing.Point(4, 4);
-            this.panel9.Margin = new System.Windows.Forms.Padding(2);
+            this.panel9.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel9.Name = "panel9";
             this.panel9.Size = new System.Drawing.Size(970, 225);
             this.panel9.TabIndex = 20;
             // 
+            // panel10
+            // 
+            this.panel10.Controls.Add(this.btnUpdateCategory);
+            this.panel10.Controls.Add(this.btnRemoveCategory);
+            this.panel10.Controls.Add(this.btnAddCategory);
+            this.panel10.Location = new System.Drawing.Point(640, 122);
+            this.panel10.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel10.Name = "panel10";
+            this.panel10.Size = new System.Drawing.Size(328, 50);
+            this.panel10.TabIndex = 20;
+            // 
+            // btnUpdateCategory
+            // 
+            this.btnUpdateCategory.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnUpdateCategory.BackgroundImage")));
+            this.btnUpdateCategory.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnUpdateCategory.Location = new System.Drawing.Point(210, 2);
+            this.btnUpdateCategory.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnUpdateCategory.Name = "btnUpdateCategory";
+            this.btnUpdateCategory.Size = new System.Drawing.Size(100, 38);
+            this.btnUpdateCategory.TabIndex = 2;
+            this.btnUpdateCategory.UseVisualStyleBackColor = true;
+            this.btnUpdateCategory.Click += new System.EventHandler(this.btnUpdateCategory_Click);
+            // 
+            // btnRemoveCategory
+            // 
+            this.btnRemoveCategory.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnRemoveCategory.BackgroundImage")));
+            this.btnRemoveCategory.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnRemoveCategory.Location = new System.Drawing.Point(106, 2);
+            this.btnRemoveCategory.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnRemoveCategory.Name = "btnRemoveCategory";
+            this.btnRemoveCategory.Size = new System.Drawing.Size(100, 38);
+            this.btnRemoveCategory.TabIndex = 1;
+            this.btnRemoveCategory.UseVisualStyleBackColor = true;
+            this.btnRemoveCategory.Click += new System.EventHandler(this.btnRemoveCategory_Click);
+            // 
+            // btnAddCategory
+            // 
+            this.btnAddCategory.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnAddCategory.BackgroundImage")));
+            this.btnAddCategory.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnAddCategory.Location = new System.Drawing.Point(2, 2);
+            this.btnAddCategory.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnAddCategory.Name = "btnAddCategory";
+            this.btnAddCategory.Size = new System.Drawing.Size(100, 38);
+            this.btnAddCategory.TabIndex = 0;
+            this.btnAddCategory.UseVisualStyleBackColor = true;
+            this.btnAddCategory.Click += new System.EventHandler(this.btnAddCategory_Click);
+            // 
             // panel11
             // 
-            this.panel11.Controls.Add(this.textBox8);
-            this.panel11.Controls.Add(this.button17);
+            this.panel11.Controls.Add(this.label10);
+            this.panel11.Controls.Add(this.tbFindCategories);
             this.panel11.Location = new System.Drawing.Point(472, 174);
-            this.panel11.Margin = new System.Windows.Forms.Padding(2);
+            this.panel11.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel11.Name = "panel11";
             this.panel11.Size = new System.Drawing.Size(496, 50);
             this.panel11.TabIndex = 17;
             // 
-            // textBox8
-            // 
-            this.textBox8.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox8.Location = new System.Drawing.Point(2, 2);
-            this.textBox8.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(349, 38);
-            this.textBox8.TabIndex = 5;
-            // 
-            // button17
-            // 
-            this.button17.Location = new System.Drawing.Point(358, 4);
-            this.button17.Margin = new System.Windows.Forms.Padding(2);
-            this.button17.Name = "button17";
-            this.button17.Size = new System.Drawing.Size(126, 38);
-            this.button17.TabIndex = 4;
-            this.button17.Text = "Tìm";
-            this.button17.UseVisualStyleBackColor = true;
-            // 
             // tbCategoryName
             // 
             this.tbCategoryName.Location = new System.Drawing.Point(141, 48);
-            this.tbCategoryName.Margin = new System.Windows.Forms.Padding(2);
+            this.tbCategoryName.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tbCategoryName.Name = "tbCategoryName";
-            this.tbCategoryName.ReadOnly = true;
             this.tbCategoryName.Size = new System.Drawing.Size(809, 31);
             this.tbCategoryName.TabIndex = 6;
             // 
@@ -651,7 +740,7 @@
             // tbCategoryID
             // 
             this.tbCategoryID.Location = new System.Drawing.Point(407, 10);
-            this.tbCategoryID.Margin = new System.Windows.Forms.Padding(2);
+            this.tbCategoryID.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tbCategoryID.Name = "tbCategoryID";
             this.tbCategoryID.ReadOnly = true;
             this.tbCategoryID.Size = new System.Drawing.Size(300, 31);
@@ -673,9 +762,9 @@
             this.tabPage4.Controls.Add(this.dgvProducts);
             this.tabPage4.Controls.Add(this.panel12);
             this.tabPage4.Location = new System.Drawing.Point(4, 34);
-            this.tabPage4.Margin = new System.Windows.Forms.Padding(2);
+            this.tabPage4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Padding = new System.Windows.Forms.Padding(2);
+            this.tabPage4.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tabPage4.Size = new System.Drawing.Size(978, 679);
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "Sản phẩm";
@@ -692,7 +781,7 @@
             this.dgvProducts.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dgvProducts.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvProducts.Location = new System.Drawing.Point(4, 233);
-            this.dgvProducts.Margin = new System.Windows.Forms.Padding(2);
+            this.dgvProducts.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dgvProducts.Name = "dgvProducts";
             this.dgvProducts.ReadOnly = true;
             this.dgvProducts.RowHeadersWidth = 62;
@@ -715,46 +804,73 @@
             this.panel12.Controls.Add(this.tbProductID);
             this.panel12.Controls.Add(this.label29);
             this.panel12.Location = new System.Drawing.Point(4, 4);
-            this.panel12.Margin = new System.Windows.Forms.Padding(2);
+            this.panel12.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel12.Name = "panel12";
             this.panel12.Size = new System.Drawing.Size(970, 225);
             this.panel12.TabIndex = 20;
             // 
+            // panel13
+            // 
+            this.panel13.Controls.Add(this.btnUpdateProduct);
+            this.panel13.Controls.Add(this.btnRemoveProduct);
+            this.panel13.Controls.Add(this.btnAddProduct);
+            this.panel13.Location = new System.Drawing.Point(640, 122);
+            this.panel13.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel13.Name = "panel13";
+            this.panel13.Size = new System.Drawing.Size(328, 50);
+            this.panel13.TabIndex = 20;
+            // 
+            // btnUpdateProduct
+            // 
+            this.btnUpdateProduct.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnUpdateProduct.BackgroundImage")));
+            this.btnUpdateProduct.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnUpdateProduct.Location = new System.Drawing.Point(210, 2);
+            this.btnUpdateProduct.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnUpdateProduct.Name = "btnUpdateProduct";
+            this.btnUpdateProduct.Size = new System.Drawing.Size(100, 38);
+            this.btnUpdateProduct.TabIndex = 2;
+            this.btnUpdateProduct.UseVisualStyleBackColor = true;
+            this.btnUpdateProduct.Click += new System.EventHandler(this.btnUpdateProduct_Click);
+            // 
+            // btnRemoveProduct
+            // 
+            this.btnRemoveProduct.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnRemoveProduct.BackgroundImage")));
+            this.btnRemoveProduct.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnRemoveProduct.Location = new System.Drawing.Point(106, 2);
+            this.btnRemoveProduct.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnRemoveProduct.Name = "btnRemoveProduct";
+            this.btnRemoveProduct.Size = new System.Drawing.Size(100, 38);
+            this.btnRemoveProduct.TabIndex = 1;
+            this.btnRemoveProduct.UseVisualStyleBackColor = true;
+            this.btnRemoveProduct.Click += new System.EventHandler(this.btnRemoveProduct_Click);
+            // 
+            // btnAddProduct
+            // 
+            this.btnAddProduct.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnAddProduct.BackgroundImage")));
+            this.btnAddProduct.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnAddProduct.Location = new System.Drawing.Point(2, 2);
+            this.btnAddProduct.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnAddProduct.Name = "btnAddProduct";
+            this.btnAddProduct.Size = new System.Drawing.Size(100, 38);
+            this.btnAddProduct.TabIndex = 0;
+            this.btnAddProduct.UseVisualStyleBackColor = true;
+            this.btnAddProduct.Click += new System.EventHandler(this.btnAddProduct_Click);
+            // 
             // panel14
             // 
-            this.panel14.Controls.Add(this.textBox21);
-            this.panel14.Controls.Add(this.button21);
+            this.panel14.Controls.Add(this.label30);
+            this.panel14.Controls.Add(this.tbFindProducts);
             this.panel14.Location = new System.Drawing.Point(472, 174);
-            this.panel14.Margin = new System.Windows.Forms.Padding(2);
+            this.panel14.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel14.Name = "panel14";
             this.panel14.Size = new System.Drawing.Size(496, 50);
             this.panel14.TabIndex = 17;
             // 
-            // textBox21
-            // 
-            this.textBox21.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox21.Location = new System.Drawing.Point(2, 2);
-            this.textBox21.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox21.Name = "textBox21";
-            this.textBox21.Size = new System.Drawing.Size(349, 38);
-            this.textBox21.TabIndex = 5;
-            // 
-            // button21
-            // 
-            this.button21.Location = new System.Drawing.Point(358, 4);
-            this.button21.Margin = new System.Windows.Forms.Padding(2);
-            this.button21.Name = "button21";
-            this.button21.Size = new System.Drawing.Size(126, 38);
-            this.button21.TabIndex = 4;
-            this.button21.Text = "Tìm";
-            this.button21.UseVisualStyleBackColor = true;
-            // 
             // tbProductCateID
             // 
             this.tbProductCateID.Location = new System.Drawing.Point(160, 81);
-            this.tbProductCateID.Margin = new System.Windows.Forms.Padding(2);
+            this.tbProductCateID.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tbProductCateID.Name = "tbProductCateID";
-            this.tbProductCateID.ReadOnly = true;
             this.tbProductCateID.Size = new System.Drawing.Size(320, 31);
             this.tbProductCateID.TabIndex = 14;
             // 
@@ -772,9 +888,8 @@
             // tbProductStockQuantity
             // 
             this.tbProductStockQuantity.Location = new System.Drawing.Point(632, 81);
-            this.tbProductStockQuantity.Margin = new System.Windows.Forms.Padding(2);
+            this.tbProductStockQuantity.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tbProductStockQuantity.Name = "tbProductStockQuantity";
-            this.tbProductStockQuantity.ReadOnly = true;
             this.tbProductStockQuantity.Size = new System.Drawing.Size(318, 31);
             this.tbProductStockQuantity.TabIndex = 12;
             // 
@@ -792,9 +907,8 @@
             // tbProductPrice
             // 
             this.tbProductPrice.Location = new System.Drawing.Point(572, 48);
-            this.tbProductPrice.Margin = new System.Windows.Forms.Padding(2);
+            this.tbProductPrice.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tbProductPrice.Name = "tbProductPrice";
-            this.tbProductPrice.ReadOnly = true;
             this.tbProductPrice.Size = new System.Drawing.Size(378, 31);
             this.tbProductPrice.TabIndex = 10;
             // 
@@ -812,9 +926,8 @@
             // tbProductName
             // 
             this.tbProductName.Location = new System.Drawing.Point(213, 48);
-            this.tbProductName.Margin = new System.Windows.Forms.Padding(2);
+            this.tbProductName.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tbProductName.Name = "tbProductName";
-            this.tbProductName.ReadOnly = true;
             this.tbProductName.Size = new System.Drawing.Size(267, 31);
             this.tbProductName.TabIndex = 6;
             // 
@@ -832,7 +945,7 @@
             // tbProductID
             // 
             this.tbProductID.Location = new System.Drawing.Point(407, 10);
-            this.tbProductID.Margin = new System.Windows.Forms.Padding(2);
+            this.tbProductID.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tbProductID.Name = "tbProductID";
             this.tbProductID.ReadOnly = true;
             this.tbProductID.Size = new System.Drawing.Size(300, 31);
@@ -855,9 +968,9 @@
             this.tabPage5.Controls.Add(this.dgvOrders);
             this.tabPage5.Controls.Add(this.panel2);
             this.tabPage5.Location = new System.Drawing.Point(4, 34);
-            this.tabPage5.Margin = new System.Windows.Forms.Padding(2);
+            this.tabPage5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tabPage5.Name = "tabPage5";
-            this.tabPage5.Padding = new System.Windows.Forms.Padding(2);
+            this.tabPage5.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tabPage5.Size = new System.Drawing.Size(978, 679);
             this.tabPage5.TabIndex = 4;
             this.tabPage5.Text = "Đơn hàng";
@@ -930,7 +1043,7 @@
             this.dgvOrders.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dgvOrders.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvOrders.Location = new System.Drawing.Point(4, 233);
-            this.dgvOrders.Margin = new System.Windows.Forms.Padding(2);
+            this.dgvOrders.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dgvOrders.Name = "dgvOrders";
             this.dgvOrders.ReadOnly = true;
             this.dgvOrders.RowHeadersWidth = 62;
@@ -953,7 +1066,7 @@
             this.panel2.Controls.Add(this.tbOrderID);
             this.panel2.Controls.Add(this.label18);
             this.panel2.Location = new System.Drawing.Point(4, 4);
-            this.panel2.Margin = new System.Windows.Forms.Padding(2);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(970, 225);
             this.panel2.TabIndex = 18;
@@ -964,7 +1077,7 @@
             this.panel5.Controls.Add(this.button5);
             this.panel5.Controls.Add(this.button8);
             this.panel5.Location = new System.Drawing.Point(640, 120);
-            this.panel5.Margin = new System.Windows.Forms.Padding(2);
+            this.panel5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(328, 50);
             this.panel5.TabIndex = 19;
@@ -973,8 +1086,9 @@
             // 
             this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
             this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button1.Enabled = false;
             this.button1.Location = new System.Drawing.Point(210, 2);
-            this.button1.Margin = new System.Windows.Forms.Padding(2);
+            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(100, 38);
             this.button1.TabIndex = 2;
@@ -984,8 +1098,9 @@
             // 
             this.button5.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button5.BackgroundImage")));
             this.button5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button5.Enabled = false;
             this.button5.Location = new System.Drawing.Point(106, 2);
-            this.button5.Margin = new System.Windows.Forms.Padding(2);
+            this.button5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(100, 38);
             this.button5.TabIndex = 1;
@@ -995,8 +1110,9 @@
             // 
             this.button8.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button8.BackgroundImage")));
             this.button8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button8.Enabled = false;
             this.button8.Location = new System.Drawing.Point(2, 2);
-            this.button8.Margin = new System.Windows.Forms.Padding(2);
+            this.button8.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button8.Name = "button8";
             this.button8.Size = new System.Drawing.Size(100, 38);
             this.button8.TabIndex = 0;
@@ -1004,37 +1120,18 @@
             // 
             // panel7
             // 
-            this.panel7.Controls.Add(this.textBox2);
-            this.panel7.Controls.Add(this.button9);
+            this.panel7.Controls.Add(this.label31);
+            this.panel7.Controls.Add(this.tbFindOrders);
             this.panel7.Location = new System.Drawing.Point(472, 174);
-            this.panel7.Margin = new System.Windows.Forms.Padding(2);
+            this.panel7.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(496, 50);
             this.panel7.TabIndex = 17;
             // 
-            // textBox2
-            // 
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(17, 2);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(334, 38);
-            this.textBox2.TabIndex = 5;
-            // 
-            // button9
-            // 
-            this.button9.Location = new System.Drawing.Point(358, 4);
-            this.button9.Margin = new System.Windows.Forms.Padding(2);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(126, 38);
-            this.button9.TabIndex = 4;
-            this.button9.Text = "Tìm";
-            this.button9.UseVisualStyleBackColor = true;
-            // 
             // tbStaffName
             // 
             this.tbStaffName.Location = new System.Drawing.Point(210, 81);
-            this.tbStaffName.Margin = new System.Windows.Forms.Padding(2);
+            this.tbStaffName.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tbStaffName.Name = "tbStaffName";
             this.tbStaffName.ReadOnly = true;
             this.tbStaffName.Size = new System.Drawing.Size(270, 31);
@@ -1054,7 +1151,7 @@
             // tbStatus
             // 
             this.tbStatus.Location = new System.Drawing.Point(659, 81);
-            this.tbStatus.Margin = new System.Windows.Forms.Padding(2);
+            this.tbStatus.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tbStatus.Name = "tbStatus";
             this.tbStatus.ReadOnly = true;
             this.tbStatus.Size = new System.Drawing.Size(291, 31);
@@ -1074,7 +1171,7 @@
             // tbOrderDate
             // 
             this.tbOrderDate.Location = new System.Drawing.Point(658, 48);
-            this.tbOrderDate.Margin = new System.Windows.Forms.Padding(2);
+            this.tbOrderDate.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tbOrderDate.Name = "tbOrderDate";
             this.tbOrderDate.ReadOnly = true;
             this.tbOrderDate.Size = new System.Drawing.Size(292, 31);
@@ -1094,7 +1191,7 @@
             // tbCustomerName
             // 
             this.tbCustomerName.Location = new System.Drawing.Point(183, 48);
-            this.tbCustomerName.Margin = new System.Windows.Forms.Padding(2);
+            this.tbCustomerName.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tbCustomerName.Name = "tbCustomerName";
             this.tbCustomerName.ReadOnly = true;
             this.tbCustomerName.Size = new System.Drawing.Size(297, 31);
@@ -1114,7 +1211,7 @@
             // tbOrderID
             // 
             this.tbOrderID.Location = new System.Drawing.Point(407, 10);
-            this.tbOrderID.Margin = new System.Windows.Forms.Padding(2);
+            this.tbOrderID.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tbOrderID.Name = "tbOrderID";
             this.tbOrderID.ReadOnly = true;
             this.tbOrderID.Size = new System.Drawing.Size(300, 31);
@@ -1138,9 +1235,9 @@
             this.tabPage6.Controls.Add(this.panel18);
             this.tabPage6.Controls.Add(this.dgvCompletedOrders);
             this.tabPage6.Location = new System.Drawing.Point(4, 34);
-            this.tabPage6.Margin = new System.Windows.Forms.Padding(2);
+            this.tabPage6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tabPage6.Name = "tabPage6";
-            this.tabPage6.Padding = new System.Windows.Forms.Padding(2);
+            this.tabPage6.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tabPage6.Size = new System.Drawing.Size(978, 679);
             this.tabPage6.TabIndex = 5;
             this.tabPage6.Text = "Thống kê doanh thu";
@@ -1170,7 +1267,7 @@
             // 
             this.textBox9.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox9.Location = new System.Drawing.Point(8, 33);
-            this.textBox9.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox9.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBox9.Name = "textBox9";
             this.textBox9.ReadOnly = true;
             this.textBox9.Size = new System.Drawing.Size(593, 47);
@@ -1255,7 +1352,7 @@
             this.dgvCompletedOrders.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dgvCompletedOrders.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvCompletedOrders.Location = new System.Drawing.Point(4, 99);
-            this.dgvCompletedOrders.Margin = new System.Windows.Forms.Padding(2);
+            this.dgvCompletedOrders.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dgvCompletedOrders.Name = "dgvCompletedOrders";
             this.dgvCompletedOrders.ReadOnly = true;
             this.dgvCompletedOrders.RowHeadersWidth = 62;
@@ -1263,189 +1360,104 @@
             this.dgvCompletedOrders.Size = new System.Drawing.Size(969, 483);
             this.dgvCompletedOrders.TabIndex = 18;
             // 
-            // panel13
+            // label8
             // 
-            this.panel13.Controls.Add(this.button7);
-            this.panel13.Controls.Add(this.button18);
-            this.panel13.Controls.Add(this.button19);
-            this.panel13.Location = new System.Drawing.Point(640, 122);
-            this.panel13.Margin = new System.Windows.Forms.Padding(2);
-            this.panel13.Name = "panel13";
-            this.panel13.Size = new System.Drawing.Size(328, 50);
-            this.panel13.TabIndex = 20;
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(2, 2);
+            this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(140, 31);
+            this.label8.TabIndex = 22;
+            this.label8.Text = "Tìm kiếm:";
             // 
-            // button7
+            // label9
             // 
-            this.button7.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button7.BackgroundImage")));
-            this.button7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button7.Location = new System.Drawing.Point(210, 2);
-            this.button7.Margin = new System.Windows.Forms.Padding(2);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(100, 38);
-            this.button7.TabIndex = 2;
-            this.button7.UseVisualStyleBackColor = true;
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(2, 6);
+            this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(140, 31);
+            this.label9.TabIndex = 24;
+            this.label9.Text = "Tìm kiếm:";
             // 
-            // button18
+            // tbFindCustomers
             // 
-            this.button18.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button18.BackgroundImage")));
-            this.button18.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button18.Location = new System.Drawing.Point(106, 2);
-            this.button18.Margin = new System.Windows.Forms.Padding(2);
-            this.button18.Name = "button18";
-            this.button18.Size = new System.Drawing.Size(100, 38);
-            this.button18.TabIndex = 1;
-            this.button18.UseVisualStyleBackColor = true;
+            this.tbFindCustomers.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbFindCustomers.Location = new System.Drawing.Point(146, 6);
+            this.tbFindCustomers.Margin = new System.Windows.Forms.Padding(2);
+            this.tbFindCustomers.Name = "tbFindCustomers";
+            this.tbFindCustomers.Size = new System.Drawing.Size(348, 38);
+            this.tbFindCustomers.TabIndex = 23;
             // 
-            // button19
+            // label10
             // 
-            this.button19.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button19.BackgroundImage")));
-            this.button19.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button19.Location = new System.Drawing.Point(2, 2);
-            this.button19.Margin = new System.Windows.Forms.Padding(2);
-            this.button19.Name = "button19";
-            this.button19.Size = new System.Drawing.Size(100, 38);
-            this.button19.TabIndex = 0;
-            this.button19.UseVisualStyleBackColor = true;
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(2, 6);
+            this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(140, 31);
+            this.label10.TabIndex = 24;
+            this.label10.Text = "Tìm kiếm:";
             // 
-            // panel10
+            // tbFindCategories
             // 
-            this.panel10.Controls.Add(this.button10);
-            this.panel10.Controls.Add(this.button15);
-            this.panel10.Controls.Add(this.button16);
-            this.panel10.Location = new System.Drawing.Point(640, 122);
-            this.panel10.Margin = new System.Windows.Forms.Padding(2);
-            this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(328, 50);
-            this.panel10.TabIndex = 20;
+            this.tbFindCategories.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbFindCategories.Location = new System.Drawing.Point(146, 6);
+            this.tbFindCategories.Margin = new System.Windows.Forms.Padding(2);
+            this.tbFindCategories.Name = "tbFindCategories";
+            this.tbFindCategories.Size = new System.Drawing.Size(348, 38);
+            this.tbFindCategories.TabIndex = 23;
             // 
-            // button10
+            // label30
             // 
-            this.button10.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button10.BackgroundImage")));
-            this.button10.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button10.Location = new System.Drawing.Point(210, 2);
-            this.button10.Margin = new System.Windows.Forms.Padding(2);
-            this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(100, 38);
-            this.button10.TabIndex = 2;
-            this.button10.UseVisualStyleBackColor = true;
+            this.label30.AutoSize = true;
+            this.label30.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label30.Location = new System.Drawing.Point(2, 6);
+            this.label30.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label30.Name = "label30";
+            this.label30.Size = new System.Drawing.Size(140, 31);
+            this.label30.TabIndex = 24;
+            this.label30.Text = "Tìm kiếm:";
             // 
-            // button15
+            // tbFindProducts
             // 
-            this.button15.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button15.BackgroundImage")));
-            this.button15.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button15.Location = new System.Drawing.Point(106, 2);
-            this.button15.Margin = new System.Windows.Forms.Padding(2);
-            this.button15.Name = "button15";
-            this.button15.Size = new System.Drawing.Size(100, 38);
-            this.button15.TabIndex = 1;
-            this.button15.UseVisualStyleBackColor = true;
+            this.tbFindProducts.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbFindProducts.Location = new System.Drawing.Point(146, 6);
+            this.tbFindProducts.Margin = new System.Windows.Forms.Padding(2);
+            this.tbFindProducts.Name = "tbFindProducts";
+            this.tbFindProducts.Size = new System.Drawing.Size(348, 38);
+            this.tbFindProducts.TabIndex = 23;
             // 
-            // button16
+            // label31
             // 
-            this.button16.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button16.BackgroundImage")));
-            this.button16.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button16.Location = new System.Drawing.Point(2, 2);
-            this.button16.Margin = new System.Windows.Forms.Padding(2);
-            this.button16.Name = "button16";
-            this.button16.Size = new System.Drawing.Size(100, 38);
-            this.button16.TabIndex = 0;
-            this.button16.UseVisualStyleBackColor = true;
+            this.label31.AutoSize = true;
+            this.label31.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label31.Location = new System.Drawing.Point(2, 6);
+            this.label31.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label31.Name = "label31";
+            this.label31.Size = new System.Drawing.Size(140, 31);
+            this.label31.TabIndex = 24;
+            this.label31.Text = "Tìm kiếm:";
             // 
-            // panel8
+            // tbFindOrders
             // 
-            this.panel8.Controls.Add(this.button11);
-            this.panel8.Controls.Add(this.button12);
-            this.panel8.Controls.Add(this.button13);
-            this.panel8.Location = new System.Drawing.Point(640, 122);
-            this.panel8.Margin = new System.Windows.Forms.Padding(2);
-            this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(328, 50);
-            this.panel8.TabIndex = 20;
-            // 
-            // button11
-            // 
-            this.button11.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button11.BackgroundImage")));
-            this.button11.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button11.Location = new System.Drawing.Point(210, 2);
-            this.button11.Margin = new System.Windows.Forms.Padding(2);
-            this.button11.Name = "button11";
-            this.button11.Size = new System.Drawing.Size(100, 38);
-            this.button11.TabIndex = 2;
-            this.button11.UseVisualStyleBackColor = true;
-            // 
-            // button12
-            // 
-            this.button12.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button12.BackgroundImage")));
-            this.button12.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button12.Location = new System.Drawing.Point(106, 2);
-            this.button12.Margin = new System.Windows.Forms.Padding(2);
-            this.button12.Name = "button12";
-            this.button12.Size = new System.Drawing.Size(100, 38);
-            this.button12.TabIndex = 1;
-            this.button12.UseVisualStyleBackColor = true;
-            // 
-            // button13
-            // 
-            this.button13.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button13.BackgroundImage")));
-            this.button13.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button13.Location = new System.Drawing.Point(2, 2);
-            this.button13.Margin = new System.Windows.Forms.Padding(2);
-            this.button13.Name = "button13";
-            this.button13.Size = new System.Drawing.Size(100, 38);
-            this.button13.TabIndex = 0;
-            this.button13.UseVisualStyleBackColor = true;
-            // 
-            // panel1
-            // 
-            this.panel1.Controls.Add(this.button2);
-            this.panel1.Controls.Add(this.button3);
-            this.panel1.Controls.Add(this.button4);
-            this.panel1.Location = new System.Drawing.Point(642, 122);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(328, 50);
-            this.panel1.TabIndex = 20;
-            // 
-            // button2
-            // 
-            this.button2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button2.BackgroundImage")));
-            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button2.Location = new System.Drawing.Point(210, 2);
-            this.button2.Margin = new System.Windows.Forms.Padding(2);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(100, 38);
-            this.button2.TabIndex = 2;
-            this.button2.UseVisualStyleBackColor = true;
-            // 
-            // button3
-            // 
-            this.button3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button3.BackgroundImage")));
-            this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button3.Location = new System.Drawing.Point(106, 2);
-            this.button3.Margin = new System.Windows.Forms.Padding(2);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(100, 38);
-            this.button3.TabIndex = 1;
-            this.button3.UseVisualStyleBackColor = true;
-            // 
-            // button4
-            // 
-            this.button4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button4.BackgroundImage")));
-            this.button4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button4.Location = new System.Drawing.Point(2, 2);
-            this.button4.Margin = new System.Windows.Forms.Padding(2);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(100, 38);
-            this.button4.TabIndex = 0;
-            this.button4.UseVisualStyleBackColor = true;
+            this.tbFindOrders.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbFindOrders.Location = new System.Drawing.Point(146, 6);
+            this.tbFindOrders.Margin = new System.Windows.Forms.Padding(2);
+            this.tbFindOrders.Name = "tbFindOrders";
+            this.tbFindOrders.Size = new System.Drawing.Size(348, 38);
+            this.tbFindOrders.TabIndex = 23;
             // 
             // fAdmin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1008, 729);
+            this.ClientSize = new System.Drawing.Size(1008, 741);
             this.Controls.Add(this.tabControl1);
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.MaximizeBox = false;
             this.Name = "fAdmin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -1455,24 +1467,28 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvAccounts)).EndInit();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
+            this.panel1.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.tabPage2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvCustomers)).EndInit();
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
+            this.panel8.ResumeLayout(false);
             this.panel20.ResumeLayout(false);
             this.panel20.PerformLayout();
             this.tabPage3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvCategories)).EndInit();
             this.panel9.ResumeLayout(false);
             this.panel9.PerformLayout();
+            this.panel10.ResumeLayout(false);
             this.panel11.ResumeLayout(false);
             this.panel11.PerformLayout();
             this.tabPage4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvProducts)).EndInit();
             this.panel12.ResumeLayout(false);
             this.panel12.PerformLayout();
+            this.panel13.ResumeLayout(false);
             this.panel14.ResumeLayout(false);
             this.panel14.PerformLayout();
             this.tabPage5.ResumeLayout(false);
@@ -1490,10 +1506,6 @@
             this.panel18.ResumeLayout(false);
             this.panel18.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCompletedOrders)).EndInit();
-            this.panel13.ResumeLayout(false);
-            this.panel10.ResumeLayout(false);
-            this.panel8.ResumeLayout(false);
-            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -1509,10 +1521,8 @@
         private System.Windows.Forms.TabPage tabPage6;
         private System.Windows.Forms.DataGridView dgvAccounts;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.TextBox tbFindUsers;
         private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.TextBox tbUserRole;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox tbUserEmail;
         private System.Windows.Forms.Label label6;
@@ -1532,8 +1542,6 @@
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button button8;
         private System.Windows.Forms.Panel panel7;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Button button9;
         private System.Windows.Forms.TextBox tbStaffName;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.TextBox tbStatus;
@@ -1556,8 +1564,6 @@
         private System.Windows.Forms.DataGridView dgvCustomers;
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Panel panel20;
-        private System.Windows.Forms.TextBox textBox10;
-        private System.Windows.Forms.Button button14;
         private System.Windows.Forms.TextBox tbCusCreatedAt;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox tbCusEmail;
@@ -1571,8 +1577,6 @@
         private System.Windows.Forms.DataGridView dgvCategories;
         private System.Windows.Forms.Panel panel9;
         private System.Windows.Forms.Panel panel11;
-        private System.Windows.Forms.TextBox textBox8;
-        private System.Windows.Forms.Button button17;
         private System.Windows.Forms.TextBox tbCategoryName;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.TextBox tbCategoryID;
@@ -1580,8 +1584,6 @@
         private System.Windows.Forms.DataGridView dgvProducts;
         private System.Windows.Forms.Panel panel12;
         private System.Windows.Forms.Panel panel14;
-        private System.Windows.Forms.TextBox textBox21;
-        private System.Windows.Forms.Button button21;
         private System.Windows.Forms.TextBox tbProductCateID;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.TextBox tbProductStockQuantity;
@@ -1598,20 +1600,30 @@
         private System.Windows.Forms.ColumnHeader columnHeader3;
         private System.Windows.Forms.ColumnHeader columnHeader4;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button btnUpdateUser;
+        private System.Windows.Forms.Button btnRemoveUser;
         private System.Windows.Forms.Panel panel8;
-        private System.Windows.Forms.Button button11;
-        private System.Windows.Forms.Button button12;
-        private System.Windows.Forms.Button button13;
+        private System.Windows.Forms.Button btnUpdateCustomer;
+        private System.Windows.Forms.Button btnRemoveCustomer;
+        private System.Windows.Forms.Button btnAddCustomer;
         private System.Windows.Forms.Panel panel10;
-        private System.Windows.Forms.Button button10;
-        private System.Windows.Forms.Button button15;
-        private System.Windows.Forms.Button button16;
+        private System.Windows.Forms.Button btnUpdateCategory;
+        private System.Windows.Forms.Button btnRemoveCategory;
+        private System.Windows.Forms.Button btnAddCategory;
         private System.Windows.Forms.Panel panel13;
-        private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.Button button18;
-        private System.Windows.Forms.Button button19;
+        private System.Windows.Forms.Button btnUpdateProduct;
+        private System.Windows.Forms.Button btnRemoveProduct;
+        private System.Windows.Forms.Button btnAddProduct;
+        private System.Windows.Forms.Button btnAddUser;
+        private System.Windows.Forms.ComboBox cbbUserRole;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.TextBox tbFindCustomers;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.TextBox tbFindCategories;
+        private System.Windows.Forms.Label label30;
+        private System.Windows.Forms.TextBox tbFindProducts;
+        private System.Windows.Forms.Label label31;
+        private System.Windows.Forms.TextBox tbFindOrders;
     }
 }

@@ -42,5 +42,34 @@ namespace QuanLyTiemTapHoa.DAO
 
             return list;
         }
+
+        public int AddCategory(string categoryName)
+        {
+            string query = "INSERT INTO Categories (CategoryName) VALUES ('" + categoryName + "')";
+            int result = DataProvider.Instance.ExecuteNonQuery(query);
+            return result;
+        }
+
+        public int RemoveCategory(int id)
+        {
+            string query = "DELETE FROM Categories WHERE CategoryID = " + id;
+            int result = DataProvider.Instance.ExecuteNonQuery(query);
+            return result;
+        }
+
+        public int UpdateCategory(int id, string categoryName)
+        {
+            string query = "UPDATE Categories SET CategoryName = '" + categoryName + "' WHERE CategoryID = " + id;
+            int result = DataProvider.Instance.ExecuteNonQuery(query);
+            return result;
+        }
+
+        public DataTable GetDataFindCategories(string keyword)
+        {
+            string query = "SELECT * FROM Categories WHERE CategoryName LIKE '%" + keyword.ToLower() + "%'";
+
+            DataTable result = DataProvider.Instance.ExecuteQuery(query);
+            return result;
+        }
     }
 }

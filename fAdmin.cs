@@ -19,9 +19,9 @@ namespace QuanLyTiemTapHoa
             InitializeComponent();
 
             LoadAllData();
-            BindingData();
         }
 
+        #region Load data
         private void LoadDataAccounts()
         {
             dgvAccounts.DataSource = AccountDAO.Instance.GetDataAllAccounts();
@@ -35,6 +35,16 @@ namespace QuanLyTiemTapHoa
                 dgvAccounts.Columns["FullName"].HeaderText = "Họ và tên";
                 dgvAccounts.Columns["Role"].HeaderText = "Vị trí";
             }
+
+            // Clear all old bindings
+            tbUserID.DataBindings.Clear();
+            tbUserFullName.DataBindings.Clear();
+            cbbUserRole.DataBindings.Clear();
+            tbUserPhone.DataBindings.Clear();
+            tbUserEmail.DataBindings.Clear();
+
+            // Rebind
+            BindingDataUser();
         }
 
         private void LoadDataCustomers()
@@ -50,6 +60,16 @@ namespace QuanLyTiemTapHoa
                 dgvCustomers.Columns["FullName"].HeaderText = "Họ và tên";
                 dgvCustomers.Columns["CreatedAt"].HeaderText = "Ngày đăng ký";
             }
+
+            // Clear old bindings
+            tbCustomerID.DataBindings.Clear();
+            tbCusFullName.DataBindings.Clear();
+            tbCusPhone.DataBindings.Clear();
+            tbCusEmail.DataBindings.Clear();
+            tbCusCreatedAt.DataBindings.Clear();
+
+            // Rebind
+            BindingDataCustomer();
         }
 
         private void LoadDataCategories()
@@ -64,6 +84,13 @@ namespace QuanLyTiemTapHoa
                 }
                 dgvCategories.Columns["CategoryName"].HeaderText = "Tên mục";
             }
+
+            // Clear old bindings
+            tbCategoryID.DataBindings.Clear();
+            tbCategoryName.DataBindings.Clear();
+
+            // Rebind
+            BindingDataCategory();
         }
 
         private void LoadDataProducts()
@@ -79,6 +106,16 @@ namespace QuanLyTiemTapHoa
                 dgvProducts.Columns["ProductName"].HeaderText = "Tên sản phẩm";
                 dgvProducts.Columns["StockQuantity"].HeaderText = "Tồn kho";
             }
+
+            // Clear old bindings
+            tbProductID.DataBindings.Clear();
+            tbProductName.DataBindings.Clear();
+            tbProductCateID.DataBindings.Clear();
+            tbProductPrice.DataBindings.Clear();
+            tbProductStockQuantity.DataBindings.Clear();
+
+            // Rebind
+            BindingDataProduct();
         }
 
         private void LoadDataOrders()
@@ -95,6 +132,16 @@ namespace QuanLyTiemTapHoa
                 dgvOrders.Columns["OrderDate"].HeaderText = "Ngày tạo";
                 dgvOrders.Columns["Status"].HeaderText = "Trạng thái";
             }
+
+            // Clear old bindings
+            tbOrderID.DataBindings.Clear();
+            tbCustomerName.DataBindings.Clear();
+            tbStaffName.DataBindings.Clear();
+            tbOrderDate.DataBindings.Clear();
+            tbStatus.DataBindings.Clear();
+
+            // Rebind
+            BindingDataOrder();
         }
 
         private void LoadDataOrderDetails()
@@ -145,12 +192,15 @@ namespace QuanLyTiemTapHoa
             LoadDateTimePickerOrder();
             LoadDataCompletedOrderByDates();
         }
+        #endregion
 
+
+        #region Binding data
         private void BindingDataUser()
         {
             tbUserID.DataBindings.Add(new Binding("Text", dgvAccounts.DataSource, "UserID"));
             tbUserFullName.DataBindings.Add(new Binding("Text", dgvAccounts.DataSource, "FullName"));
-            tbUserRole.DataBindings.Add(new Binding("Text", dgvAccounts.DataSource, "Role"));
+            cbbUserRole.DataBindings.Add(new Binding("Text", dgvAccounts.DataSource, "Role"));
             tbUserPhone.DataBindings.Add(new Binding("Text", dgvAccounts.DataSource, "Phone"));
             tbUserEmail.DataBindings.Add(new Binding("Text", dgvAccounts.DataSource, "Email"));
         }
@@ -196,7 +246,10 @@ namespace QuanLyTiemTapHoa
             BindingDataProduct();
             BindingDataOrder();
         }
+        #endregion
 
+
+        #region Logic components
         private void dtpEnd_ValueChanged(object sender, EventArgs e)
         {
             LoadDataCompletedOrderByDates();
@@ -226,6 +279,154 @@ namespace QuanLyTiemTapHoa
         private void tbOrderID_TextChanged(object sender, EventArgs e)
         {
             LoadDataOrderDetails();
+        }
+        #endregion
+
+
+        private void btnRemoveUser_Click(object sender, EventArgs e)
+        {
+            int result = AccountDAO.Instance.RemoveAccount(Convert.ToInt32(tbUserID.Text));
+
+            if (result != 0)
+                MessageBox.Show("Xóa thành công");
+            else
+                MessageBox.Show("Xóa thất bại");
+            
+            LoadDataAccounts();
+        }
+
+        private void btnUpdateUser_Click(object sender, EventArgs e)
+        {
+            int result = AccountDAO.Instance.UpdateAccount(Convert.ToInt32(tbUserID.Text), tbUserFullName.Text, cbbUserRole.Text, tbUserPhone.Text, tbUserEmail.Text);
+
+            if (result != 0)
+                MessageBox.Show("Cập nhật thành công");
+            else
+                MessageBox.Show("Cập nhật thất bại"); ;
+
+            LoadDataAccounts();
+        }
+
+        private void btnAddCustomer_Click(object sender, EventArgs e)
+        {
+            int result = CustomerDAO.Instance.AddCustomer(tbCusFullName.Text, tbCusPhone.Text, tbCusEmail.Text);
+
+            if (result != 0)
+                MessageBox.Show("Thêm khách hàng thành công");
+            else
+                MessageBox.Show("Thêm thất bại"); ;
+
+            LoadDataCustomers();
+        }
+
+        private void btnRemoveCustomer_Click(object sender, EventArgs e)
+        {
+            int result = CustomerDAO.Instance.RemoveCustomer(Convert.ToInt32(tbCustomerID.Text));
+
+            if (result != 0)
+                MessageBox.Show("Xóa khách hàng thành công");
+            else
+                MessageBox.Show("Xóa thất bại");
+
+            LoadDataCustomers();
+        }
+
+        private void btnUpdateCustomer_Click(object sender, EventArgs e)
+        {
+            int result = CustomerDAO.Instance.UpdateCustomer(Convert.ToInt32(tbCustomerID.Text), tbCusFullName.Text, tbCusPhone.Text, tbCusEmail.Text);
+
+            if (result != 0)
+                MessageBox.Show("Cập nhật thành công");
+            else
+                MessageBox.Show("Cập nhật thất bại");
+
+            LoadDataCustomers();
+        }
+        private void btnAddCategory_Click(object sender, EventArgs e)
+        {
+            int result = CategoryDAO.Instance.AddCategory(tbCategoryName.Text);
+
+            if (result != 0)
+                MessageBox.Show("Thêm danh mục thành công");
+            else
+                MessageBox.Show("Thêm thất bại");
+
+            LoadDataCategories();
+        }
+
+        private void btnRemoveCategory_Click(object sender, EventArgs e)
+        {
+            int result = CategoryDAO.Instance.RemoveCategory(Convert.ToInt32(tbCategoryID.Text));
+
+            if (result != 0)
+                MessageBox.Show("Xóa danh mục thành công");
+            else
+                MessageBox.Show("Xóa thất bại");
+
+            LoadDataCategories();
+        }
+
+        private void btnUpdateCategory_Click(object sender, EventArgs e)
+        {
+            int result = CategoryDAO.Instance.UpdateCategory(Convert.ToInt32(tbCategoryID.Text), tbCategoryName.Text);
+
+            if (result != 0)
+                MessageBox.Show("Cập nhật thành công");
+            else
+                MessageBox.Show("Cập nhật thất bại");
+
+            LoadDataCategories();
+        }
+        private void btnAddProduct_Click(object sender, EventArgs e)
+        {
+            int result = ProductDAO.Instance.AddProduct(
+                tbProductName.Text,
+                Convert.ToInt32(tbCategoryID.Text),
+                Convert.ToDecimal(tbProductPrice.Text),
+                Convert.ToInt32(tbProductStockQuantity.Text)
+            );
+
+            if (result != 0)
+                MessageBox.Show("Thêm sản phẩm thành công");
+            else
+                MessageBox.Show("Thêm thất bại");
+
+            LoadDataProducts();
+        }
+
+        private void btnRemoveProduct_Click(object sender, EventArgs e)
+        {
+            int result = ProductDAO.Instance.RemoveProduct(Convert.ToInt32(tbProductID.Text));
+
+            if (result != 0)
+                MessageBox.Show("Xóa sản phẩm thành công");
+            else
+                MessageBox.Show("Xóa thất bại");
+
+            LoadDataProducts();
+        }
+
+        private void btnUpdateProduct_Click(object sender, EventArgs e)
+        {
+            int result = ProductDAO.Instance.UpdateProduct(
+                Convert.ToInt32(tbProductID.Text),
+                tbProductName.Text,
+                Convert.ToInt32(tbCategoryID.Text),
+                Convert.ToDecimal(tbProductPrice.Text),
+                Convert.ToInt32(tbProductStockQuantity.Text)
+            );
+
+            if (result != 0)
+                MessageBox.Show("Cập nhật thành công");
+            else
+                MessageBox.Show("Cập nhật thất bại");
+
+            LoadDataProducts();
+        }
+
+        private void tbFindUsers_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
