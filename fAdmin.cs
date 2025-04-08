@@ -22,9 +22,9 @@ namespace QuanLyTiemTapHoa
         }
 
         #region Load data
-        private void LoadDataAccounts()
+        private void LoadDataAccounts(string keyword = "")
         {
-            dgvAccounts.DataSource = AccountDAO.Instance.GetDataAllAccounts();
+            dgvAccounts.DataSource = keyword == "" ? AccountDAO.Instance.GetDataAllAccounts() : AccountDAO.Instance.GetDataFindAccounts(keyword);
 
             if (dgvAccounts.Rows.Count > 0)
             {
@@ -47,9 +47,10 @@ namespace QuanLyTiemTapHoa
             BindingDataUser();
         }
 
-        private void LoadDataCustomers()
+        private void LoadDataCustomers(string keyword = "")
         {
-            dgvCustomers.DataSource = CustomerDAO.Instance.GetDataAllCustomers();
+            dgvCustomers.DataSource = keyword == "" ? CustomerDAO.Instance.GetDataAllCustomers() : CustomerDAO.Instance.GetDataFindCustomers(keyword);
+            //dgvCustomers.DataSource = CustomerDAO.Instance.GetDataAllCustomers();
 
             if (dgvCustomers.Rows.Count > 0)
             {
@@ -72,9 +73,10 @@ namespace QuanLyTiemTapHoa
             BindingDataCustomer();
         }
 
-        private void LoadDataCategories()
+        private void LoadDataCategories(string keyword = "")
         {
-            dgvCategories.DataSource = CategoryDAO.Instance.GetDataAllCategories();
+            dgvCategories.DataSource = keyword == "" ? CategoryDAO.Instance.GetDataAllCategories() : CategoryDAO.Instance.GetDataFindCategories(keyword);
+            //dgvCategories.DataSource = CategoryDAO.Instance.GetDataAllCategories();
 
             if (dgvCategories.Rows.Count > 0)
             {
@@ -93,9 +95,10 @@ namespace QuanLyTiemTapHoa
             BindingDataCategory();
         }
 
-        private void LoadDataProducts()
+        private void LoadDataProducts(string keyword = "")
         {
-            dgvProducts.DataSource = ProductDAO.Instance.GetDataAllProducts();
+            dgvProducts.DataSource = keyword == "" ? ProductDAO.Instance.GetDataAllProducts() : ProductDAO.Instance.GetDataFindProducts(keyword);
+            //dgvProducts.DataSource = ProductDAO.Instance.GetDataAllProducts();
 
             if (dgvProducts.Rows.Count > 0)
             {
@@ -118,8 +121,9 @@ namespace QuanLyTiemTapHoa
             BindingDataProduct();
         }
 
-        private void LoadDataOrders()
+        private void LoadDataOrders(string keyword = "")
         {
+            //dgvOrders.DataSource = keyword == "" ? OrderDAO.Instance.GetDataAllOrders() : OrderDAO.Instance.GetDataFindOrders(keyword);
             dgvOrders.DataSource = OrderDAO.Instance.GetDataAllOrders();
 
             if (dgvOrders.Rows.Count > 0)
@@ -283,6 +287,7 @@ namespace QuanLyTiemTapHoa
         #endregion
 
 
+        #region Logic CRUD
         private void btnRemoveUser_Click(object sender, EventArgs e)
         {
             int result = AccountDAO.Instance.RemoveAccount(Convert.ToInt32(tbUserID.Text));
@@ -291,7 +296,7 @@ namespace QuanLyTiemTapHoa
                 MessageBox.Show("Xóa thành công");
             else
                 MessageBox.Show("Xóa thất bại");
-            
+
             LoadDataAccounts();
         }
 
@@ -423,10 +428,59 @@ namespace QuanLyTiemTapHoa
 
             LoadDataProducts();
         }
+        #endregion
 
+
+        #region Find bar & Reload dataGridView
         private void tbFindUsers_TextChanged(object sender, EventArgs e)
         {
+            LoadDataAccounts(tbFindUsers.Text);
+        }
 
+        private void tbFindCustomers_TextChanged(object sender, EventArgs e)
+        {
+            LoadDataCustomers(tbFindCustomers.Text);
+        }
+
+        private void tbFindCategories_TextChanged(object sender, EventArgs e)
+        {
+            LoadDataCategories(tbFindCategories.Text);
+        }
+
+        private void tbFindProducts_TextChanged(object sender, EventArgs e)
+        {
+            LoadDataProducts(tbFindProducts.Text);
+        }
+
+        private void tbFindOrders_TextChanged(object sender, EventArgs e)
+        {
+            LoadDataOrders(tbFindOrders.Text);
+        }
+        #endregion
+
+        private void btnReloadUsers_Click(object sender, EventArgs e)
+        {
+            LoadDataAccounts();
+        }
+
+        private void btnReloadCustomers_Click(object sender, EventArgs e)
+        {
+            LoadDataCustomers();
+        }
+
+        private void btnReloadCategories_Click(object sender, EventArgs e)
+        {
+            LoadDataCategories();
+        }
+
+        private void btnReloadProducts_Click(object sender, EventArgs e)
+        {
+            LoadDataProducts();
+        }
+
+        private void btnReloadOrders_Click(object sender, EventArgs e)
+        {
+            LoadDataOrders();
         }
     }
 }
