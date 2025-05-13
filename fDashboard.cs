@@ -9,6 +9,7 @@ namespace QuanLyTiemTapHoa
 {
     public partial class fDashboard : Form
     {
+        private CultureInfo culture = new CultureInfo("vi-VN") { NumberFormat = { CurrencyDecimalDigits = 0 } };
         private int currentOrderID = 0;
         private int currentCategoryID = 0;
         private int currentProductID = 0;
@@ -24,7 +25,7 @@ namespace QuanLyTiemTapHoa
             currentOrderID = OrderDAO.Instance.GetIdNewestOrder();
             LoadOrder();
             LoadCategories();
-            LoadProducts();
+            LoadProductList();
         }
 
         private void adminToolStripMenuItem_Click(object sender, EventArgs e)
@@ -42,18 +43,25 @@ namespace QuanLyTiemTapHoa
 
         private void LoadOrder()
         {
-            lvNewOder.Items.Clear();
+            flpOrderDetails.Controls.Clear();
 
             List<MenuRow> listRow = MenuRowDAO.Instance.GetListMenuRow(currentOrderID);
 
-            foreach (MenuRow row in listRow)
+            foreach (MenuRow item in listRow)
             {
-                ListViewItem lvItem = new ListViewItem(row.ProductName.ToString());
-                lvItem.SubItems.Add(row.Quantity.ToString());
-                lvItem.SubItems.Add(row.Price.ToString());
-                lvItem.SubItems.Add(row.TotalPrice.ToString());
+                var panel = new ShowingOrderDetailPanel()
+                {
+                    ProductName = item.ProductName,
+                    ProductCount = item.Quantity.ToString(),
+                    ProductPrice = item.Price.ToString("c", culture),
+                    ProductTotalPrice = item.TotalPrice.ToString("c", culture),
+                    OnPanelClick = () =>
+                    {
+                        RemoveOrderDetail(item);
+                    }
+                };
 
-                lvNewOder.Items.Add(lvItem);
+                flpOrderDetails.Controls.Add(panel);
             }
 
             LoadTotalBillCost();
@@ -68,7 +76,6 @@ namespace QuanLyTiemTapHoa
             foreach (MenuRow row in listRow)
                 total += row.TotalPrice;
 
-            CultureInfo culture = new CultureInfo("vi-VN");
             tbTotalBillCost.Text = total.ToString("c", culture);
         }
 
@@ -80,12 +87,59 @@ namespace QuanLyTiemTapHoa
             cbbCategories.DisplayMember = "CategoryName";
         }
 
-        private void LoadProducts(int CategoryID = -1)
+        private void LoadProductList(int CategoryID = 1, string keyword = "")
         {
-            List<Product> listProduct = ProductDAO.Instance.GetListProducts(CategoryID);
+            flpListProducts.Controls.Clear();
+            List<Product> listProduct = ProductDAO.Instance.GetListProducts(CategoryID, keyword);
 
-            cbbProducts.DataSource = listProduct;
-            cbbProducts.DisplayMember = "ProductName";
+            foreach (Product item in listProduct)
+            {
+                var panel = new FindingProductPanel()
+                {
+                    ProductName = item.ProductName,
+                    ProductPrice = item.Price.ToString("c", culture),
+                    OnPanelClick = () =>
+                    {
+                        AddOrRemoveProduct(item);
+                    }
+                };
+
+                flpListProducts.Controls.Add(panel);
+            }
+        }
+
+        private void AddOrRemoveProduct(Product item)
+        {
+            if (nudQuantity.Value > 0)
+            {
+                if (OrderDAO.Instance.InsertProductToOrder(currentOrderID, item.ProductID, (int)nudQuantity.Value) != 1)
+                {
+                    MessageBox.Show("Lỗi thêm sản phẩm vào đơn hàng");
+                    return;
+                }
+            }
+            else
+            {
+                if (OrderDAO.Instance.RemoveProductFromOrder(currentOrderID, item.ProductID, -(int)nudQuantity.Value) != 1)
+                {
+                    MessageBox.Show("Lỗi xóa sản phẩm khỏi đơn hàng");
+                    return;
+                }
+            }
+
+            LoadOrder();
+        }
+
+        private void RemoveOrderDetail(MenuRow item)
+        {
+            flpOrderDetails.Controls.Clear();
+            if (OrderDAO.Instance.RemoveProductFromOrder(currentOrderID, item.ProductID, 999999) != 1)
+            {
+                MessageBox.Show("Lỗi xóa sản phẩm khỏi đơn hàng");
+                return;
+            }
+
+            LoadOrder();
         }
 
         private void cbbCategories_SelectedIndexChanged(object sender, EventArgs e)
@@ -98,18 +152,7 @@ namespace QuanLyTiemTapHoa
             Category selected = cb.SelectedItem as Category;
             currentCategoryID = selected.CategoryID;
 
-            LoadProducts(currentCategoryID);
-        }
-
-        private void cbbProducts_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            ComboBox cb = sender as ComboBox;
-
-            if (cb.SelectedItem == null)
-                return;
-
-            Product selected = cb.SelectedItem as Product;
-            currentProductID = selected.ProductID;
+            LoadProductList(currentCategoryID, tbProducts.Text);
         }
 
         private void btnCancelOrder_Click(object sender, EventArgs e)
@@ -149,6 +192,31 @@ namespace QuanLyTiemTapHoa
             }
 
             LoadOrder();
+        }
+
+        private void tbProducts_TextChanged(object sender, EventArgs e)
+        {
+            LoadProductList(currentCategoryID, tbProducts.Text);
+        }
+
+        private void btnCheckOut_Click(object sender, EventArgs e)
+        {
+            currentOrderID = OrderDAO.Instance.GetIdNewestOrder();
+            if (MessageBox.Show("Bạn có chắc chắn thanh toán đơn hàng này không?", "Thông báo", MessageBoxButtons.OKCancel) == DialogResult.OK)
+            {
+                if (OrderDAO.Instance.CheckOut(currentOrderID) != 1)
+                {
+                    MessageBox.Show("Lỗi thanh toán đơn hàng");
+                    return;
+                }
+                else
+                {
+                    MessageBox.Show("Thanh toán thành công");
+                    OrderDAO.Instance.InitNewOrder();
+                    currentOrderID = OrderDAO.Instance.GetIdNewestOrder();
+                    LoadOrder();
+                }
+            }
         }
     }
 }

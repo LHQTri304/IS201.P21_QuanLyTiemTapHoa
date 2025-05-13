@@ -74,5 +74,22 @@ namespace QuanLyTiemTapHoa.DAO
 
             return result;
         }
+
+        public DataTable GetDataFindOrders(string keyword)
+        {
+            string query = "SELECT o.OrderID, c.FullName as CustomerName, u.FullName as StaffName, o.OrderDate, o.Status FROM quanlytiemtaphoa.orders as o, quanlytiemtaphoa.users as u, quanlytiemtaphoa.customers as c where o.CustomerID = c.CustomerID and o.UserID = u.UserID AND u.FullName LIKE '%" + keyword.ToLower() + "%'";
+
+            DataTable result = DataProvider.Instance.ExecuteQuery(query);
+            return result;
+        }
+
+        public int CheckOut(int OrderID)
+        {
+            string query = "UPDATE quanlytiemtaphoa.orders SET Status = 'completed' WHERE OrderID = " + OrderID;
+
+            int result = DataProvider.Instance.ExecuteNonQuery(query);
+
+            return result;
+        }
     }
 }

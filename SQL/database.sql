@@ -43,27 +43,81 @@ CREATE TABLE Categories (
 );
 
 INSERT INTO Categories (CategoryName) VALUES
-('Dairy'),
-('Bakery'),
-('Grain'),
-('Grocery');
+('Rỗng'),
+('Thực phẩm tươi sống'),
+('Đồ uống'),
+('Sản phẩm từ sữa'),
+('Đồ hộp và thực phẩm khô'),
+('Bánh kẹo và đồ ăn vặt'),
+('Đồ gia dụng'),
+('Sản phẩm chăm sóc cá nhân'),
+('Đồ dùng vệ sinh'),
+('Đồ dùng nhà bếp'),
+('Đồ dùng văn phòng phẩm');
 
 -- Bảng Products (Sản phẩm)
 CREATE TABLE Products (
     ProductID INT AUTO_INCREMENT PRIMARY KEY,
     ProductName VARCHAR(200) NOT NULL,
     CategoryID INT,
-    Price DECIMAL(10,2) NOT NULL,
+    Price INT NOT NULL,
     StockQuantity INT DEFAULT 0,
     FOREIGN KEY (CategoryID) REFERENCES Categories(CategoryID) ON DELETE CASCADE
 );
 
 INSERT INTO Products (ProductName, CategoryID, Price, StockQuantity) VALUES
-('Milk', 1, 1.50, 100),
-('Bread', 2, 2.00, 80),
-('Rice', 3, 3.00, 120),
-('Eggs', 1, 2.50, 90),
-('Sugar', 4, 1.75, 110);
+('Thịt heo vai', 2, 136000, 234),
+('Cá hồi đông lạnh', 2, 250000, 312),
+('Bịch gạo ST25 5kg', 2, 150000, 198),
+('Bình nước Aquavina 5l', 2, 30000, 421),
+('Rau cải xanh', 2, 25000, 367),
+('Nước ngọt Coca-Cola', 3, 12000, 145),
+('Trà xanh C2', 3, 10000, 389),
+('Sữa tươi Vinamilk', 3, 25000, 276),
+('Nước ép trái cây Tropicana', 3, 35000, 497),
+('Nước khoáng Lavie', 3, 8000, 321),
+('Sữa chua Vinamilk', 4, 6000, 142),
+('Phô mai Con Bò Cười', 4, 50000, 367),
+('Sữa đặc Ông Thọ', 4, 20000, 221),
+('Sữa tươi TH True Milk', 4, 25000, 198),
+('Bơ Anchor', 4, 80000, 312),
+('Cá hộp Vissan', 5, 25000, 145),
+('Đậu phộng rang muối', 5, 30000, 276),
+('Mì gói Hảo Hảo', 5, 5000, 389),
+('Bánh quy Oreo', 5, 20000, 234),
+('Nấm hương khô', 5, 150000, 421),
+('Kẹo dẻo Haribo', 6, 35000, 198),
+('Bánh Choco-Pie', 6, 50000, 367),
+('Snack khoai tây Lay', 6, 20000, 312),
+('Kẹo sô cô la KitKat', 6, 25000, 145),
+('Bánh quy Ritz', 6, 30000, 276),
+('Nồi cơm điện Sharp', 7, 800000, 234),
+('Máy xay sinh tố Philips', 7, 1200000, 389),
+('Bàn ủi Panasonic', 7, 500000, 312),
+('Quạt điện Senko', 7, 300000, 145),
+('Máy hút bụi Electrolux', 7, 2000000, 276),
+('Dầu gội Clear', 8, 100000, 198),
+('Sữa tắm Dove', 8, 120000, 367),
+('Kem đánh răng Colgate', 8, 50000, 312),
+('Nước hoa hồng Nivea', 8, 150000, 145),
+('Kem dưỡng da Vaseline', 8, 80000, 276),
+('Bồn cầu Inax', 9, 3500000, 234),
+('Lavabo Toto', 9, 2000000, 389),
+('Vòi sen Caesar', 9, 1200000, 312),
+('Gương soi phòng tắm', 9, 500000, 145),
+('Kệ để đồ nhà tắm', 9, 300000, 276),
+('Chảo chống dính Sunhouse', 10, 250000, 198),
+('Bộ dao kéo Lock&Lock', 10, 500000, 367),
+('Nồi inox Kangaroo', 10, 300000, 312),
+('Máy ép trái cây Philips', 10, 1500000, 145),
+('Lò vi sóng Electrolux', 10, 2000000, 276),
+('Giấy in Double A A4', 11, 75000, 234),
+('Bút bi Thiên Long', 11, 5000, 389),
+('Sổ tay Campus', 11, 20000, 312),
+('Kẹp giấy Deli', 11, 10000, 145),
+('Băng keo Scotch', 11, 15000, 276);
+
+
 
 -- Bảng Orders (Đơn hàng)
 CREATE TABLE Orders (

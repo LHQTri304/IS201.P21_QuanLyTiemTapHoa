@@ -29,10 +29,12 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(fAdmin));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.dgvAccounts = new System.Windows.Forms.DataGridView();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.btnReloadUsers = new System.Windows.Forms.Button();
             this.cbbUserRole = new System.Windows.Forms.ComboBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnUpdateUser = new System.Windows.Forms.Button();
@@ -53,6 +55,7 @@
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.dgvCustomers = new System.Windows.Forms.DataGridView();
             this.panel6 = new System.Windows.Forms.Panel();
+            this.btnReloadCustomers = new System.Windows.Forms.Button();
             this.panel8 = new System.Windows.Forms.Panel();
             this.btnUpdateCustomer = new System.Windows.Forms.Button();
             this.btnRemoveCustomer = new System.Windows.Forms.Button();
@@ -73,6 +76,7 @@
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.dgvCategories = new System.Windows.Forms.DataGridView();
             this.panel9 = new System.Windows.Forms.Panel();
+            this.btnReloadCategories = new System.Windows.Forms.Button();
             this.panel10 = new System.Windows.Forms.Panel();
             this.btnUpdateCategory = new System.Windows.Forms.Button();
             this.btnRemoveCategory = new System.Windows.Forms.Button();
@@ -87,6 +91,7 @@
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.dgvProducts = new System.Windows.Forms.DataGridView();
             this.panel12 = new System.Windows.Forms.Panel();
+            this.btnReloadProducts = new System.Windows.Forms.Button();
             this.panel13 = new System.Windows.Forms.Panel();
             this.btnUpdateProduct = new System.Windows.Forms.Button();
             this.btnRemoveProduct = new System.Windows.Forms.Button();
@@ -114,6 +119,7 @@
             this.label19 = new System.Windows.Forms.Label();
             this.dgvOrders = new System.Windows.Forms.DataGridView();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.btnReloadOrders = new System.Windows.Forms.Button();
             this.panel5 = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
@@ -142,11 +148,6 @@
             this.dtpStart = new System.Windows.Forms.DateTimePicker();
             this.btnExport = new System.Windows.Forms.Button();
             this.dgvCompletedOrders = new System.Windows.Forms.DataGridView();
-            this.btnReloadUsers = new System.Windows.Forms.Button();
-            this.btnReloadCustomers = new System.Windows.Forms.Button();
-            this.btnReloadCategories = new System.Windows.Forms.Button();
-            this.btnReloadProducts = new System.Windows.Forms.Button();
-            this.btnReloadOrders = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAccounts)).BeginInit();
@@ -248,6 +249,18 @@
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(970, 225);
             this.panel4.TabIndex = 16;
+            // 
+            // btnReloadUsers
+            // 
+            this.btnReloadUsers.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnReloadUsers.BackgroundImage")));
+            this.btnReloadUsers.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnReloadUsers.Location = new System.Drawing.Point(2, 172);
+            this.btnReloadUsers.Margin = new System.Windows.Forms.Padding(2);
+            this.btnReloadUsers.Name = "btnReloadUsers";
+            this.btnReloadUsers.Size = new System.Drawing.Size(50, 50);
+            this.btnReloadUsers.TabIndex = 3;
+            this.btnReloadUsers.UseVisualStyleBackColor = true;
+            this.btnReloadUsers.Click += new System.EventHandler(this.btnReloadUsers_Click);
             // 
             // cbbUserRole
             // 
@@ -480,6 +493,18 @@
             this.panel6.Size = new System.Drawing.Size(970, 225);
             this.panel6.TabIndex = 18;
             // 
+            // btnReloadCustomers
+            // 
+            this.btnReloadCustomers.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnReloadCustomers.BackgroundImage")));
+            this.btnReloadCustomers.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnReloadCustomers.Location = new System.Drawing.Point(2, 173);
+            this.btnReloadCustomers.Margin = new System.Windows.Forms.Padding(2);
+            this.btnReloadCustomers.Name = "btnReloadCustomers";
+            this.btnReloadCustomers.Size = new System.Drawing.Size(50, 50);
+            this.btnReloadCustomers.TabIndex = 21;
+            this.btnReloadCustomers.UseVisualStyleBackColor = true;
+            this.btnReloadCustomers.Click += new System.EventHandler(this.btnReloadCustomers_Click);
+            // 
             // panel8
             // 
             this.panel8.Controls.Add(this.btnUpdateCustomer);
@@ -701,6 +726,18 @@
             this.panel9.Size = new System.Drawing.Size(970, 225);
             this.panel9.TabIndex = 20;
             // 
+            // btnReloadCategories
+            // 
+            this.btnReloadCategories.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnReloadCategories.BackgroundImage")));
+            this.btnReloadCategories.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnReloadCategories.Location = new System.Drawing.Point(2, 173);
+            this.btnReloadCategories.Margin = new System.Windows.Forms.Padding(2);
+            this.btnReloadCategories.Name = "btnReloadCategories";
+            this.btnReloadCategories.Size = new System.Drawing.Size(50, 50);
+            this.btnReloadCategories.TabIndex = 21;
+            this.btnReloadCategories.UseVisualStyleBackColor = true;
+            this.btnReloadCategories.Click += new System.EventHandler(this.btnReloadCategories_Click);
+            // 
             // panel10
             // 
             this.panel10.Controls.Add(this.btnUpdateCategory);
@@ -870,6 +907,18 @@
             this.panel12.Name = "panel12";
             this.panel12.Size = new System.Drawing.Size(970, 225);
             this.panel12.TabIndex = 20;
+            // 
+            // btnReloadProducts
+            // 
+            this.btnReloadProducts.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnReloadProducts.BackgroundImage")));
+            this.btnReloadProducts.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnReloadProducts.Location = new System.Drawing.Point(2, 173);
+            this.btnReloadProducts.Margin = new System.Windows.Forms.Padding(2);
+            this.btnReloadProducts.Name = "btnReloadProducts";
+            this.btnReloadProducts.Size = new System.Drawing.Size(50, 50);
+            this.btnReloadProducts.TabIndex = 21;
+            this.btnReloadProducts.UseVisualStyleBackColor = true;
+            this.btnReloadProducts.Click += new System.EventHandler(this.btnReloadProducts_Click);
             // 
             // panel13
             // 
@@ -1125,6 +1174,14 @@
             this.dgvOrders.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvOrders.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dgvOrders.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvOrders.DefaultCellStyle = dataGridViewCellStyle1;
             this.dgvOrders.Location = new System.Drawing.Point(4, 233);
             this.dgvOrders.Margin = new System.Windows.Forms.Padding(2);
             this.dgvOrders.Name = "dgvOrders";
@@ -1154,6 +1211,18 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(970, 225);
             this.panel2.TabIndex = 18;
+            // 
+            // btnReloadOrders
+            // 
+            this.btnReloadOrders.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnReloadOrders.BackgroundImage")));
+            this.btnReloadOrders.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnReloadOrders.Location = new System.Drawing.Point(2, 173);
+            this.btnReloadOrders.Margin = new System.Windows.Forms.Padding(2);
+            this.btnReloadOrders.Name = "btnReloadOrders";
+            this.btnReloadOrders.Size = new System.Drawing.Size(50, 50);
+            this.btnReloadOrders.TabIndex = 20;
+            this.btnReloadOrders.UseVisualStyleBackColor = true;
+            this.btnReloadOrders.Click += new System.EventHandler(this.btnReloadOrders_Click);
             // 
             // panel5
             // 
@@ -1464,66 +1533,6 @@
             this.dgvCompletedOrders.RowTemplate.Height = 28;
             this.dgvCompletedOrders.Size = new System.Drawing.Size(969, 483);
             this.dgvCompletedOrders.TabIndex = 18;
-            // 
-            // btnReloadUsers
-            // 
-            this.btnReloadUsers.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnReloadUsers.BackgroundImage")));
-            this.btnReloadUsers.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnReloadUsers.Location = new System.Drawing.Point(2, 172);
-            this.btnReloadUsers.Margin = new System.Windows.Forms.Padding(2);
-            this.btnReloadUsers.Name = "btnReloadUsers";
-            this.btnReloadUsers.Size = new System.Drawing.Size(50, 50);
-            this.btnReloadUsers.TabIndex = 3;
-            this.btnReloadUsers.UseVisualStyleBackColor = true;
-            this.btnReloadUsers.Click += new System.EventHandler(this.btnReloadUsers_Click);
-            // 
-            // btnReloadCustomers
-            // 
-            this.btnReloadCustomers.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnReloadCustomers.BackgroundImage")));
-            this.btnReloadCustomers.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnReloadCustomers.Location = new System.Drawing.Point(2, 173);
-            this.btnReloadCustomers.Margin = new System.Windows.Forms.Padding(2);
-            this.btnReloadCustomers.Name = "btnReloadCustomers";
-            this.btnReloadCustomers.Size = new System.Drawing.Size(50, 50);
-            this.btnReloadCustomers.TabIndex = 21;
-            this.btnReloadCustomers.UseVisualStyleBackColor = true;
-            this.btnReloadCustomers.Click += new System.EventHandler(this.btnReloadCustomers_Click);
-            // 
-            // btnReloadCategories
-            // 
-            this.btnReloadCategories.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnReloadCategories.BackgroundImage")));
-            this.btnReloadCategories.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnReloadCategories.Location = new System.Drawing.Point(2, 173);
-            this.btnReloadCategories.Margin = new System.Windows.Forms.Padding(2);
-            this.btnReloadCategories.Name = "btnReloadCategories";
-            this.btnReloadCategories.Size = new System.Drawing.Size(50, 50);
-            this.btnReloadCategories.TabIndex = 21;
-            this.btnReloadCategories.UseVisualStyleBackColor = true;
-            this.btnReloadCategories.Click += new System.EventHandler(this.btnReloadCategories_Click);
-            // 
-            // btnReloadProducts
-            // 
-            this.btnReloadProducts.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnReloadProducts.BackgroundImage")));
-            this.btnReloadProducts.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnReloadProducts.Location = new System.Drawing.Point(2, 173);
-            this.btnReloadProducts.Margin = new System.Windows.Forms.Padding(2);
-            this.btnReloadProducts.Name = "btnReloadProducts";
-            this.btnReloadProducts.Size = new System.Drawing.Size(50, 50);
-            this.btnReloadProducts.TabIndex = 21;
-            this.btnReloadProducts.UseVisualStyleBackColor = true;
-            this.btnReloadProducts.Click += new System.EventHandler(this.btnReloadProducts_Click);
-            // 
-            // btnReloadOrders
-            // 
-            this.btnReloadOrders.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnReloadOrders.BackgroundImage")));
-            this.btnReloadOrders.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnReloadOrders.Location = new System.Drawing.Point(2, 173);
-            this.btnReloadOrders.Margin = new System.Windows.Forms.Padding(2);
-            this.btnReloadOrders.Name = "btnReloadOrders";
-            this.btnReloadOrders.Size = new System.Drawing.Size(50, 50);
-            this.btnReloadOrders.TabIndex = 20;
-            this.btnReloadOrders.UseVisualStyleBackColor = true;
-            this.btnReloadOrders.Click += new System.EventHandler(this.btnReloadOrders_Click);
             // 
             // fAdmin
             // 

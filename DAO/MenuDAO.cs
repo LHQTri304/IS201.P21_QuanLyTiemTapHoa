@@ -21,7 +21,7 @@ namespace QuanLyTiemTapHoa.DAO
         {
             List<MenuRow> listMenuRow = new List<MenuRow>();
 
-            string query = "SELECT p.ProductName, od.Quantity, p.Price, p.Price*od.Quantity as TotalPrice FROM quanlytiemtaphoa.orderdetails as od, quanlytiemtaphoa.orders as o, quanlytiemtaphoa.products as p where od.OrderID = o.OrderID and od.ProductID = p.ProductID and od.OrderID = " + orderID;
+            string query = "SELECT p.ProductID, p.ProductName, od.Quantity, p.Price, p.Price*od.Quantity as TotalPrice FROM quanlytiemtaphoa.orderdetails as od, quanlytiemtaphoa.orders as o, quanlytiemtaphoa.products as p where od.OrderID = o.OrderID and od.ProductID = p.ProductID and od.OrderID = " + orderID;
 
             DataTable result = DataProvider.Instance.ExecuteQuery(query);
             foreach (DataRow row in result.Rows)

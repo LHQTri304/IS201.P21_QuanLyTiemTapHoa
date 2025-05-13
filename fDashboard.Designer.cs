@@ -29,12 +29,12 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.flpOrderDetails = new System.Windows.Forms.FlowLayoutPanel();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.btnCancelOrder = new System.Windows.Forms.Button();
-            this.lvNewOder = new System.Windows.Forms.ListView();
-            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.tsmAdmin = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmAccount = new System.Windows.Forms.ToolStripMenuItem();
@@ -43,29 +43,85 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.lbTotalBillCost = new System.Windows.Forms.Label();
             this.tbTotalBillCost = new System.Windows.Forms.TextBox();
-            this.button2 = new System.Windows.Forms.Button();
-            this.panel3 = new System.Windows.Forms.Panel();
+            this.btnCheckOut = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.cbbProducts = new System.Windows.Forms.ComboBox();
+            this.tbProducts = new System.Windows.Forms.TextBox();
             this.nudQuantity = new System.Windows.Forms.NumericUpDown();
-            this.btnAddProduct = new System.Windows.Forms.Button();
             this.cbbCategories = new System.Windows.Forms.ComboBox();
+            this.flpListProducts = new System.Windows.Forms.FlowLayoutPanel();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudQuantity)).BeginInit();
+            this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
+            this.panel1.AutoSize = true;
+            this.panel1.Controls.Add(this.flpOrderDetails);
+            this.panel1.Controls.Add(this.label6);
+            this.panel1.Controls.Add(this.label5);
+            this.panel1.Controls.Add(this.label4);
+            this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.btnCancelOrder);
-            this.panel1.Controls.Add(this.lvNewOder);
             this.panel1.Location = new System.Drawing.Point(8, 71);
             this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1292, 959);
+            this.panel1.Size = new System.Drawing.Size(1292, 961);
             this.panel1.TabIndex = 0;
+            // 
+            // flpOrderDetails
+            // 
+            this.flpOrderDetails.AutoScroll = true;
+            this.flpOrderDetails.Location = new System.Drawing.Point(3, 28);
+            this.flpOrderDetails.Name = "flpOrderDetails";
+            this.flpOrderDetails.Size = new System.Drawing.Size(1286, 816);
+            this.flpOrderDetails.TabIndex = 4;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(960, 0);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(131, 25);
+            this.label6.TabIndex = 9;
+            this.label6.Text = "Thành Tiền";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(664, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(93, 25);
+            this.label5.TabIndex = 8;
+            this.label5.Text = "Đơn giá";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(530, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(105, 25);
+            this.label4.TabIndex = 7;
+            this.label4.Text = "Số lượng";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(3, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(161, 25);
+            this.label3.TabIndex = 2;
+            this.label3.Text = "Tên sản phẩm";
             // 
             // btnCancelOrder
             // 
@@ -78,42 +134,6 @@
             this.btnCancelOrder.Text = "Hủy đơn";
             this.btnCancelOrder.UseVisualStyleBackColor = true;
             this.btnCancelOrder.Click += new System.EventHandler(this.btnCancelOrder_Click);
-            // 
-            // lvNewOder
-            // 
-            this.lvNewOder.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.columnHeader1,
-            this.columnHeader2,
-            this.columnHeader3,
-            this.columnHeader4});
-            this.lvNewOder.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lvNewOder.HideSelection = false;
-            this.lvNewOder.Location = new System.Drawing.Point(4, 3);
-            this.lvNewOder.Name = "lvNewOder";
-            this.lvNewOder.Size = new System.Drawing.Size(1285, 838);
-            this.lvNewOder.TabIndex = 0;
-            this.lvNewOder.UseCompatibleStateImageBehavior = false;
-            this.lvNewOder.View = System.Windows.Forms.View.Details;
-            // 
-            // columnHeader1
-            // 
-            this.columnHeader1.Text = "Tên sản phẩm";
-            this.columnHeader1.Width = 530;
-            // 
-            // columnHeader2
-            // 
-            this.columnHeader2.Text = "Số lượng";
-            this.columnHeader2.Width = 111;
-            // 
-            // columnHeader3
-            // 
-            this.columnHeader3.Text = "Đơn giá";
-            this.columnHeader3.Width = 313;
-            // 
-            // columnHeader4
-            // 
-            this.columnHeader4.Text = "Thành tiền";
-            this.columnHeader4.Width = 316;
             // 
             // menuStrip1
             // 
@@ -160,9 +180,10 @@
             // 
             // panel2
             // 
+            this.panel2.AutoSize = true;
             this.panel2.Controls.Add(this.lbTotalBillCost);
             this.panel2.Controls.Add(this.tbTotalBillCost);
-            this.panel2.Controls.Add(this.button2);
+            this.panel2.Controls.Add(this.btnCheckOut);
             this.panel2.Location = new System.Drawing.Point(1304, 830);
             this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
@@ -190,52 +211,44 @@
             this.tbTotalBillCost.TabIndex = 6;
             this.tbTotalBillCost.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // button2
+            // btnCheckOut
             // 
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(2, 88);
-            this.button2.Margin = new System.Windows.Forms.Padding(2);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(583, 110);
-            this.button2.TabIndex = 5;
-            this.button2.Text = "Thanh toán";
-            this.button2.UseVisualStyleBackColor = true;
-            // 
-            // panel3
-            // 
-            this.panel3.Location = new System.Drawing.Point(1304, 200);
-            this.panel3.Margin = new System.Windows.Forms.Padding(2);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(587, 626);
-            this.panel3.TabIndex = 2;
+            this.btnCheckOut.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCheckOut.Location = new System.Drawing.Point(2, 88);
+            this.btnCheckOut.Margin = new System.Windows.Forms.Padding(2);
+            this.btnCheckOut.Name = "btnCheckOut";
+            this.btnCheckOut.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.btnCheckOut.Size = new System.Drawing.Size(583, 110);
+            this.btnCheckOut.TabIndex = 5;
+            this.btnCheckOut.Text = "Thanh toán";
+            this.btnCheckOut.UseVisualStyleBackColor = true;
+            this.btnCheckOut.Click += new System.EventHandler(this.btnCheckOut_Click);
             // 
             // panel4
             // 
-            this.panel4.Controls.Add(this.cbbProducts);
+            this.panel4.AutoSize = true;
+            this.panel4.Controls.Add(this.tbProducts);
             this.panel4.Controls.Add(this.nudQuantity);
-            this.panel4.Controls.Add(this.btnAddProduct);
             this.panel4.Controls.Add(this.cbbCategories);
             this.panel4.Location = new System.Drawing.Point(1304, 71);
             this.panel4.Margin = new System.Windows.Forms.Padding(2);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(587, 125);
+            this.panel4.Size = new System.Drawing.Size(587, 91);
             this.panel4.TabIndex = 2;
             // 
-            // cbbProducts
+            // tbProducts
             // 
-            this.cbbProducts.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbbProducts.FormattingEnabled = true;
-            this.cbbProducts.Location = new System.Drawing.Point(4, 44);
-            this.cbbProducts.Margin = new System.Windows.Forms.Padding(2);
-            this.cbbProducts.Name = "cbbProducts";
-            this.cbbProducts.Size = new System.Drawing.Size(394, 39);
-            this.cbbProducts.TabIndex = 5;
-            this.cbbProducts.SelectedIndexChanged += new System.EventHandler(this.cbbProducts_SelectedIndexChanged);
+            this.tbProducts.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbProducts.Location = new System.Drawing.Point(4, 44);
+            this.tbProducts.Name = "tbProducts";
+            this.tbProducts.Size = new System.Drawing.Size(432, 38);
+            this.tbProducts.TabIndex = 6;
+            this.tbProducts.TextChanged += new System.EventHandler(this.tbProducts_TextChanged);
             // 
             // nudQuantity
             // 
-            this.nudQuantity.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nudQuantity.Location = new System.Drawing.Point(293, 87);
+            this.nudQuantity.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nudQuantity.Location = new System.Drawing.Point(441, 2);
             this.nudQuantity.Margin = new System.Windows.Forms.Padding(2);
             this.nudQuantity.Minimum = new decimal(new int[] {
             100,
@@ -243,43 +256,75 @@
             0,
             -2147483648});
             this.nudQuantity.Name = "nudQuantity";
-            this.nudQuantity.Size = new System.Drawing.Size(105, 31);
+            this.nudQuantity.Size = new System.Drawing.Size(140, 80);
             this.nudQuantity.TabIndex = 4;
             this.nudQuantity.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.nudQuantity.ThousandsSeparator = true;
-            // 
-            // btnAddProduct
-            // 
-            this.btnAddProduct.Font = new System.Drawing.Font("Microsoft Sans Serif", 72F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAddProduct.Location = new System.Drawing.Point(402, 2);
-            this.btnAddProduct.Margin = new System.Windows.Forms.Padding(2);
-            this.btnAddProduct.Name = "btnAddProduct";
-            this.btnAddProduct.Size = new System.Drawing.Size(183, 121);
-            this.btnAddProduct.TabIndex = 3;
-            this.btnAddProduct.Text = "+";
-            this.btnAddProduct.UseVisualStyleBackColor = true;
-            this.btnAddProduct.Click += new System.EventHandler(this.btnAddProduct_Click);
+            this.nudQuantity.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             // 
             // cbbCategories
             // 
+            this.cbbCategories.DropDownHeight = 500;
             this.cbbCategories.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbbCategories.FormattingEnabled = true;
+            this.cbbCategories.IntegralHeight = false;
             this.cbbCategories.Location = new System.Drawing.Point(4, 2);
             this.cbbCategories.Margin = new System.Windows.Forms.Padding(2);
             this.cbbCategories.Name = "cbbCategories";
-            this.cbbCategories.Size = new System.Drawing.Size(394, 39);
+            this.cbbCategories.Size = new System.Drawing.Size(433, 39);
             this.cbbCategories.TabIndex = 0;
             this.cbbCategories.SelectedIndexChanged += new System.EventHandler(this.cbbCategories_SelectedIndexChanged);
+            // 
+            // flpListProducts
+            // 
+            this.flpListProducts.AutoScroll = true;
+            this.flpListProducts.Location = new System.Drawing.Point(1304, 210);
+            this.flpListProducts.Name = "flpListProducts";
+            this.flpListProducts.Size = new System.Drawing.Size(588, 615);
+            this.flpListProducts.TabIndex = 3;
+            // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.label2);
+            this.panel3.Controls.Add(this.label1);
+            this.panel3.Location = new System.Drawing.Point(1304, 167);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(588, 37);
+            this.panel3.TabIndex = 4;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(396, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(68, 31);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "Giá:";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(1, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(207, 31);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Tên sản phẩm:";
             // 
             // fDashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
-            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(1904, 1041);
-            this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel3);
+            this.Controls.Add(this.flpListProducts);
+            this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.menuStrip1);
@@ -291,12 +336,16 @@
             this.Text = "fDashboard";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.panel4.ResumeLayout(false);
+            this.panel4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudQuantity)).EndInit();
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -311,20 +360,22 @@
         private System.Windows.Forms.ToolStripMenuItem tsmAccount;
         private System.Windows.Forms.ToolStripMenuItem tsmAccInfo;
         private System.Windows.Forms.ToolStripMenuItem tsmLogout;
-        private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.NumericUpDown nudQuantity;
-        private System.Windows.Forms.Button btnAddProduct;
         private System.Windows.Forms.ComboBox cbbCategories;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.ListView lvNewOder;
+        private System.Windows.Forms.Button btnCheckOut;
         private System.Windows.Forms.Button btnCancelOrder;
-        private System.Windows.Forms.ColumnHeader columnHeader1;
-        private System.Windows.Forms.ColumnHeader columnHeader2;
-        private System.Windows.Forms.ColumnHeader columnHeader3;
-        private System.Windows.Forms.ColumnHeader columnHeader4;
         private System.Windows.Forms.TextBox tbTotalBillCost;
         private System.Windows.Forms.Label lbTotalBillCost;
-        private System.Windows.Forms.ComboBox cbbProducts;
+        private System.Windows.Forms.FlowLayoutPanel flpListProducts;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.TextBox tbProducts;
+        private System.Windows.Forms.FlowLayoutPanel flpOrderDetails;
     }
 }

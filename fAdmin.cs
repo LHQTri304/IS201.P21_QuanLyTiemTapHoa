@@ -50,7 +50,6 @@ namespace QuanLyTiemTapHoa
         private void LoadDataCustomers(string keyword = "")
         {
             dgvCustomers.DataSource = keyword == "" ? CustomerDAO.Instance.GetDataAllCustomers() : CustomerDAO.Instance.GetDataFindCustomers(keyword);
-            //dgvCustomers.DataSource = CustomerDAO.Instance.GetDataAllCustomers();
 
             if (dgvCustomers.Rows.Count > 0)
             {
@@ -76,7 +75,6 @@ namespace QuanLyTiemTapHoa
         private void LoadDataCategories(string keyword = "")
         {
             dgvCategories.DataSource = keyword == "" ? CategoryDAO.Instance.GetDataAllCategories() : CategoryDAO.Instance.GetDataFindCategories(keyword);
-            //dgvCategories.DataSource = CategoryDAO.Instance.GetDataAllCategories();
 
             if (dgvCategories.Rows.Count > 0)
             {
@@ -98,7 +96,6 @@ namespace QuanLyTiemTapHoa
         private void LoadDataProducts(string keyword = "")
         {
             dgvProducts.DataSource = keyword == "" ? ProductDAO.Instance.GetDataAllProducts() : ProductDAO.Instance.GetDataFindProducts(keyword);
-            //dgvProducts.DataSource = ProductDAO.Instance.GetDataAllProducts();
 
             if (dgvProducts.Rows.Count > 0)
             {
@@ -123,8 +120,7 @@ namespace QuanLyTiemTapHoa
 
         private void LoadDataOrders(string keyword = "")
         {
-            //dgvOrders.DataSource = keyword == "" ? OrderDAO.Instance.GetDataAllOrders() : OrderDAO.Instance.GetDataFindOrders(keyword);
-            dgvOrders.DataSource = OrderDAO.Instance.GetDataAllOrders();
+            dgvOrders.DataSource = keyword == "" ? OrderDAO.Instance.GetDataAllOrders() : OrderDAO.Instance.GetDataFindOrders(keyword);
 
             if (dgvOrders.Rows.Count > 0)
             {

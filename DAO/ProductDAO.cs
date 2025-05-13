@@ -25,15 +25,15 @@ namespace QuanLyTiemTapHoa.DAO
             return result;
         }
 
-        public List<Product> GetListProducts(int categoryID = -1)
+        public List<Product> GetListProducts(int categoryID = -1, string keyword = "")
         {
             List<Product> list = new List<Product>();
 
-            string query = "SELECT * FROM quanlytiemtaphoa.products";
+            string query = "SELECT * FROM Products WHERE ProductName LIKE '%" + keyword.ToLower() + "%'";
 
-            if (categoryID > -1)
+            if (categoryID > 1)
             {
-                query += " where CategoryID = " + categoryID;
+                query += " AND CategoryID = " + categoryID;
             }
 
             DataTable result = DataProvider.Instance.ExecuteQuery(query);
