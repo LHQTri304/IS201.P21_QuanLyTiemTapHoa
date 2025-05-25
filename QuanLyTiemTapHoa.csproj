@@ -34,7 +34,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="BouncyCastle.Cryptography, Version=2.0.0.0, Culture=neutral, PublicKeyToken=072edcf4a5328938, processorArchitecture=MSIL">
-      <HintPath>packages\BouncyCastle.Cryptography.2.3.1\lib\net461\BouncyCastle.Cryptography.dll</HintPath>
+      <HintPath>packages\BouncyCastle.Cryptography.2.5.1\lib\net461\BouncyCastle.Cryptography.dll</HintPath>
     </Reference>
     <Reference Include="ClosedXML, Version=0.104.2.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>packages\ClosedXML.0.104.2\lib\netstandard2.0\ClosedXML.dll</HintPath>
@@ -51,8 +51,8 @@
     <Reference Include="ExcelNumberFormat, Version=1.1.0.0, Culture=neutral, PublicKeyToken=23c6f5d73be07eca, processorArchitecture=MSIL">
       <HintPath>packages\ExcelNumberFormat.1.1.0\lib\net20\ExcelNumberFormat.dll</HintPath>
     </Reference>
-    <Reference Include="Google.Protobuf, Version=3.26.1.0, Culture=neutral, PublicKeyToken=a7d26565bac4d604, processorArchitecture=MSIL">
-      <HintPath>packages\Google.Protobuf.3.26.1\lib\net45\Google.Protobuf.dll</HintPath>
+    <Reference Include="Google.Protobuf, Version=3.30.0.0, Culture=neutral, PublicKeyToken=a7d26565bac4d604, processorArchitecture=MSIL">
+      <HintPath>packages\Google.Protobuf.3.30.0\lib\net45\Google.Protobuf.dll</HintPath>
     </Reference>
     <Reference Include="K4os.Compression.LZ4, Version=1.3.8.0, Culture=neutral, PublicKeyToken=2186fa9121ef231d, processorArchitecture=MSIL">
       <HintPath>packages\K4os.Compression.LZ4.1.3.8\lib\net462\K4os.Compression.LZ4.dll</HintPath>
@@ -69,8 +69,8 @@
     <Reference Include="Microsoft.Bcl.HashCode, Version=1.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>packages\Microsoft.Bcl.HashCode.1.1.1\lib\net461\Microsoft.Bcl.HashCode.dll</HintPath>
     </Reference>
-    <Reference Include="MySql.Data, Version=9.2.0.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
-      <HintPath>packages\MySql.Data.9.2.0\lib\net462\MySql.Data.dll</HintPath>
+    <Reference Include="MySql.Data, Version=9.3.0.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <HintPath>packages\MySql.Data.9.3.0\lib\net462\MySql.Data.dll</HintPath>
     </Reference>
     <Reference Include="RBush, Version=4.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>packages\RBush.4.0.0\lib\net47\RBush.dll</HintPath>
@@ -118,8 +118,8 @@
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
     <Reference Include="WindowsBase" />
-    <Reference Include="ZstdSharp, Version=0.8.0.0, Culture=neutral, PublicKeyToken=8d151af33a4ad5cf, processorArchitecture=MSIL">
-      <HintPath>packages\ZstdSharp.Port.0.8.0\lib\net462\ZstdSharp.dll</HintPath>
+    <Reference Include="ZstdSharp, Version=0.8.5.0, Culture=neutral, PublicKeyToken=8d151af33a4ad5cf, processorArchitecture=MSIL">
+      <HintPath>packages\ZstdSharp.Port.0.8.5\lib\net462\ZstdSharp.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
@@ -145,6 +145,12 @@
     <Compile Include="fAdmin.Designer.cs">
       <DependentUpon>fAdmin.cs</DependentUpon>
     </Compile>
+    <Compile Include="fCheckout.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fCheckout.Designer.cs">
+      <DependentUpon>fCheckout.cs</DependentUpon>
+    </Compile>
     <Compile Include="fDashboard.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -161,6 +167,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="fAdmin.resx">
       <DependentUpon>fAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fCheckout.resx">
+      <DependentUpon>fCheckout.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="fDashboard.resx">
       <DependentUpon>fDashboard.cs</DependentUpon>

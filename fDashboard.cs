@@ -21,7 +21,7 @@ namespace QuanLyTiemTapHoa
         public fDashboard()
         {
             InitializeComponent();
-
+            
             currentOrderID = OrderDAO.Instance.GetIdNewestOrder();
             LoadOrder();
             LoadCategories();
@@ -213,10 +213,23 @@ namespace QuanLyTiemTapHoa
                 {
                     MessageBox.Show("Thanh toán thành công");
                     OrderDAO.Instance.InitNewOrder();
+                    
+                    fCheckout billForm = new fCheckout(currentOrderID);
+                    billForm.ShowDialog();
                     currentOrderID = OrderDAO.Instance.GetIdNewestOrder();
                     LoadOrder();
                 }
             }
+        }
+
+        private void fDashboard_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -91,5 +91,20 @@ namespace QuanLyTiemTapHoa.DAO
 
             return result;
         }
+
+
+        public DataTable GetOrderDetailsForBill(int orderID)
+        {
+            // Lấy giá từ bảng Products (p.Price) vì OrderDetails không lưu UnitPrice
+            string query = string.Format(
+                "SELECT p.ProductName, od.Quantity, p.Price AS UnitPrice, (od.Quantity * p.Price) AS ThanhTien " +
+                "FROM OrderDetails od " +
+                "JOIN Products p ON od.ProductID = p.ProductID " +
+                "WHERE od.OrderID = {0}", orderID);
+
+            DataTable result = DataProvider.Instance.ExecuteQuery(query);
+            return result;
+        }
+
     }
 }
