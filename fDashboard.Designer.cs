@@ -62,6 +62,7 @@
             // 
             // panel1
             // 
+            this.panel1.AutoSize = true;
             this.panel1.Controls.Add(this.flpOrderDetails);
             this.panel1.Controls.Add(this.label6);
             this.panel1.Controls.Add(this.label5);
@@ -71,7 +72,7 @@
             this.panel1.Location = new System.Drawing.Point(8, 71);
             this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(987, 961);
+            this.panel1.Size = new System.Drawing.Size(1292, 961);
             this.panel1.TabIndex = 0;
             // 
             // flpOrderDetails
@@ -86,7 +87,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(818, 2);
+            this.label6.Location = new System.Drawing.Point(960, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(131, 25);
             this.label6.TabIndex = 9;
@@ -96,7 +97,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(631, 2);
+            this.label5.Location = new System.Drawing.Point(664, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(93, 25);
             this.label5.TabIndex = 8;
@@ -106,7 +107,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(397, 2);
+            this.label4.Location = new System.Drawing.Point(530, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(105, 25);
             this.label4.TabIndex = 7;
@@ -144,7 +145,7 @@
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(4, 1, 0, 1);
-            this.menuStrip1.Size = new System.Drawing.Size(1891, 51);
+            this.menuStrip1.Size = new System.Drawing.Size(1904, 51);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -229,7 +230,7 @@
             this.panel4.Controls.Add(this.tbProducts);
             this.panel4.Controls.Add(this.nudQuantity);
             this.panel4.Controls.Add(this.cbbCategories);
-            this.panel4.Location = new System.Drawing.Point(1000, 66);
+            this.panel4.Location = new System.Drawing.Point(1304, 71);
             this.panel4.Margin = new System.Windows.Forms.Padding(2);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(587, 91);
@@ -281,16 +282,16 @@
             // flpListProducts
             // 
             this.flpListProducts.AutoScroll = true;
-            this.flpListProducts.Location = new System.Drawing.Point(1000, 205);
+            this.flpListProducts.Location = new System.Drawing.Point(1304, 210);
             this.flpListProducts.Name = "flpListProducts";
-            this.flpListProducts.Size = new System.Drawing.Size(588, 400);
+            this.flpListProducts.Size = new System.Drawing.Size(588, 615);
             this.flpListProducts.TabIndex = 3;
             // 
             // panel3
             // 
             this.panel3.Controls.Add(this.label2);
             this.panel3.Controls.Add(this.label1);
-            this.panel3.Location = new System.Drawing.Point(1000, 162);
+            this.panel3.Location = new System.Drawing.Point(1304, 167);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(588, 37);
             this.panel3.TabIndex = 4;
@@ -319,9 +320,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.AutoScroll = true;
             this.AutoSize = true;
-            this.ClientSize = new System.Drawing.Size(1370, 749);
+            this.ClientSize = new System.Drawing.Size(1904, 1041);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.flpListProducts);
             this.Controls.Add(this.panel4);
@@ -334,7 +334,7 @@
             this.Name = "fDashboard";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "fDashboard";
-            this.Load += new System.EventHandler(this.fDashboard_Load);
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.menuStrip1.ResumeLayout(false);

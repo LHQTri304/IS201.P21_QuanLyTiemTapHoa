@@ -7,7 +7,7 @@ namespace QuanLyTiemTapHoa.DAO
     internal class DataProvider
     {
         private static DataProvider instance;
-        private string connetionString = "server=localhost;database=quanlytiemtaphoa;uid=root;pwd=123456;";
+        private string connetionString = "server=localhost;database=quanlytiemtaphoa;uid=root;pwd=Qtmysql3045!;";
 
         public static DataProvider Instance
         {
