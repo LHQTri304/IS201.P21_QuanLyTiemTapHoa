@@ -1,110 +1,107 @@
-﻿//using System;
-//using System.Data;
+﻿using System.Data;
+using System.Text;
+using System.Windows.Forms;
 
-//namespace QuanLyTiemTapHoa.DAO
-//{
-//    internal class OrderDAO
-//    {
-//        private static OrderDAO instance;
+namespace QuanLyTiemTapHoa.DAO
+{
+    internal class OrderDAO
+    {
+        private static OrderDAO instance;
 
-//        public static OrderDAO Instance
-//        {
-//            get { if (instance == null) instance = new OrderDAO(); return instance; }
-//            private set => instance = value;
-//        }
+        public static OrderDAO Instance
+        {
+            get { if (instance == null) instance = new OrderDAO(); return instance; }
+            private set => instance = value;
+        }
 
-//        private OrderDAO() { }
+        private OrderDAO() { }
 
-//        public DataTable GetDataAllOrders()
-//        {
-//            string query = "SELECT o.OrderID, c.FullName as CustomerName, u.FullName as StaffName, o.OrderDate, o.Status FROM quanlytiemtaphoa.orders as o, quanlytiemtaphoa.nhanvien as u, quanlytiemtaphoa.khachhang as c where o.CustomerID = c.CustomerID and o.UserID = u.UserID";
+        public DataTable GetDataAllOrders()
+        {
+            string query = "SELECT * FROM quanlytiemtaphoa.hoadon as hd, quanlytiemtaphoa.nhanvien as nv where hd.MaNV = nv.MaNV";
 
-//            DataTable result = DataProvider.Instance.ExecuteQuery(query);
-//            return result;
-//        }
+            DataTable result = DataProvider.Instance.ExecuteQuery(query);
+            return result;
+        }
 
-//        public DataTable GetCompletedOrderByDates(string dateStart, string dateEnd)
-//        {
-//            string query = "SELECT c.FullName as CustomerName, u.FullName as StaffName, o.OrderDate, o.Status FROM quanlytiemtaphoa.orders as o, quanlytiemtaphoa.nhanvien as u, quanlytiemtaphoa.khachhang as c where o.CustomerID = c.CustomerID and o.UserID = u.UserID and o.Status = 'completed' and o.OrderDate >= '" + dateStart + "' and o.OrderDate <= '" + dateEnd + "'";
+        public DataTable GetCompletedOrderByDates(string dateStart, string dateEnd)
+        {
+            string query = "SELECT * FROM quanlytiemtaphoa.hoadon as hd, quanlytiemtaphoa.nhanvien as nv"
+                + " where hd.MaNV = nv.MaNV and hd.NgayLap >= '" + dateStart + "' and hd.NgayLap <= '" + dateEnd + "'";
 
-//            DataTable result = DataProvider.Instance.ExecuteQuery(query);
-//            return result;
-//        }
+            DataTable result = DataProvider.Instance.ExecuteQuery(query);
+            return result;
+        }
 
-//        public int GetIdNewestOrder()
-//        {
-//            string query = "SELECT * FROM Orders ORDER BY OrderID DESC LIMIT 1;";
+        public string GetIdNewestOrder()
+        {
+            string query = "SELECT * FROM quanlytiemtaphoa.hoadon ORDER BY SoHD DESC LIMIT 1;";
 
-//            DataTable result = DataProvider.Instance.ExecuteQuery(query);
-//            return Convert.ToInt32(result.Rows[0]["OrderID"]);
-//        }
+            DataTable result = DataProvider.Instance.ExecuteQuery(query);
 
-//        public int InitNewOrder()
-//        {
-//            string query = "INSERT INTO Orders (CustomerID, UserID, Status) VALUES (1, NULL, 'pending');";
+            return result.Rows.Count > 0 ? result.Rows[0]["SoHD"].ToString() : string.Empty;
+        }
 
-//            int result = DataProvider.Instance.ExecuteNonQuery(query);
+        public int InitNewOrder()
+        {
+            string query = "CALL ThemHoaDonMoi()";
 
-//            return result;
-//        }
+            int result = DataProvider.Instance.ExecuteNonQuery(query);
 
-//        public int RemoveOrder(int id)
-//        {
-//            string query = "CALL DeleteOrder(" + id + ")";
+            return result;
+        }
 
-//            int result = DataProvider.Instance.ExecuteNonQuery(query);
+        public int InsertProductToOrder(string SoHD, string MaSP, int SoLuong)
+        {
+            if (SoLuong <= 0)
+                return -1; // Return -1 if quantity is invalid (less than or equal to zero)
 
-//            return result;
-//        }
+            string query = "CALL ThemSanPhamVaoCTHD('" + SoHD + "', '" + MaSP + "', " + SoLuong + ");";
 
-//        public int InsertProductToOrder(int OrderID, int ProductID, int Quantity)
-//        {
-//            string query = "CALL AddProductInOrder(" + OrderID + ", " + ProductID + ", " + Quantity + ");";
+            int result = DataProvider.Instance.ExecuteNonQuery(query);
 
-//            int result = DataProvider.Instance.ExecuteNonQuery(query);
+            return result;
+        }
 
-//            return result;
-//        }
+        public int RemoveProductFromOrder(string SoHD, string MaSP, int SoLuong)
+        {
+            if (SoLuong >= 0)
+                return -1; // Return -1 if quantity is invalid (more than or equal to zero)
 
-//        public int RemoveProductFromOrder(int OrderID, int ProductID, int Quantity)
-//        {
-//            string query = "CALL RemoveProductFromOrder(" + OrderID + ", " + ProductID + ", " + Quantity + ");";
+            string query = "CALL ThemSanPhamVaoCTHD('" + SoHD + "', '" + MaSP + "', " + SoLuong + ");";
 
-//            int result = DataProvider.Instance.ExecuteNonQuery(query);
+            int result = DataProvider.Instance.ExecuteNonQuery(query);
 
-//            return result;
-//        }
+            return result;
+        }
 
-//        public DataTable GetDataFindOrders(string keyword)
-//        {
-//            string query = "SELECT o.OrderID, c.FullName as CustomerName, u.FullName as StaffName, o.OrderDate, o.Status FROM quanlytiemtaphoa.orders as o, quanlytiemtaphoa.nhanvien as u, quanlytiemtaphoa.khachhang as c where o.CustomerID = c.CustomerID and o.UserID = u.UserID AND u.FullName LIKE '%" + keyword.ToLower() + "%'";
+        public DataTable GetDataFindOrders(string keyword)
+        {
+            string query = "SELECT o.OrderID, c.FullName as CustomerName, u.FullName as StaffName, o.OrderDate, o.Status"
+                + " FROM quanlytiemtaphoa.hoadon as o, quanlytiemtaphoa.nhanvien as u, quanlytiemtaphoa.khachhang as c"
+                + " WHERE o.CustomerID = c.CustomerID and o.UserID = u.UserID AND u.FullName LIKE '%" + keyword.ToLower() + "%'";
 
-//            DataTable result = DataProvider.Instance.ExecuteQuery(query);
-//            return result;
-//        }
+            DataTable result = DataProvider.Instance.ExecuteQuery(query);
+            return result;
+        }
 
-//        public int CheckOut(int OrderID)
-//        {
-//            string query = "UPDATE quanlytiemtaphoa.orders SET Status = 'completed' WHERE OrderID = " + OrderID;
+        public int CheckOut(string OrderID)
+        {
+            //string query = "UPDATE quanlytiemtaphoa.hoadon SET Status = 'completed' WHERE OrderID = '" + OrderID + "';";
 
-//            int result = DataProvider.Instance.ExecuteNonQuery(query);
+            //int result = DataProvider.Instance.ExecuteNonQuery(query);
 
-//            return result;
-//        }
+            return 1;
+        }
 
 
-//        public DataTable GetOrderDetailsForBill(int orderID)
-//        {
-//            // Lấy giá từ bảng Products (p.Price) vì OrderDetails không lưu UnitPrice
-//            string query = string.Format(
-//                "SELECT p.ProductName, od.Quantity, p.Price AS UnitPrice, (od.Quantity * p.Price) AS ThanhTien " +
-//                "FROM OrderDetails od " +
-//                "JOIN Products p ON od.ProductID = p.ProductID " +
-//                "WHERE od.OrderID = {0}", orderID);
+        public DataTable GetOrderDetailsForBill(string orderID)
+        {
+            string query = "SELECT TenSP as ProductName, SoLuong as Quantity, GiaSP as UnitPrice, TongGia as ThanhTien FROM CTHD WHERE SoHD = '" + orderID + "';";
 
-//            DataTable result = DataProvider.Instance.ExecuteQuery(query);
-//            return result;
-//        }
+            DataTable result = DataProvider.Instance.ExecuteQuery(query);
 
-//    }
-//}
+            return result;
+        }
+    }
+}

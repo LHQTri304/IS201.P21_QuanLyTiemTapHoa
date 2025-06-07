@@ -38,16 +38,16 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.tsmAdmin = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmAccount = new System.Windows.Forms.ToolStripMenuItem();
-            this.tsmAccInfo = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmLogout = new System.Windows.Forms.ToolStripMenuItem();
             this.panel2 = new System.Windows.Forms.Panel();
             this.lbTotalBillCost = new System.Windows.Forms.Label();
             this.tbTotalBillCost = new System.Windows.Forms.TextBox();
             this.btnCheckOut = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
             this.tbProducts = new System.Windows.Forms.TextBox();
             this.nudQuantity = new System.Windows.Forms.NumericUpDown();
-            this.cbbCategories = new System.Windows.Forms.ComboBox();
             this.flpListProducts = new System.Windows.Forms.FlowLayoutPanel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
@@ -159,22 +159,15 @@
             // tsmAccount
             // 
             this.tsmAccount.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.tsmAccInfo,
             this.tsmLogout});
             this.tsmAccount.Name = "tsmAccount";
             this.tsmAccount.Size = new System.Drawing.Size(165, 49);
             this.tsmAccount.Text = "Tài khoản";
             // 
-            // tsmAccInfo
-            // 
-            this.tsmAccInfo.Name = "tsmAccInfo";
-            this.tsmAccInfo.Size = new System.Drawing.Size(429, 50);
-            this.tsmAccInfo.Text = "Đổi thông tin tài khoản";
-            // 
             // tsmLogout
             // 
             this.tsmLogout.Name = "tsmLogout";
-            this.tsmLogout.Size = new System.Drawing.Size(429, 50);
+            this.tsmLogout.Size = new System.Drawing.Size(244, 50);
             this.tsmLogout.Text = "Đăng xuất";
             this.tsmLogout.Click += new System.EventHandler(this.tsmLogout_Click);
             // 
@@ -227,14 +220,36 @@
             // panel4
             // 
             this.panel4.AutoSize = true;
+            this.panel4.Controls.Add(this.label8);
+            this.panel4.Controls.Add(this.label7);
             this.panel4.Controls.Add(this.tbProducts);
             this.panel4.Controls.Add(this.nudQuantity);
-            this.panel4.Controls.Add(this.cbbCategories);
             this.panel4.Location = new System.Drawing.Point(1304, 71);
             this.panel4.Margin = new System.Windows.Forms.Padding(2);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(587, 91);
             this.panel4.TabIndex = 2;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(296, 10);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(137, 31);
+            this.label8.TabIndex = 7;
+            this.label8.Text = "Số lượng:";
+            this.label8.Click += new System.EventHandler(this.label8_Click);
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(3, 10);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(140, 31);
+            this.label7.TabIndex = 2;
+            this.label7.Text = "Tìm kiếm:";
             // 
             // tbProducts
             // 
@@ -265,19 +280,6 @@
             0,
             0,
             0});
-            // 
-            // cbbCategories
-            // 
-            this.cbbCategories.DropDownHeight = 500;
-            this.cbbCategories.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbbCategories.FormattingEnabled = true;
-            this.cbbCategories.IntegralHeight = false;
-            this.cbbCategories.Location = new System.Drawing.Point(4, 2);
-            this.cbbCategories.Margin = new System.Windows.Forms.Padding(2);
-            this.cbbCategories.Name = "cbbCategories";
-            this.cbbCategories.Size = new System.Drawing.Size(433, 39);
-            this.cbbCategories.TabIndex = 0;
-            this.cbbCategories.SelectedIndexChanged += new System.EventHandler(this.cbbCategories_SelectedIndexChanged);
             // 
             // flpListProducts
             // 
@@ -358,11 +360,9 @@
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem tsmAdmin;
         private System.Windows.Forms.ToolStripMenuItem tsmAccount;
-        private System.Windows.Forms.ToolStripMenuItem tsmAccInfo;
         private System.Windows.Forms.ToolStripMenuItem tsmLogout;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.NumericUpDown nudQuantity;
-        private System.Windows.Forms.ComboBox cbbCategories;
         private System.Windows.Forms.Button btnCheckOut;
         private System.Windows.Forms.Button btnCancelOrder;
         private System.Windows.Forms.TextBox tbTotalBillCost;
@@ -377,5 +377,7 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox tbProducts;
         private System.Windows.Forms.FlowLayoutPanel flpOrderDetails;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label8;
     }
 }
