@@ -34,7 +34,7 @@
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.dgvAccounts = new System.Windows.Forms.DataGridView();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.btnReloadUsers = new System.Windows.Forms.Button();
+            this.btnReloadNHANVIEN = new System.Windows.Forms.Button();
             this.cbbUserRole = new System.Windows.Forms.ComboBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnUpdateUser = new System.Windows.Forms.Button();
@@ -42,7 +42,7 @@
             this.btnAddUser = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label8 = new System.Windows.Forms.Label();
-            this.tbFindUsers = new System.Windows.Forms.TextBox();
+            this.tbFindNHANVIEN = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.tbUserEmail = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
@@ -231,7 +231,7 @@
             // 
             // panel4
             // 
-            this.panel4.Controls.Add(this.btnReloadUsers);
+            this.panel4.Controls.Add(this.btnReloadNHANVIEN);
             this.panel4.Controls.Add(this.cbbUserRole);
             this.panel4.Controls.Add(this.panel1);
             this.panel4.Controls.Add(this.panel3);
@@ -250,17 +250,17 @@
             this.panel4.Size = new System.Drawing.Size(970, 225);
             this.panel4.TabIndex = 16;
             // 
-            // btnReloadUsers
+            // btnReloadNHANVIEN
             // 
-            this.btnReloadUsers.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnReloadUsers.BackgroundImage")));
-            this.btnReloadUsers.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnReloadUsers.Location = new System.Drawing.Point(2, 172);
-            this.btnReloadUsers.Margin = new System.Windows.Forms.Padding(2);
-            this.btnReloadUsers.Name = "btnReloadUsers";
-            this.btnReloadUsers.Size = new System.Drawing.Size(50, 50);
-            this.btnReloadUsers.TabIndex = 3;
-            this.btnReloadUsers.UseVisualStyleBackColor = true;
-            this.btnReloadUsers.Click += new System.EventHandler(this.btnReloadUsers_Click);
+            this.btnReloadNHANVIEN.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnReloadNHANVIEN.BackgroundImage")));
+            this.btnReloadNHANVIEN.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnReloadNHANVIEN.Location = new System.Drawing.Point(2, 172);
+            this.btnReloadNHANVIEN.Margin = new System.Windows.Forms.Padding(2);
+            this.btnReloadNHANVIEN.Name = "btnReloadNHANVIEN";
+            this.btnReloadNHANVIEN.Size = new System.Drawing.Size(50, 50);
+            this.btnReloadNHANVIEN.TabIndex = 3;
+            this.btnReloadNHANVIEN.UseVisualStyleBackColor = true;
+            this.btnReloadNHANVIEN.Click += new System.EventHandler(this.btnReloadNHANVIEN_Click);
             // 
             // cbbUserRole
             // 
@@ -324,7 +324,7 @@
             // panel3
             // 
             this.panel3.Controls.Add(this.label8);
-            this.panel3.Controls.Add(this.tbFindUsers);
+            this.panel3.Controls.Add(this.tbFindNHANVIEN);
             this.panel3.Location = new System.Drawing.Point(472, 174);
             this.panel3.Margin = new System.Windows.Forms.Padding(2);
             this.panel3.Name = "panel3";
@@ -342,15 +342,15 @@
             this.label8.TabIndex = 22;
             this.label8.Text = "Tìm kiếm:";
             // 
-            // tbFindUsers
+            // tbFindNHANVIEN
             // 
-            this.tbFindUsers.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbFindUsers.Location = new System.Drawing.Point(146, 2);
-            this.tbFindUsers.Margin = new System.Windows.Forms.Padding(2);
-            this.tbFindUsers.Name = "tbFindUsers";
-            this.tbFindUsers.Size = new System.Drawing.Size(348, 38);
-            this.tbFindUsers.TabIndex = 5;
-            this.tbFindUsers.TextChanged += new System.EventHandler(this.tbFindUsers_TextChanged);
+            this.tbFindNHANVIEN.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbFindNHANVIEN.Location = new System.Drawing.Point(146, 2);
+            this.tbFindNHANVIEN.Margin = new System.Windows.Forms.Padding(2);
+            this.tbFindNHANVIEN.Name = "tbFindNHANVIEN";
+            this.tbFindNHANVIEN.Size = new System.Drawing.Size(348, 38);
+            this.tbFindNHANVIEN.TabIndex = 5;
+            this.tbFindNHANVIEN.TextChanged += new System.EventHandler(this.tbFindNHANVIEN_TextChanged);
             // 
             // label3
             // 
@@ -1604,7 +1604,7 @@
         private System.Windows.Forms.TabPage tabPage6;
         private System.Windows.Forms.DataGridView dgvAccounts;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.TextBox tbFindUsers;
+        private System.Windows.Forms.TextBox tbFindNHANVIEN;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox tbUserEmail;
@@ -1708,7 +1708,7 @@
         private System.Windows.Forms.TextBox tbFindProducts;
         private System.Windows.Forms.Label label31;
         private System.Windows.Forms.TextBox tbFindOrders;
-        private System.Windows.Forms.Button btnReloadUsers;
+        private System.Windows.Forms.Button btnReloadNHANVIEN;
         private System.Windows.Forms.Button btnReloadKHACHHANG;
         private System.Windows.Forms.Button btnReloadCategories;
         private System.Windows.Forms.Button btnReloadProducts;

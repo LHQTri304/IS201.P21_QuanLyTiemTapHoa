@@ -1,6 +1,6 @@
 ﻿using ClosedXML.Excel;
-using QuanLyTiemTapHoa.DAO;
-using QuanLyTiemTapHoa.DTO;
+//using QuanLyTiemTapHoa.DAO;
+//using QuanLyTiemTapHoa.DTO;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -18,179 +18,179 @@ namespace QuanLyTiemTapHoa
         {
             InitializeComponent();
 
-            LoadAllData();
+            //LoadAllData();
         }
 
         #region Load data
         private void LoadDataAccounts(string keyword = "")
         {
-            dgvAccounts.DataSource = keyword == "" ? AccountDAO.Instance.GetDataAllAccounts() : AccountDAO.Instance.GetDataFindAccounts(keyword);
+            //dgvAccounts.DataSource = keyword == "" ? AccountDAO.Instance.GetDataAllAccounts() : AccountDAO.Instance.GetDataFindAccounts(keyword);
 
-            if (dgvAccounts.Rows.Count > 0)
-            {
-                foreach (DataGridViewColumn col in dgvAccounts.Columns)
-                {
-                    col.Visible = col.Name == "FullName" || col.Name == "Role";
-                }
-                dgvAccounts.Columns["FullName"].HeaderText = "Họ và tên";
-                dgvAccounts.Columns["Role"].HeaderText = "Vị trí";
-            }
+            //if (dgvAccounts.Rows.Count > 0)
+            //{
+            //    foreach (DataGridViewColumn col in dgvAccounts.Columns)
+            //    {
+            //        col.Visible = col.Name == "FullName" || col.Name == "Role";
+            //    }
+            //    dgvAccounts.Columns["FullName"].HeaderText = "Họ và tên";
+            //    dgvAccounts.Columns["Role"].HeaderText = "Vị trí";
+            //}
 
-            // Clear all old bindings
-            tbUserID.DataBindings.Clear();
-            tbUserFullName.DataBindings.Clear();
-            cbbUserRole.DataBindings.Clear();
-            tbUserPhone.DataBindings.Clear();
-            tbUserEmail.DataBindings.Clear();
+            //// Clear all old bindings
+            //tbUserID.DataBindings.Clear();
+            //tbUserFullName.DataBindings.Clear();
+            //cbbUserRole.DataBindings.Clear();
+            //tbUserPhone.DataBindings.Clear();
+            //tbUserEmail.DataBindings.Clear();
 
-            // Rebind
-            BindingDataUser();
+            //// Rebind
+            //BindingDataUser();
         }
 
         private void LoadDataKHACHHANG(string keyword = "")
         {
-            dgvKHACHHANG.DataSource = keyword == "" ? CustomerDAO.Instance.GetDataAllKHACHHANG() : CustomerDAO.Instance.GetDataFindKHACHHANG(keyword);
+            //dgvKHACHHANG.DataSource = keyword == "" ? CustomerDAO.Instance.GetDataAllKHACHHANG() : CustomerDAO.Instance.GetDataFindKHACHHANG(keyword);
 
-            if (dgvKHACHHANG.Rows.Count > 0)
-            {
-                foreach (DataGridViewColumn col in dgvKHACHHANG.Columns)
-                {
-                    col.Visible = col.Name == "FullName" || col.Name == "CreatedAt";
-                }
-                dgvKHACHHANG.Columns["FullName"].HeaderText = "Họ và tên";
-                dgvKHACHHANG.Columns["CreatedAt"].HeaderText = "Ngày đăng ký";
-            }
+            //if (dgvKHACHHANG.Rows.Count > 0)
+            //{
+            //    foreach (DataGridViewColumn col in dgvKHACHHANG.Columns)
+            //    {
+            //        col.Visible = col.Name == "FullName" || col.Name == "CreatedAt";
+            //    }
+            //    dgvKHACHHANG.Columns["FullName"].HeaderText = "Họ và tên";
+            //    dgvKHACHHANG.Columns["CreatedAt"].HeaderText = "Ngày đăng ký";
+            //}
 
-            // Clear old bindings
-            tbCustomerID.DataBindings.Clear();
-            tbCusFullName.DataBindings.Clear();
-            tbCusPhone.DataBindings.Clear();
-            tbCusEmail.DataBindings.Clear();
-            tbCusCreatedAt.DataBindings.Clear();
+            //// Clear old bindings
+            //tbCustomerID.DataBindings.Clear();
+            //tbCusFullName.DataBindings.Clear();
+            //tbCusPhone.DataBindings.Clear();
+            //tbCusEmail.DataBindings.Clear();
+            //tbCusCreatedAt.DataBindings.Clear();
 
-            // Rebind
-            BindingDataCustomer();
+            //// Rebind
+            //BindingDataCustomer();
         }
 
         private void LoadDataCategories(string keyword = "")
         {
-            dgvCategories.DataSource = keyword == "" ? CategoryDAO.Instance.GetDataAllCategories() : CategoryDAO.Instance.GetDataFindCategories(keyword);
+            //dgvCategories.DataSource = keyword == "" ? CategoryDAO.Instance.GetDataAllCategories() : CategoryDAO.Instance.GetDataFindCategories(keyword);
 
-            if (dgvCategories.Rows.Count > 0)
-            {
-                foreach (DataGridViewColumn col in dgvCategories.Columns)
-                {
-                    col.Visible = col.Name == "CategoryName";
-                }
-                dgvCategories.Columns["CategoryName"].HeaderText = "Tên mục";
-            }
+            //if (dgvCategories.Rows.Count > 0)
+            //{
+            //    foreach (DataGridViewColumn col in dgvCategories.Columns)
+            //    {
+            //        col.Visible = col.Name == "CategoryName";
+            //    }
+            //    dgvCategories.Columns["CategoryName"].HeaderText = "Tên mục";
+            //}
 
-            // Clear old bindings
-            tbCategoryID.DataBindings.Clear();
-            tbCategoryName.DataBindings.Clear();
+            //// Clear old bindings
+            //tbCategoryID.DataBindings.Clear();
+            //tbCategoryName.DataBindings.Clear();
 
-            // Rebind
-            BindingDataCategory();
+            //// Rebind
+            //BindingDataCategory();
         }
 
         private void LoadDataProducts(string keyword = "")
         {
-            dgvProducts.DataSource = keyword == "" ? ProductDAO.Instance.GetDataAllProducts() : ProductDAO.Instance.GetDataFindProducts(keyword);
+            //dgvProducts.DataSource = keyword == "" ? ProductDAO.Instance.GetDataAllProducts() : ProductDAO.Instance.GetDataFindProducts(keyword);
 
-            if (dgvProducts.Rows.Count > 0)
-            {
-                foreach (DataGridViewColumn col in dgvProducts.Columns)
-                {
-                    col.Visible = col.Name == "ProductName" || col.Name == "StockQuantity";
-                }
-                dgvProducts.Columns["ProductName"].HeaderText = "Tên sản phẩm";
-                dgvProducts.Columns["StockQuantity"].HeaderText = "Tồn kho";
-            }
+            //if (dgvProducts.Rows.Count > 0)
+            //{
+            //    foreach (DataGridViewColumn col in dgvProducts.Columns)
+            //    {
+            //        col.Visible = col.Name == "ProductName" || col.Name == "StockQuantity";
+            //    }
+            //    dgvProducts.Columns["ProductName"].HeaderText = "Tên sản phẩm";
+            //    dgvProducts.Columns["StockQuantity"].HeaderText = "Tồn kho";
+            //}
 
-            // Clear old bindings
-            tbProductID.DataBindings.Clear();
-            tbProductName.DataBindings.Clear();
-            tbProductCateID.DataBindings.Clear();
-            tbProductPrice.DataBindings.Clear();
-            tbProductStockQuantity.DataBindings.Clear();
+            //// Clear old bindings
+            //tbProductID.DataBindings.Clear();
+            //tbProductName.DataBindings.Clear();
+            //tbProductCateID.DataBindings.Clear();
+            //tbProductPrice.DataBindings.Clear();
+            //tbProductStockQuantity.DataBindings.Clear();
 
-            // Rebind
-            BindingDataProduct();
+            //// Rebind
+            //BindingDataProduct();
         }
 
         private void LoadDataOrders(string keyword = "")
         {
-            dgvOrders.DataSource = keyword == "" ? OrderDAO.Instance.GetDataAllOrders() : OrderDAO.Instance.GetDataFindOrders(keyword);
+            //dgvOrders.DataSource = keyword == "" ? OrderDAO.Instance.GetDataAllOrders() : OrderDAO.Instance.GetDataFindOrders(keyword);
 
-            if (dgvOrders.Rows.Count > 0)
-            {
-                foreach (DataGridViewColumn col in dgvOrders.Columns)
-                {
-                    col.Visible = col.Name == "StaffName" || col.Name == "OrderDate" || col.Name == "Status";
-                }
-                dgvOrders.Columns["StaffName"].HeaderText = "Người tạo đơn";
-                dgvOrders.Columns["OrderDate"].HeaderText = "Ngày tạo";
-                dgvOrders.Columns["Status"].HeaderText = "Trạng thái";
-            }
+            //if (dgvOrders.Rows.Count > 0)
+            //{
+            //    foreach (DataGridViewColumn col in dgvOrders.Columns)
+            //    {
+            //        col.Visible = col.Name == "StaffName" || col.Name == "OrderDate" || col.Name == "Status";
+            //    }
+            //    dgvOrders.Columns["StaffName"].HeaderText = "Người tạo đơn";
+            //    dgvOrders.Columns["OrderDate"].HeaderText = "Ngày tạo";
+            //    dgvOrders.Columns["Status"].HeaderText = "Trạng thái";
+            //}
 
-            // Clear old bindings
-            tbOrderID.DataBindings.Clear();
-            tbCustomerName.DataBindings.Clear();
-            tbStaffName.DataBindings.Clear();
-            tbOrderDate.DataBindings.Clear();
-            tbStatus.DataBindings.Clear();
+            //// Clear old bindings
+            //tbOrderID.DataBindings.Clear();
+            //tbCustomerName.DataBindings.Clear();
+            //tbStaffName.DataBindings.Clear();
+            //tbOrderDate.DataBindings.Clear();
+            //tbStatus.DataBindings.Clear();
 
-            // Rebind
-            BindingDataOrder();
+            //// Rebind
+            //BindingDataOrder();
         }
 
         private void LoadDataOrderDetails()
         {
-            lvOderDetail.Items.Clear();
+            //lvOderDetail.Items.Clear();
 
-            List<MenuRow> listRow = MenuRowDAO.Instance.GetListMenuRow(int.Parse(tbOrderID.Text));
+            //List<MenuRow> listRow = MenuRowDAO.Instance.GetListMenuRow(int.Parse(tbOrderID.Text));
 
-            foreach (MenuRow row in listRow)
-            {
-                ListViewItem lvItem = new ListViewItem(row.ProductName.ToString());
-                lvItem.SubItems.Add(row.Quantity.ToString());
-                lvItem.SubItems.Add(row.Price.ToString());
-                lvItem.SubItems.Add(row.TotalPrice.ToString());
+            //foreach (MenuRow row in listRow)
+            //{
+            //    ListViewItem lvItem = new ListViewItem(row.ProductName.ToString());
+            //    lvItem.SubItems.Add(row.Quantity.ToString());
+            //    lvItem.SubItems.Add(row.Price.ToString());
+            //    lvItem.SubItems.Add(row.TotalPrice.ToString());
 
-                lvOderDetail.Items.Add(lvItem);
-            }
+            //    lvOderDetail.Items.Add(lvItem);
+            //}
         }
 
         private void LoadDateTimePickerOrder()
         {
-            DateTime today = DateTime.Today;
-            dtpStart.Value = new DateTime(today.Year, today.Month, 1);
-            dtpEnd.Value = dtpStart.Value.AddMonths(1).AddDays(-1);
+            //DateTime today = DateTime.Today;
+            //dtpStart.Value = new DateTime(today.Year, today.Month, 1);
+            //dtpEnd.Value = dtpStart.Value.AddMonths(1).AddDays(-1);
         }
 
         private void LoadDataCompletedOrderByDates()
         {
-            statisticsData = OrderDAO.Instance.GetCompletedOrderByDates(dtpStart.Value.ToString("yyyy-MM-dd"), dtpEnd.Value.AddDays(1).ToString("yyyy-MM-dd"));
-            dgvCompletedOrders.DataSource = statisticsData;
+            //statisticsData = OrderDAO.Instance.GetCompletedOrderByDates(dtpStart.Value.ToString("yyyy-MM-dd"), dtpEnd.Value.AddDays(1).ToString("yyyy-MM-dd"));
+            //dgvCompletedOrders.DataSource = statisticsData;
 
-            if (dgvCompletedOrders.Rows.Count > 0)
-            {
-                dgvCompletedOrders.Columns["CustomerName"].HeaderText = "Tên khách hàng";
-                dgvCompletedOrders.Columns["StaffName"].HeaderText = "Người tạo đơn";
-                dgvCompletedOrders.Columns["OrderDate"].HeaderText = "Ngày tạo";
-                dgvCompletedOrders.Columns["Status"].HeaderText = "Trạng thái";
-            }
+            //if (dgvCompletedOrders.Rows.Count > 0)
+            //{
+            //    dgvCompletedOrders.Columns["CustomerName"].HeaderText = "Tên khách hàng";
+            //    dgvCompletedOrders.Columns["StaffName"].HeaderText = "Người tạo đơn";
+            //    dgvCompletedOrders.Columns["OrderDate"].HeaderText = "Ngày tạo";
+            //    dgvCompletedOrders.Columns["Status"].HeaderText = "Trạng thái";
+            //}
         }
 
         private void LoadAllData()
         {
-            LoadDataAccounts();
-            LoadDataKHACHHANG();
-            LoadDataCategories();
-            LoadDataProducts();
-            LoadDataOrders();
-            LoadDateTimePickerOrder();
-            LoadDataCompletedOrderByDates();
+            //LoadDataAccounts();
+            //LoadDataKHACHHANG();
+            //LoadDataCategories();
+            //LoadDataProducts();
+            //LoadDataOrders();
+            //LoadDateTimePickerOrder();
+            //LoadDataCompletedOrderByDates();
         }
         #endregion
 
@@ -198,53 +198,53 @@ namespace QuanLyTiemTapHoa
         #region Binding data
         private void BindingDataUser()
         {
-            tbUserID.DataBindings.Add(new Binding("Text", dgvAccounts.DataSource, "UserID"));
-            tbUserFullName.DataBindings.Add(new Binding("Text", dgvAccounts.DataSource, "FullName"));
-            cbbUserRole.DataBindings.Add(new Binding("Text", dgvAccounts.DataSource, "Role"));
-            tbUserPhone.DataBindings.Add(new Binding("Text", dgvAccounts.DataSource, "Phone"));
-            tbUserEmail.DataBindings.Add(new Binding("Text", dgvAccounts.DataSource, "Email"));
+            //tbUserID.DataBindings.Add(new Binding("Text", dgvAccounts.DataSource, "UserID"));
+            //tbUserFullName.DataBindings.Add(new Binding("Text", dgvAccounts.DataSource, "FullName"));
+            //cbbUserRole.DataBindings.Add(new Binding("Text", dgvAccounts.DataSource, "Role"));
+            //tbUserPhone.DataBindings.Add(new Binding("Text", dgvAccounts.DataSource, "Phone"));
+            //tbUserEmail.DataBindings.Add(new Binding("Text", dgvAccounts.DataSource, "Email"));
         }
 
         private void BindingDataCustomer()
         {
-            tbCustomerID.DataBindings.Add(new Binding("Text", dgvKHACHHANG.DataSource, "CustomerID"));
-            tbCusFullName.DataBindings.Add(new Binding("Text", dgvKHACHHANG.DataSource, "FullName"));
-            tbCusPhone.DataBindings.Add(new Binding("Text", dgvKHACHHANG.DataSource, "Phone"));
-            tbCusEmail.DataBindings.Add(new Binding("Text", dgvKHACHHANG.DataSource, "Email"));
-            tbCusCreatedAt.DataBindings.Add(new Binding("Text", dgvKHACHHANG.DataSource, "CreatedAt"));
+            //tbCustomerID.DataBindings.Add(new Binding("Text", dgvKHACHHANG.DataSource, "CustomerID"));
+            //tbCusFullName.DataBindings.Add(new Binding("Text", dgvKHACHHANG.DataSource, "FullName"));
+            //tbCusPhone.DataBindings.Add(new Binding("Text", dgvKHACHHANG.DataSource, "Phone"));
+            //tbCusEmail.DataBindings.Add(new Binding("Text", dgvKHACHHANG.DataSource, "Email"));
+            //tbCusCreatedAt.DataBindings.Add(new Binding("Text", dgvKHACHHANG.DataSource, "CreatedAt"));
         }
 
         private void BindingDataCategory()
         {
-            tbCategoryID.DataBindings.Add(new Binding("Text", dgvCategories.DataSource, "CategoryID"));
-            tbCategoryName.DataBindings.Add(new Binding("Text", dgvCategories.DataSource, "CategoryName"));
+            //tbCategoryID.DataBindings.Add(new Binding("Text", dgvCategories.DataSource, "CategoryID"));
+            //tbCategoryName.DataBindings.Add(new Binding("Text", dgvCategories.DataSource, "CategoryName"));
         }
 
         private void BindingDataProduct()
         {
-            tbProductID.DataBindings.Add(new Binding("Text", dgvProducts.DataSource, "ProductID"));
-            tbProductName.DataBindings.Add(new Binding("Text", dgvProducts.DataSource, "ProductName"));
-            tbProductCateID.DataBindings.Add(new Binding("Text", dgvProducts.DataSource, "CategoryID"));
-            tbProductPrice.DataBindings.Add(new Binding("Text", dgvProducts.DataSource, "Price"));
-            tbProductStockQuantity.DataBindings.Add(new Binding("Text", dgvProducts.DataSource, "StockQuantity"));
+            //tbProductID.DataBindings.Add(new Binding("Text", dgvProducts.DataSource, "ProductID"));
+            //tbProductName.DataBindings.Add(new Binding("Text", dgvProducts.DataSource, "ProductName"));
+            //tbProductCateID.DataBindings.Add(new Binding("Text", dgvProducts.DataSource, "CategoryID"));
+            //tbProductPrice.DataBindings.Add(new Binding("Text", dgvProducts.DataSource, "Price"));
+            //tbProductStockQuantity.DataBindings.Add(new Binding("Text", dgvProducts.DataSource, "StockQuantity"));
         }
 
         private void BindingDataOrder()
         {
-            tbOrderID.DataBindings.Add(new Binding("Text", dgvOrders.DataSource, "OrderID"));
-            tbCustomerName.DataBindings.Add(new Binding("Text", dgvOrders.DataSource, "CustomerName"));
-            tbStaffName.DataBindings.Add(new Binding("Text", dgvOrders.DataSource, "StaffName"));
-            tbOrderDate.DataBindings.Add(new Binding("Text", dgvOrders.DataSource, "OrderDate"));
-            tbStatus.DataBindings.Add(new Binding("Text", dgvOrders.DataSource, "Status"));
+            //tbOrderID.DataBindings.Add(new Binding("Text", dgvOrders.DataSource, "OrderID"));
+            //tbCustomerName.DataBindings.Add(new Binding("Text", dgvOrders.DataSource, "CustomerName"));
+            //tbStaffName.DataBindings.Add(new Binding("Text", dgvOrders.DataSource, "StaffName"));
+            //tbOrderDate.DataBindings.Add(new Binding("Text", dgvOrders.DataSource, "OrderDate"));
+            //tbStatus.DataBindings.Add(new Binding("Text", dgvOrders.DataSource, "Status"));
         }
 
         private void BindingData()
         {
-            BindingDataUser();
-            BindingDataCustomer();
-            BindingDataCategory();
-            BindingDataProduct();
-            BindingDataOrder();
+            //BindingDataUser();
+            //BindingDataCustomer();
+            //BindingDataCategory();
+            //BindingDataProduct();
+            //BindingDataOrder();
         }
         #endregion
 
@@ -252,33 +252,33 @@ namespace QuanLyTiemTapHoa
         #region Logic components
         private void dtpEnd_ValueChanged(object sender, EventArgs e)
         {
-            LoadDataCompletedOrderByDates();
+            //LoadDataCompletedOrderByDates();
         }
 
         private void dtpStart_ValueChanged(object sender, EventArgs e)
         {
-            LoadDataCompletedOrderByDates();
+            //LoadDataCompletedOrderByDates();
         }
 
         private void btnExport_Click(object sender, EventArgs e)
         {
-            using (SaveFileDialog sfd = new SaveFileDialog() { Filter = "Excel files|*.xlsx", FileName = "data.xlsx" })
-            {
-                if (sfd.ShowDialog() == DialogResult.OK)
-                {
-                    using (XLWorkbook wb = new XLWorkbook())
-                    {
-                        wb.Worksheets.Add(statisticsData, "Sheet1");
-                        wb.SaveAs(sfd.FileName);
-                    }
-                    MessageBox.Show("Xuất Excel thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                }
-            }
+            //using (SaveFileDialog sfd = new SaveFileDialog() { Filter = "Excel files|*.xlsx", FileName = "data.xlsx" })
+            //{
+            //    if (sfd.ShowDialog() == DialogResult.OK)
+            //    {
+            //        using (XLWorkbook wb = new XLWorkbook())
+            //        {
+            //            wb.Worksheets.Add(statisticsData, "Sheet1");
+            //            wb.SaveAs(sfd.FileName);
+            //        }
+            //        MessageBox.Show("Xuất Excel thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            //    }
+            //}
         }
 
         private void tbOrderID_TextChanged(object sender, EventArgs e)
         {
-            LoadDataOrderDetails();
+            //LoadDataOrderDetails();
         }
         #endregion
 
@@ -286,197 +286,197 @@ namespace QuanLyTiemTapHoa
         #region Logic CRUD
         private void btnRemoveUser_Click(object sender, EventArgs e)
         {
-            int result = AccountDAO.Instance.RemoveAccount(Convert.ToInt32(tbUserID.Text));
+            //int result = AccountDAO.Instance.RemoveAccount(Convert.ToInt32(tbUserID.Text));
 
-            if (result != 0)
-                MessageBox.Show("Xóa thành công");
-            else
-                MessageBox.Show("Xóa thất bại");
+            //if (result != 0)
+            //    MessageBox.Show("Xóa thành công");
+            //else
+            //    MessageBox.Show("Xóa thất bại");
 
-            LoadDataAccounts();
+            //LoadDataAccounts();
         }
 
         private void btnUpdateUser_Click(object sender, EventArgs e)
         {
-            int result = AccountDAO.Instance.UpdateAccount(Convert.ToInt32(tbUserID.Text), tbUserFullName.Text, cbbUserRole.Text, tbUserPhone.Text, tbUserEmail.Text);
+            //int result = AccountDAO.Instance.UpdateAccount(Convert.ToInt32(tbUserID.Text), tbUserFullName.Text, cbbUserRole.Text, tbUserPhone.Text, tbUserEmail.Text);
 
-            if (result != 0)
-                MessageBox.Show("Cập nhật thành công");
-            else
-                MessageBox.Show("Cập nhật thất bại"); ;
+            //if (result != 0)
+            //    MessageBox.Show("Cập nhật thành công");
+            //else
+            //    MessageBox.Show("Cập nhật thất bại"); ;
 
-            LoadDataAccounts();
+            //LoadDataAccounts();
         }
 
         private void btnAddCustomer_Click(object sender, EventArgs e)
         {
-            int result = CustomerDAO.Instance.AddCustomer(tbCusFullName.Text, tbCusPhone.Text, tbCusEmail.Text);
+            //int result = CustomerDAO.Instance.AddCustomer(tbCusFullName.Text, tbCusPhone.Text, tbCusEmail.Text);
 
-            if (result != 0)
-                MessageBox.Show("Thêm khách hàng thành công");
-            else
-                MessageBox.Show("Thêm thất bại"); ;
+            //if (result != 0)
+            //    MessageBox.Show("Thêm khách hàng thành công");
+            //else
+            //    MessageBox.Show("Thêm thất bại"); ;
 
-            LoadDataKHACHHANG();
+            //LoadDataKHACHHANG();
         }
 
         private void btnRemoveCustomer_Click(object sender, EventArgs e)
         {
-            int result = CustomerDAO.Instance.RemoveCustomer(Convert.ToInt32(tbCustomerID.Text));
+            //int result = CustomerDAO.Instance.RemoveCustomer(Convert.ToInt32(tbCustomerID.Text));
 
-            if (result != 0)
-                MessageBox.Show("Xóa khách hàng thành công");
-            else
-                MessageBox.Show("Xóa thất bại");
+            //if (result != 0)
+            //    MessageBox.Show("Xóa khách hàng thành công");
+            //else
+            //    MessageBox.Show("Xóa thất bại");
 
-            LoadDataKHACHHANG();
+            //LoadDataKHACHHANG();
         }
 
         private void btnUpdateCustomer_Click(object sender, EventArgs e)
         {
-            int result = CustomerDAO.Instance.UpdateCustomer(Convert.ToInt32(tbCustomerID.Text), tbCusFullName.Text, tbCusPhone.Text, tbCusEmail.Text);
+            //int result = CustomerDAO.Instance.UpdateCustomer(Convert.ToInt32(tbCustomerID.Text), tbCusFullName.Text, tbCusPhone.Text, tbCusEmail.Text);
 
-            if (result != 0)
-                MessageBox.Show("Cập nhật thành công");
-            else
-                MessageBox.Show("Cập nhật thất bại");
+            //if (result != 0)
+            //    MessageBox.Show("Cập nhật thành công");
+            //else
+            //    MessageBox.Show("Cập nhật thất bại");
 
-            LoadDataKHACHHANG();
+            //LoadDataKHACHHANG();
         }
         private void btnAddCategory_Click(object sender, EventArgs e)
         {
-            int result = CategoryDAO.Instance.AddCategory(tbCategoryName.Text);
+            //int result = CategoryDAO.Instance.AddCategory(tbCategoryName.Text);
 
-            if (result != 0)
-                MessageBox.Show("Thêm danh mục thành công");
-            else
-                MessageBox.Show("Thêm thất bại");
+            //if (result != 0)
+            //    MessageBox.Show("Thêm danh mục thành công");
+            //else
+            //    MessageBox.Show("Thêm thất bại");
 
-            LoadDataCategories();
+            //LoadDataCategories();
         }
 
         private void btnRemoveCategory_Click(object sender, EventArgs e)
         {
-            int result = CategoryDAO.Instance.RemoveCategory(Convert.ToInt32(tbCategoryID.Text));
+            //int result = CategoryDAO.Instance.RemoveCategory(Convert.ToInt32(tbCategoryID.Text));
 
-            if (result != 0)
-                MessageBox.Show("Xóa danh mục thành công");
-            else
-                MessageBox.Show("Xóa thất bại");
+            //if (result != 0)
+            //    MessageBox.Show("Xóa danh mục thành công");
+            //else
+            //    MessageBox.Show("Xóa thất bại");
 
-            LoadDataCategories();
+            //LoadDataCategories();
         }
 
         private void btnUpdateCategory_Click(object sender, EventArgs e)
         {
-            int result = CategoryDAO.Instance.UpdateCategory(Convert.ToInt32(tbCategoryID.Text), tbCategoryName.Text);
+            //int result = CategoryDAO.Instance.UpdateCategory(Convert.ToInt32(tbCategoryID.Text), tbCategoryName.Text);
 
-            if (result != 0)
-                MessageBox.Show("Cập nhật thành công");
-            else
-                MessageBox.Show("Cập nhật thất bại");
+            //if (result != 0)
+            //    MessageBox.Show("Cập nhật thành công");
+            //else
+            //    MessageBox.Show("Cập nhật thất bại");
 
-            LoadDataCategories();
+            //LoadDataCategories();
         }
         private void btnAddProduct_Click(object sender, EventArgs e)
         {
-            int result = ProductDAO.Instance.AddProduct(
-                tbProductName.Text,
-                Convert.ToInt32(tbCategoryID.Text),
-                Convert.ToDecimal(tbProductPrice.Text),
-                Convert.ToInt32(tbProductStockQuantity.Text)
-            );
+            //int result = ProductDAO.Instance.AddProduct(
+            //    tbProductName.Text,
+            //    Convert.ToInt32(tbCategoryID.Text),
+            //    Convert.ToDecimal(tbProductPrice.Text),
+            //    Convert.ToInt32(tbProductStockQuantity.Text)
+            //);
 
-            if (result != 0)
-                MessageBox.Show("Thêm sản phẩm thành công");
-            else
-                MessageBox.Show("Thêm thất bại");
+            //if (result != 0)
+            //    MessageBox.Show("Thêm sản phẩm thành công");
+            //else
+            //    MessageBox.Show("Thêm thất bại");
 
-            LoadDataProducts();
+            //LoadDataProducts();
         }
 
         private void btnRemoveProduct_Click(object sender, EventArgs e)
         {
-            int result = ProductDAO.Instance.RemoveProduct(Convert.ToInt32(tbProductID.Text));
+            //int result = ProductDAO.Instance.RemoveProduct(Convert.ToInt32(tbProductID.Text));
 
-            if (result != 0)
-                MessageBox.Show("Xóa sản phẩm thành công");
-            else
-                MessageBox.Show("Xóa thất bại");
+            //if (result != 0)
+            //    MessageBox.Show("Xóa sản phẩm thành công");
+            //else
+            //    MessageBox.Show("Xóa thất bại");
 
-            LoadDataProducts();
+            //LoadDataProducts();
         }
 
         private void btnUpdateProduct_Click(object sender, EventArgs e)
         {
-            int result = ProductDAO.Instance.UpdateProduct(
-                Convert.ToInt32(tbProductID.Text),
-                tbProductName.Text,
-                Convert.ToInt32(tbCategoryID.Text),
-                Convert.ToDecimal(tbProductPrice.Text),
-                Convert.ToInt32(tbProductStockQuantity.Text)
-            );
+            //int result = ProductDAO.Instance.UpdateProduct(
+            //    Convert.ToInt32(tbProductID.Text),
+            //    tbProductName.Text,
+            //    Convert.ToInt32(tbCategoryID.Text),
+            //    Convert.ToDecimal(tbProductPrice.Text),
+            //    Convert.ToInt32(tbProductStockQuantity.Text)
+            //);
 
-            if (result != 0)
-                MessageBox.Show("Cập nhật thành công");
-            else
-                MessageBox.Show("Cập nhật thất bại");
+            //if (result != 0)
+            //    MessageBox.Show("Cập nhật thành công");
+            //else
+            //    MessageBox.Show("Cập nhật thất bại");
 
-            LoadDataProducts();
+            //LoadDataProducts();
         }
         #endregion
 
 
         #region Find bar & Reload dataGridView
-        private void tbFindUsers_TextChanged(object sender, EventArgs e)
+        private void tbFindNHANVIEN_TextChanged(object sender, EventArgs e)
         {
-            LoadDataAccounts(tbFindUsers.Text);
+            //LoadDataAccounts(tbFindNHANVIEN.Text);
         }
 
         private void tbFindKHACHHANG_TextChanged(object sender, EventArgs e)
         {
-            LoadDataKHACHHANG(tbFindKHACHHANG.Text);
+            //LoadDataKHACHHANG(tbFindKHACHHANG.Text);
         }
 
         private void tbFindCategories_TextChanged(object sender, EventArgs e)
         {
-            LoadDataCategories(tbFindCategories.Text);
+            //LoadDataCategories(tbFindCategories.Text);
         }
 
         private void tbFindProducts_TextChanged(object sender, EventArgs e)
         {
-            LoadDataProducts(tbFindProducts.Text);
+            //LoadDataProducts(tbFindProducts.Text);
         }
 
         private void tbFindOrders_TextChanged(object sender, EventArgs e)
         {
-            LoadDataOrders(tbFindOrders.Text);
+            //LoadDataOrders(tbFindOrders.Text);
         }
         #endregion
 
-        private void btnReloadUsers_Click(object sender, EventArgs e)
+        private void btnReloadNHANVIEN_Click(object sender, EventArgs e)
         {
-            LoadDataAccounts();
+            //LoadDataAccounts();
         }
 
         private void btnReloadKHACHHANG_Click(object sender, EventArgs e)
         {
-            LoadDataKHACHHANG();
+            //LoadDataKHACHHANG();
         }
 
         private void btnReloadCategories_Click(object sender, EventArgs e)
         {
-            LoadDataCategories();
+            //LoadDataCategories();
         }
 
         private void btnReloadProducts_Click(object sender, EventArgs e)
         {
-            LoadDataProducts();
+            //LoadDataProducts();
         }
 
         private void btnReloadOrders_Click(object sender, EventArgs e)
         {
-            LoadDataOrders();
+            //LoadDataOrders();
         }
     }
 }

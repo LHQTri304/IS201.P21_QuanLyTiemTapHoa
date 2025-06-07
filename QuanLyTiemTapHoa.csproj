@@ -123,12 +123,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Controls\ShowingOrderDetailPanel.cs">
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="Controls\FindingProductPanel.cs">
-      <SubType>Component</SubType>
-    </Compile>
+    <Compile Include="Controls\ShowingOrderDetailPanel.cs" />
+    <Compile Include="Controls\FindingProductPanel.cs" />
     <Compile Include="DAO\MenuDAO.cs" />
     <Compile Include="DAO\OrderDAO.cs" />
     <Compile Include="DAO\ProductDAO.cs" />

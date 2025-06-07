@@ -1,4 +1,4 @@
-﻿using QuanLyTiemTapHoa.DAO;
+﻿//using QuanLyTiemTapHoa.DAO;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -18,26 +18,26 @@ namespace QuanLyTiemTapHoa
             InitializeComponent();
         }
 
-        bool Login(string username, string password)
-        {
-            return AccountDAO.Instance.Login(username, password);
-        }
+        //bool Login(string username, string password)
+        //{
+        //    return AccountDAO.Instance.Login(username, password);
+        //}
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            string username = tbUsername.Text;
-            string password = tbPassword.Text;
-            if (Login(username,password))
-            {
-                fDashboard f = new fDashboard();
-                this.Hide();
-                f.ShowDialog();
-                this.Show();
-            }
-            else
-            {
-                MessageBox.Show("Sai tên tài khoản, mật khẩu");
-            }
+            //string username = tbUsername.Text;
+            //string password = tbPassword.Text;
+            //if (Login(username, password))
+            //{
+            //    fDashboard f = new fDashboard();
+            //    this.Hide();
+            //    f.ShowDialog();
+            //    this.Show();
+            //}
+            //else
+            //{
+            //    MessageBox.Show("Sai tên tài khoản, mật khẩu");
+            //}
         }
     }
 }
