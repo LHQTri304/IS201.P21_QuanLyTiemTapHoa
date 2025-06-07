@@ -17,7 +17,9 @@ namespace QuanLyTiemTapHoa
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
 
-            Application.Run(new fDashboard());
+            Application.Run(new fLogin());
+            //Application.Run(new fDashboard());
+            //Application.Run(new fAdmin());
         }
     }
 }

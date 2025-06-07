@@ -204,7 +204,7 @@ INSERT INTO SANPHAM VALUES
 
 -- 2. Thêm nhân viên
 INSERT INTO NHANVIEN VALUES
-('NV01', 'Nguyen Van A', 'Quan ly', '123456789', '0909123456', 'a@gmail.com', 'pass1'),
+('NV01', 'Nguyen Van A', 'Quan ly', '123456789', '0909123456', 'admin', '1'),
 ('NV02', 'Tran Thi B', 'Ban hang', '223456789', '0909123457', 'b@gmail.com', 'pass2'),
 ('NV03', 'Le Van C', 'Thu ngan', '323456789', '0909123458', 'c@gmail.com', 'pass3'),
 ('NV04', 'Pham Thi D', 'Ban hang', '423456789', '0909123459', 'd@gmail.com', 'pass4'),
