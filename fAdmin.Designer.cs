@@ -73,21 +73,6 @@
             this.label5 = new System.Windows.Forms.Label();
             this.tbCustomerID = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.dgvCategories = new System.Windows.Forms.DataGridView();
-            this.panel9 = new System.Windows.Forms.Panel();
-            this.btnReloadCategories = new System.Windows.Forms.Button();
-            this.panel10 = new System.Windows.Forms.Panel();
-            this.btnUpdateCategory = new System.Windows.Forms.Button();
-            this.btnRemoveCategory = new System.Windows.Forms.Button();
-            this.btnAddCategory = new System.Windows.Forms.Button();
-            this.panel11 = new System.Windows.Forms.Panel();
-            this.label10 = new System.Windows.Forms.Label();
-            this.tbFindCategories = new System.Windows.Forms.TextBox();
-            this.tbCategoryName = new System.Windows.Forms.TextBox();
-            this.label11 = new System.Windows.Forms.Label();
-            this.tbCategoryID = new System.Windows.Forms.TextBox();
-            this.label12 = new System.Windows.Forms.Label();
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.dgvProducts = new System.Windows.Forms.DataGridView();
             this.panel12 = new System.Windows.Forms.Panel();
@@ -159,11 +144,6 @@
             this.panel6.SuspendLayout();
             this.panel8.SuspendLayout();
             this.panel20.SuspendLayout();
-            this.tabPage3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvCategories)).BeginInit();
-            this.panel9.SuspendLayout();
-            this.panel10.SuspendLayout();
-            this.panel11.SuspendLayout();
             this.tabPage4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProducts)).BeginInit();
             this.panel12.SuspendLayout();
@@ -185,7 +165,6 @@
             // 
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
-            this.tabControl1.Controls.Add(this.tabPage3);
             this.tabControl1.Controls.Add(this.tabPage4);
             this.tabControl1.Controls.Add(this.tabPage5);
             this.tabControl1.Controls.Add(this.tabPage6);
@@ -678,182 +657,6 @@
             this.label7.Size = new System.Drawing.Size(53, 31);
             this.label7.TabIndex = 3;
             this.label7.Text = "ID:";
-            // 
-            // tabPage3
-            // 
-            this.tabPage3.Controls.Add(this.dgvCategories);
-            this.tabPage3.Controls.Add(this.panel9);
-            this.tabPage3.Location = new System.Drawing.Point(4, 34);
-            this.tabPage3.Margin = new System.Windows.Forms.Padding(2);
-            this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Padding = new System.Windows.Forms.Padding(2);
-            this.tabPage3.Size = new System.Drawing.Size(978, 679);
-            this.tabPage3.TabIndex = 2;
-            this.tabPage3.Text = "Danh mục";
-            this.tabPage3.UseVisualStyleBackColor = true;
-            // 
-            // dgvCategories
-            // 
-            this.dgvCategories.AllowDrop = true;
-            this.dgvCategories.AllowUserToAddRows = false;
-            this.dgvCategories.AllowUserToDeleteRows = false;
-            this.dgvCategories.AllowUserToResizeColumns = false;
-            this.dgvCategories.AllowUserToResizeRows = false;
-            this.dgvCategories.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgvCategories.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
-            this.dgvCategories.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvCategories.Location = new System.Drawing.Point(4, 233);
-            this.dgvCategories.Margin = new System.Windows.Forms.Padding(2);
-            this.dgvCategories.Name = "dgvCategories";
-            this.dgvCategories.ReadOnly = true;
-            this.dgvCategories.RowHeadersWidth = 62;
-            this.dgvCategories.RowTemplate.Height = 28;
-            this.dgvCategories.Size = new System.Drawing.Size(970, 442);
-            this.dgvCategories.TabIndex = 19;
-            // 
-            // panel9
-            // 
-            this.panel9.Controls.Add(this.btnReloadCategories);
-            this.panel9.Controls.Add(this.panel10);
-            this.panel9.Controls.Add(this.panel11);
-            this.panel9.Controls.Add(this.tbCategoryName);
-            this.panel9.Controls.Add(this.label11);
-            this.panel9.Controls.Add(this.tbCategoryID);
-            this.panel9.Controls.Add(this.label12);
-            this.panel9.Location = new System.Drawing.Point(4, 4);
-            this.panel9.Margin = new System.Windows.Forms.Padding(2);
-            this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(970, 225);
-            this.panel9.TabIndex = 20;
-            // 
-            // btnReloadCategories
-            // 
-            this.btnReloadCategories.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnReloadCategories.BackgroundImage")));
-            this.btnReloadCategories.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnReloadCategories.Location = new System.Drawing.Point(2, 173);
-            this.btnReloadCategories.Margin = new System.Windows.Forms.Padding(2);
-            this.btnReloadCategories.Name = "btnReloadCategories";
-            this.btnReloadCategories.Size = new System.Drawing.Size(50, 50);
-            this.btnReloadCategories.TabIndex = 21;
-            this.btnReloadCategories.UseVisualStyleBackColor = true;
-            this.btnReloadCategories.Click += new System.EventHandler(this.btnReloadCategories_Click);
-            // 
-            // panel10
-            // 
-            this.panel10.Controls.Add(this.btnUpdateCategory);
-            this.panel10.Controls.Add(this.btnRemoveCategory);
-            this.panel10.Controls.Add(this.btnAddCategory);
-            this.panel10.Location = new System.Drawing.Point(640, 122);
-            this.panel10.Margin = new System.Windows.Forms.Padding(2);
-            this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(328, 50);
-            this.panel10.TabIndex = 20;
-            // 
-            // btnUpdateCategory
-            // 
-            this.btnUpdateCategory.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnUpdateCategory.BackgroundImage")));
-            this.btnUpdateCategory.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnUpdateCategory.Location = new System.Drawing.Point(210, 2);
-            this.btnUpdateCategory.Margin = new System.Windows.Forms.Padding(2);
-            this.btnUpdateCategory.Name = "btnUpdateCategory";
-            this.btnUpdateCategory.Size = new System.Drawing.Size(100, 38);
-            this.btnUpdateCategory.TabIndex = 2;
-            this.btnUpdateCategory.UseVisualStyleBackColor = true;
-            this.btnUpdateCategory.Click += new System.EventHandler(this.btnUpdateCategory_Click);
-            // 
-            // btnRemoveCategory
-            // 
-            this.btnRemoveCategory.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnRemoveCategory.BackgroundImage")));
-            this.btnRemoveCategory.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnRemoveCategory.Location = new System.Drawing.Point(106, 2);
-            this.btnRemoveCategory.Margin = new System.Windows.Forms.Padding(2);
-            this.btnRemoveCategory.Name = "btnRemoveCategory";
-            this.btnRemoveCategory.Size = new System.Drawing.Size(100, 38);
-            this.btnRemoveCategory.TabIndex = 1;
-            this.btnRemoveCategory.UseVisualStyleBackColor = true;
-            this.btnRemoveCategory.Click += new System.EventHandler(this.btnRemoveCategory_Click);
-            // 
-            // btnAddCategory
-            // 
-            this.btnAddCategory.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnAddCategory.BackgroundImage")));
-            this.btnAddCategory.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnAddCategory.Location = new System.Drawing.Point(2, 2);
-            this.btnAddCategory.Margin = new System.Windows.Forms.Padding(2);
-            this.btnAddCategory.Name = "btnAddCategory";
-            this.btnAddCategory.Size = new System.Drawing.Size(100, 38);
-            this.btnAddCategory.TabIndex = 0;
-            this.btnAddCategory.UseVisualStyleBackColor = true;
-            this.btnAddCategory.Click += new System.EventHandler(this.btnAddCategory_Click);
-            // 
-            // panel11
-            // 
-            this.panel11.Controls.Add(this.label10);
-            this.panel11.Controls.Add(this.tbFindCategories);
-            this.panel11.Location = new System.Drawing.Point(472, 174);
-            this.panel11.Margin = new System.Windows.Forms.Padding(2);
-            this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(496, 50);
-            this.panel11.TabIndex = 17;
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(2, 6);
-            this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(140, 31);
-            this.label10.TabIndex = 24;
-            this.label10.Text = "Tìm kiếm:";
-            // 
-            // tbFindCategories
-            // 
-            this.tbFindCategories.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbFindCategories.Location = new System.Drawing.Point(146, 6);
-            this.tbFindCategories.Margin = new System.Windows.Forms.Padding(2);
-            this.tbFindCategories.Name = "tbFindCategories";
-            this.tbFindCategories.Size = new System.Drawing.Size(348, 38);
-            this.tbFindCategories.TabIndex = 23;
-            this.tbFindCategories.TextChanged += new System.EventHandler(this.tbFindCategories_TextChanged);
-            // 
-            // tbCategoryName
-            // 
-            this.tbCategoryName.Location = new System.Drawing.Point(141, 48);
-            this.tbCategoryName.Margin = new System.Windows.Forms.Padding(2);
-            this.tbCategoryName.Name = "tbCategoryName";
-            this.tbCategoryName.Size = new System.Drawing.Size(809, 31);
-            this.tbCategoryName.TabIndex = 6;
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(2, 48);
-            this.label11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(135, 31);
-            this.label11.TabIndex = 5;
-            this.label11.Text = "Tên mục:";
-            // 
-            // tbCategoryID
-            // 
-            this.tbCategoryID.Location = new System.Drawing.Point(407, 10);
-            this.tbCategoryID.Margin = new System.Windows.Forms.Padding(2);
-            this.tbCategoryID.Name = "tbCategoryID";
-            this.tbCategoryID.ReadOnly = true;
-            this.tbCategoryID.Size = new System.Drawing.Size(300, 31);
-            this.tbCategoryID.TabIndex = 4;
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(350, 10);
-            this.label12.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(53, 31);
-            this.label12.TabIndex = 3;
-            this.label12.Text = "ID:";
             // 
             // tabPage4
             // 
@@ -1560,13 +1363,6 @@
             this.panel8.ResumeLayout(false);
             this.panel20.ResumeLayout(false);
             this.panel20.PerformLayout();
-            this.tabPage3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvCategories)).EndInit();
-            this.panel9.ResumeLayout(false);
-            this.panel9.PerformLayout();
-            this.panel10.ResumeLayout(false);
-            this.panel11.ResumeLayout(false);
-            this.panel11.PerformLayout();
             this.tabPage4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvProducts)).EndInit();
             this.panel12.ResumeLayout(false);
@@ -1598,7 +1394,6 @@
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.TabPage tabPage2;
-        private System.Windows.Forms.TabPage tabPage3;
         private System.Windows.Forms.TabPage tabPage4;
         private System.Windows.Forms.TabPage tabPage5;
         private System.Windows.Forms.TabPage tabPage6;
@@ -1657,13 +1452,6 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox tbCustomerID;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.DataGridView dgvCategories;
-        private System.Windows.Forms.Panel panel9;
-        private System.Windows.Forms.Panel panel11;
-        private System.Windows.Forms.TextBox tbCategoryName;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.TextBox tbCategoryID;
-        private System.Windows.Forms.Label label12;
         private System.Windows.Forms.DataGridView dgvProducts;
         private System.Windows.Forms.Panel panel12;
         private System.Windows.Forms.Panel panel14;
@@ -1689,10 +1477,6 @@
         private System.Windows.Forms.Button btnUpdateCustomer;
         private System.Windows.Forms.Button btnRemoveCustomer;
         private System.Windows.Forms.Button btnAddCustomer;
-        private System.Windows.Forms.Panel panel10;
-        private System.Windows.Forms.Button btnUpdateCategory;
-        private System.Windows.Forms.Button btnRemoveCategory;
-        private System.Windows.Forms.Button btnAddCategory;
         private System.Windows.Forms.Panel panel13;
         private System.Windows.Forms.Button btnUpdateProduct;
         private System.Windows.Forms.Button btnRemoveProduct;
@@ -1702,15 +1486,12 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox tbFindKHACHHANG;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.TextBox tbFindCategories;
         private System.Windows.Forms.Label label30;
         private System.Windows.Forms.TextBox tbFindProducts;
         private System.Windows.Forms.Label label31;
         private System.Windows.Forms.TextBox tbFindOrders;
         private System.Windows.Forms.Button btnReloadNHANVIEN;
         private System.Windows.Forms.Button btnReloadKHACHHANG;
-        private System.Windows.Forms.Button btnReloadCategories;
         private System.Windows.Forms.Button btnReloadProducts;
         private System.Windows.Forms.Button btnReloadOrders;
     }
