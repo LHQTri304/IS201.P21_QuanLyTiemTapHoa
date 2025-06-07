@@ -53,16 +53,16 @@
             this.tbUserID = new System.Windows.Forms.TextBox();
             this.label25 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.dgvCustomers = new System.Windows.Forms.DataGridView();
+            this.dgvKHACHHANG = new System.Windows.Forms.DataGridView();
             this.panel6 = new System.Windows.Forms.Panel();
-            this.btnReloadCustomers = new System.Windows.Forms.Button();
+            this.btnReloadKHACHHANG = new System.Windows.Forms.Button();
             this.panel8 = new System.Windows.Forms.Panel();
             this.btnUpdateCustomer = new System.Windows.Forms.Button();
             this.btnRemoveCustomer = new System.Windows.Forms.Button();
             this.btnAddCustomer = new System.Windows.Forms.Button();
             this.panel20 = new System.Windows.Forms.Panel();
             this.label9 = new System.Windows.Forms.Label();
-            this.tbFindCustomers = new System.Windows.Forms.TextBox();
+            this.tbFindKHACHHANG = new System.Windows.Forms.TextBox();
             this.tbCusCreatedAt = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.tbCusEmail = new System.Windows.Forms.TextBox();
@@ -155,7 +155,7 @@
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.tabPage2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvCustomers)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvKHACHHANG)).BeginInit();
             this.panel6.SuspendLayout();
             this.panel8.SuspendLayout();
             this.panel20.SuspendLayout();
@@ -442,7 +442,7 @@
             // 
             // tabPage2
             // 
-            this.tabPage2.Controls.Add(this.dgvCustomers);
+            this.tabPage2.Controls.Add(this.dgvKHACHHANG);
             this.tabPage2.Controls.Add(this.panel6);
             this.tabPage2.Location = new System.Drawing.Point(4, 34);
             this.tabPage2.Margin = new System.Windows.Forms.Padding(2);
@@ -453,28 +453,28 @@
             this.tabPage2.Text = "Khách hàng";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
-            // dgvCustomers
+            // dgvKHACHHANG
             // 
-            this.dgvCustomers.AllowDrop = true;
-            this.dgvCustomers.AllowUserToAddRows = false;
-            this.dgvCustomers.AllowUserToDeleteRows = false;
-            this.dgvCustomers.AllowUserToResizeColumns = false;
-            this.dgvCustomers.AllowUserToResizeRows = false;
-            this.dgvCustomers.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgvCustomers.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
-            this.dgvCustomers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvCustomers.Location = new System.Drawing.Point(4, 233);
-            this.dgvCustomers.Margin = new System.Windows.Forms.Padding(2);
-            this.dgvCustomers.Name = "dgvCustomers";
-            this.dgvCustomers.ReadOnly = true;
-            this.dgvCustomers.RowHeadersWidth = 62;
-            this.dgvCustomers.RowTemplate.Height = 28;
-            this.dgvCustomers.Size = new System.Drawing.Size(970, 442);
-            this.dgvCustomers.TabIndex = 17;
+            this.dgvKHACHHANG.AllowDrop = true;
+            this.dgvKHACHHANG.AllowUserToAddRows = false;
+            this.dgvKHACHHANG.AllowUserToDeleteRows = false;
+            this.dgvKHACHHANG.AllowUserToResizeColumns = false;
+            this.dgvKHACHHANG.AllowUserToResizeRows = false;
+            this.dgvKHACHHANG.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvKHACHHANG.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.dgvKHACHHANG.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvKHACHHANG.Location = new System.Drawing.Point(4, 233);
+            this.dgvKHACHHANG.Margin = new System.Windows.Forms.Padding(2);
+            this.dgvKHACHHANG.Name = "dgvKHACHHANG";
+            this.dgvKHACHHANG.ReadOnly = true;
+            this.dgvKHACHHANG.RowHeadersWidth = 62;
+            this.dgvKHACHHANG.RowTemplate.Height = 28;
+            this.dgvKHACHHANG.Size = new System.Drawing.Size(970, 442);
+            this.dgvKHACHHANG.TabIndex = 17;
             // 
             // panel6
             // 
-            this.panel6.Controls.Add(this.btnReloadCustomers);
+            this.panel6.Controls.Add(this.btnReloadKHACHHANG);
             this.panel6.Controls.Add(this.panel8);
             this.panel6.Controls.Add(this.panel20);
             this.panel6.Controls.Add(this.tbCusCreatedAt);
@@ -493,17 +493,17 @@
             this.panel6.Size = new System.Drawing.Size(970, 225);
             this.panel6.TabIndex = 18;
             // 
-            // btnReloadCustomers
+            // btnReloadKHACHHANG
             // 
-            this.btnReloadCustomers.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnReloadCustomers.BackgroundImage")));
-            this.btnReloadCustomers.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnReloadCustomers.Location = new System.Drawing.Point(2, 173);
-            this.btnReloadCustomers.Margin = new System.Windows.Forms.Padding(2);
-            this.btnReloadCustomers.Name = "btnReloadCustomers";
-            this.btnReloadCustomers.Size = new System.Drawing.Size(50, 50);
-            this.btnReloadCustomers.TabIndex = 21;
-            this.btnReloadCustomers.UseVisualStyleBackColor = true;
-            this.btnReloadCustomers.Click += new System.EventHandler(this.btnReloadCustomers_Click);
+            this.btnReloadKHACHHANG.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnReloadKHACHHANG.BackgroundImage")));
+            this.btnReloadKHACHHANG.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnReloadKHACHHANG.Location = new System.Drawing.Point(2, 173);
+            this.btnReloadKHACHHANG.Margin = new System.Windows.Forms.Padding(2);
+            this.btnReloadKHACHHANG.Name = "btnReloadKHACHHANG";
+            this.btnReloadKHACHHANG.Size = new System.Drawing.Size(50, 50);
+            this.btnReloadKHACHHANG.TabIndex = 21;
+            this.btnReloadKHACHHANG.UseVisualStyleBackColor = true;
+            this.btnReloadKHACHHANG.Click += new System.EventHandler(this.btnReloadKHACHHANG_Click);
             // 
             // panel8
             // 
@@ -555,7 +555,7 @@
             // panel20
             // 
             this.panel20.Controls.Add(this.label9);
-            this.panel20.Controls.Add(this.tbFindCustomers);
+            this.panel20.Controls.Add(this.tbFindKHACHHANG);
             this.panel20.Location = new System.Drawing.Point(472, 174);
             this.panel20.Margin = new System.Windows.Forms.Padding(2);
             this.panel20.Name = "panel20";
@@ -573,15 +573,15 @@
             this.label9.TabIndex = 24;
             this.label9.Text = "Tìm kiếm:";
             // 
-            // tbFindCustomers
+            // tbFindKHACHHANG
             // 
-            this.tbFindCustomers.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbFindCustomers.Location = new System.Drawing.Point(146, 6);
-            this.tbFindCustomers.Margin = new System.Windows.Forms.Padding(2);
-            this.tbFindCustomers.Name = "tbFindCustomers";
-            this.tbFindCustomers.Size = new System.Drawing.Size(348, 38);
-            this.tbFindCustomers.TabIndex = 23;
-            this.tbFindCustomers.TextChanged += new System.EventHandler(this.tbFindCustomers_TextChanged);
+            this.tbFindKHACHHANG.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbFindKHACHHANG.Location = new System.Drawing.Point(146, 6);
+            this.tbFindKHACHHANG.Margin = new System.Windows.Forms.Padding(2);
+            this.tbFindKHACHHANG.Name = "tbFindKHACHHANG";
+            this.tbFindKHACHHANG.Size = new System.Drawing.Size(348, 38);
+            this.tbFindKHACHHANG.TabIndex = 23;
+            this.tbFindKHACHHANG.TextChanged += new System.EventHandler(this.tbFindKHACHHANG_TextChanged);
             // 
             // tbCusCreatedAt
             // 
@@ -1554,7 +1554,7 @@
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.tabPage2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvCustomers)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvKHACHHANG)).EndInit();
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
             this.panel8.ResumeLayout(false);
@@ -1644,7 +1644,7 @@
         private System.Windows.Forms.Panel panel18;
         private System.Windows.Forms.Label label26;
         private System.Windows.Forms.Label label21;
-        private System.Windows.Forms.DataGridView dgvCustomers;
+        private System.Windows.Forms.DataGridView dgvKHACHHANG;
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Panel panel20;
         private System.Windows.Forms.TextBox tbCusCreatedAt;
@@ -1701,7 +1701,7 @@
         private System.Windows.Forms.ComboBox cbbUserRole;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox tbFindCustomers;
+        private System.Windows.Forms.TextBox tbFindKHACHHANG;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.TextBox tbFindCategories;
         private System.Windows.Forms.Label label30;
@@ -1709,7 +1709,7 @@
         private System.Windows.Forms.Label label31;
         private System.Windows.Forms.TextBox tbFindOrders;
         private System.Windows.Forms.Button btnReloadUsers;
-        private System.Windows.Forms.Button btnReloadCustomers;
+        private System.Windows.Forms.Button btnReloadKHACHHANG;
         private System.Windows.Forms.Button btnReloadCategories;
         private System.Windows.Forms.Button btnReloadProducts;
         private System.Windows.Forms.Button btnReloadOrders;

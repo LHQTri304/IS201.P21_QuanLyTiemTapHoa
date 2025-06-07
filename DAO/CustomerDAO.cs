@@ -16,9 +16,9 @@ namespace QuanLyTiemTapHoa.DAO
         private CustomerDAO() { }
 
 
-        public DataTable GetDataAllCustomers()
+        public DataTable GetDataAllKHACHHANG()
         {
-            string query = "SELECT * FROM quanlytiemtaphoa.customers;";
+            string query = "SELECT * FROM quanlytiemtaphoa.khachhang;";
 
             DataTable result = DataProvider.Instance.ExecuteQuery(query);
             return result;
@@ -26,28 +26,28 @@ namespace QuanLyTiemTapHoa.DAO
 
         public int AddCustomer(string fullName, string phone, string email)
         {
-            string query = "INSERT INTO Customers (FullName, Phone, Email) VALUES ('" + fullName + "', '" + phone + "', '" + email + "')";
+            string query = "INSERT INTO KHACHHANG (FullName, Phone) VALUES ('" + fullName + "', '" + phone + "')";
             int result = DataProvider.Instance.ExecuteNonQuery(query);
-            return result;
+            return 1;
         }
 
         public int RemoveCustomer(int id)
         {
-            string query = "DELETE FROM Customers WHERE CustomerID = " + id;
+            string query = "DELETE FROM KHACHHANG WHERE CustomerID = " + id;
             int result = DataProvider.Instance.ExecuteNonQuery(query);
-            return result;
+            return 1;
         }
 
         public int UpdateCustomer(int id, string fullName, string phone, string email)
         {
-            string query = "UPDATE Customers SET FullName = '" + fullName + "', Phone = '" + phone + "', Email = '" + email + "' WHERE CustomerID = " + id;
+            string query = "UPDATE KHACHHANG SET FullName = '" + fullName + "', Phone = '" + phone + "', Email = '" + email + "' WHERE CustomerID = " + id;
             int result = DataProvider.Instance.ExecuteNonQuery(query);
-            return result;
+            return 1;
         }
 
-        public DataTable GetDataFindCustomers(string keyword)
+        public DataTable GetDataFindKHACHHANG(string keyword)
         {
-            string query = "SELECT * FROM Customers WHERE FullName LIKE '%" + keyword.ToLower() + "%'";
+            string query = "SELECT * FROM KHACHHANG WHERE TenKH LIKE '%" + keyword.ToLower() + "%'";
 
             DataTable result = DataProvider.Instance.ExecuteQuery(query);
             return result;

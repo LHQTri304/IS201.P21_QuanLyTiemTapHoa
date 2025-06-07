@@ -47,18 +47,18 @@ namespace QuanLyTiemTapHoa
             BindingDataUser();
         }
 
-        private void LoadDataCustomers(string keyword = "")
+        private void LoadDataKHACHHANG(string keyword = "")
         {
-            dgvCustomers.DataSource = keyword == "" ? CustomerDAO.Instance.GetDataAllCustomers() : CustomerDAO.Instance.GetDataFindCustomers(keyword);
+            dgvKHACHHANG.DataSource = keyword == "" ? CustomerDAO.Instance.GetDataAllKHACHHANG() : CustomerDAO.Instance.GetDataFindKHACHHANG(keyword);
 
-            if (dgvCustomers.Rows.Count > 0)
+            if (dgvKHACHHANG.Rows.Count > 0)
             {
-                foreach (DataGridViewColumn col in dgvCustomers.Columns)
+                foreach (DataGridViewColumn col in dgvKHACHHANG.Columns)
                 {
                     col.Visible = col.Name == "FullName" || col.Name == "CreatedAt";
                 }
-                dgvCustomers.Columns["FullName"].HeaderText = "Họ và tên";
-                dgvCustomers.Columns["CreatedAt"].HeaderText = "Ngày đăng ký";
+                dgvKHACHHANG.Columns["FullName"].HeaderText = "Họ và tên";
+                dgvKHACHHANG.Columns["CreatedAt"].HeaderText = "Ngày đăng ký";
             }
 
             // Clear old bindings
@@ -185,7 +185,7 @@ namespace QuanLyTiemTapHoa
         private void LoadAllData()
         {
             LoadDataAccounts();
-            LoadDataCustomers();
+            LoadDataKHACHHANG();
             LoadDataCategories();
             LoadDataProducts();
             LoadDataOrders();
@@ -207,11 +207,11 @@ namespace QuanLyTiemTapHoa
 
         private void BindingDataCustomer()
         {
-            tbCustomerID.DataBindings.Add(new Binding("Text", dgvCustomers.DataSource, "CustomerID"));
-            tbCusFullName.DataBindings.Add(new Binding("Text", dgvCustomers.DataSource, "FullName"));
-            tbCusPhone.DataBindings.Add(new Binding("Text", dgvCustomers.DataSource, "Phone"));
-            tbCusEmail.DataBindings.Add(new Binding("Text", dgvCustomers.DataSource, "Email"));
-            tbCusCreatedAt.DataBindings.Add(new Binding("Text", dgvCustomers.DataSource, "CreatedAt"));
+            tbCustomerID.DataBindings.Add(new Binding("Text", dgvKHACHHANG.DataSource, "CustomerID"));
+            tbCusFullName.DataBindings.Add(new Binding("Text", dgvKHACHHANG.DataSource, "FullName"));
+            tbCusPhone.DataBindings.Add(new Binding("Text", dgvKHACHHANG.DataSource, "Phone"));
+            tbCusEmail.DataBindings.Add(new Binding("Text", dgvKHACHHANG.DataSource, "Email"));
+            tbCusCreatedAt.DataBindings.Add(new Binding("Text", dgvKHACHHANG.DataSource, "CreatedAt"));
         }
 
         private void BindingDataCategory()
@@ -317,7 +317,7 @@ namespace QuanLyTiemTapHoa
             else
                 MessageBox.Show("Thêm thất bại"); ;
 
-            LoadDataCustomers();
+            LoadDataKHACHHANG();
         }
 
         private void btnRemoveCustomer_Click(object sender, EventArgs e)
@@ -329,7 +329,7 @@ namespace QuanLyTiemTapHoa
             else
                 MessageBox.Show("Xóa thất bại");
 
-            LoadDataCustomers();
+            LoadDataKHACHHANG();
         }
 
         private void btnUpdateCustomer_Click(object sender, EventArgs e)
@@ -341,7 +341,7 @@ namespace QuanLyTiemTapHoa
             else
                 MessageBox.Show("Cập nhật thất bại");
 
-            LoadDataCustomers();
+            LoadDataKHACHHANG();
         }
         private void btnAddCategory_Click(object sender, EventArgs e)
         {
@@ -433,9 +433,9 @@ namespace QuanLyTiemTapHoa
             LoadDataAccounts(tbFindUsers.Text);
         }
 
-        private void tbFindCustomers_TextChanged(object sender, EventArgs e)
+        private void tbFindKHACHHANG_TextChanged(object sender, EventArgs e)
         {
-            LoadDataCustomers(tbFindCustomers.Text);
+            LoadDataKHACHHANG(tbFindKHACHHANG.Text);
         }
 
         private void tbFindCategories_TextChanged(object sender, EventArgs e)
@@ -459,9 +459,9 @@ namespace QuanLyTiemTapHoa
             LoadDataAccounts();
         }
 
-        private void btnReloadCustomers_Click(object sender, EventArgs e)
+        private void btnReloadKHACHHANG_Click(object sender, EventArgs e)
         {
-            LoadDataCustomers();
+            LoadDataKHACHHANG();
         }
 
         private void btnReloadCategories_Click(object sender, EventArgs e)
