@@ -258,6 +258,38 @@ BEGIN
 END //
 DELIMITER ;
 
+-- Thủ tục tính tổng hóa đơn từ các chi tiết hóa đơn liên quan
+-- DROP PROCEDURE IF EXISTS TinhTongTienTatCaHoaDon;
+DELIMITER //
+CREATE PROCEDURE TinhTongTienTatCaHoaDon()
+BEGIN
+    DECLARE done INT DEFAULT FALSE;
+    DECLARE v_SoHD VARCHAR(10);
+    DECLARE cur CURSOR FOR SELECT SoHD FROM HOADON;
+    DECLARE CONTINUE HANDLER FOR NOT FOUND SET done = TRUE;
+
+    OPEN cur;
+
+    read_loop: LOOP
+        FETCH cur INTO v_SoHD;
+        IF done THEN
+            LEAVE read_loop;
+        END IF;
+
+        UPDATE HOADON
+        SET TongTien = (
+            SELECT SUM(TongGia)
+            FROM CTHD
+            WHERE CTHD.SoHD = v_SoHD
+        )
+        WHERE SoHD = v_SoHD;
+    END LOOP;
+
+    CLOSE cur;
+END //
+DELIMITER ;
+
+
 -- Thêm dữ liệu mẫu
 -- 1. Thêm sản phẩm
 INSERT INTO SANPHAM VALUES

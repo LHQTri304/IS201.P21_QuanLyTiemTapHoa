@@ -24,12 +24,19 @@ namespace QuanLyTiemTapHoa.DAO
             DataTable result = DataProvider.Instance.ExecuteQuery(query);
             return result;
         }
+        public DataTable GetDataAllProductsOld()
+        {
+            string query = "SELECT * FROM Products";
+
+            DataTable result = DataProvider.Instance.ExecuteQuery(query);
+            return result;
+        }
 
         public List<Product> GetListProducts(string keyword = "")
         {
             List<Product> list = new List<Product>();
 
-            string query = "SELECT * FROM SANPHAM WHERE TenSP LIKE '%" + keyword.ToLower() + "%'";
+            string query = "SELECT * FROM Products WHERE TenSP LIKE '%" + keyword.ToLower() + "%'";
 
             DataTable result = DataProvider.Instance.ExecuteQuery(query);
 

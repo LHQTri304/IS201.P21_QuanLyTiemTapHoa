@@ -1,6 +1,6 @@
 -- Tạo database
 -- DROP DATABASE QuanLyTiemTapHoa;
-CREATE DATABASE QuanLyTiemTapHoa;
+-- CREATE DATABASE QuanLyTiemTapHoa;
 USE QuanLyTiemTapHoa;
 
 -- Bảng Users (Nhân viên và quản trị viên)

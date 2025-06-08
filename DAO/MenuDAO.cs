@@ -34,5 +34,21 @@ namespace QuanLyTiemTapHoa.DAO
 
             return listMenuRow;
         }
+
+        public List<MenuRow2> GetListMenuRowOld(int orderID)
+        {
+            List<MenuRow2> listMenuRow = new List<MenuRow2>();
+
+            string query = "SELECT p.ProductID, p.ProductName, od.Quantity, p.Price, p.Price*od.Quantity as TotalPrice FROM quanlytiemtaphoa.orderdetails as od, quanlytiemtaphoa.orders as o, quanlytiemtaphoa.products as p where od.OrderID = o.OrderID and od.ProductID = p.ProductID and od.OrderID = " + orderID;
+
+            DataTable result = DataProvider.Instance.ExecuteQuery(query);
+            foreach (DataRow row in result.Rows)
+            {
+                MenuRow2 menuRow = new MenuRow2(row);
+                listMenuRow.Add(menuRow);
+            }
+
+            return listMenuRow;
+        }
     }
 }

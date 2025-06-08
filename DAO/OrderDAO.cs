@@ -1,6 +1,4 @@
 ﻿using System.Data;
-using System.Text;
-using System.Windows.Forms;
 
 namespace QuanLyTiemTapHoa.DAO
 {
@@ -26,8 +24,17 @@ namespace QuanLyTiemTapHoa.DAO
 
         public DataTable GetCompletedOrderByDates(string dateStart, string dateEnd)
         {
-            string query = "SELECT * FROM quanlytiemtaphoa.hoadon as hd, quanlytiemtaphoa.nhanvien as nv"
+            string query = "SELECT SoHD as 'Mã số hóa đơn', NgayLap as 'Ngày tạo', TongTien as 'Tổng tiền'"
+                + " FROM quanlytiemtaphoa.hoadon as hd, quanlytiemtaphoa.nhanvien as nv"
                 + " where hd.MaNV = nv.MaNV and hd.NgayLap >= '" + dateStart + "' and hd.NgayLap <= '" + dateEnd + "'";
+
+            DataTable result = DataProvider.Instance.ExecuteQuery(query);
+            return result;
+        }
+
+        public DataTable GetCompletedOrderByDatesOld(string dateStart, string dateEnd)
+        {
+            string query = "SELECT o.OrderID, c.FullName as CustomerName, u.FullName as StaffName, o.OrderDate, o.Status FROM quanlytiemtaphoa.orders as o, quanlytiemtaphoa.users as u, quanlytiemtaphoa.khachhang as c where o.CustomerID = c.CustomerID and o.UserID = u.UserID";
 
             DataTable result = DataProvider.Instance.ExecuteQuery(query);
             return result;
@@ -100,6 +107,29 @@ namespace QuanLyTiemTapHoa.DAO
             string query = "SELECT TenSP as ProductName, SoLuong as Quantity, GiaSP as UnitPrice, TongGia as ThanhTien FROM CTHD WHERE SoHD = '" + orderID + "';";
 
             DataTable result = DataProvider.Instance.ExecuteQuery(query);
+
+            return result;
+        }
+
+        public DataTable GetDataAllOrdersOld()
+        {
+            string query = "SELECT o.OrderID, c.FullName as CustomerName, u.FullName as StaffName, o.OrderDate, o.Status FROM quanlytiemtaphoa.orders as o, quanlytiemtaphoa.users as u, quanlytiemtaphoa.customers as c where o.CustomerID = c.CustomerID and o.UserID = u.UserID";
+            DataTable result = DataProvider.Instance.ExecuteQuery(query);
+            return result;
+        }
+
+        public DataTable GetDataFindOrdersOld(string keyword)
+        {
+            string query = "SELECT o.OrderID, c.FullName as CustomerName, u.FullName as StaffName, o.OrderDate, o.Status FROM quanlytiemtaphoa.orders as o, quanlytiemtaphoa.users as u, quanlytiemtaphoa.customers as c where o.CustomerID = c.CustomerID and o.UserID = u.UserID AND u.FullName LIKE '%" + keyword.ToLower() + "%'";
+            DataTable result = DataProvider.Instance.ExecuteQuery(query);
+            return result;
+        }
+
+        public int TinhTongTienTatCaHoaDon()
+        {
+            string query = "CALL TinhTongTienTatCaHoaDon();";
+
+            int result = DataProvider.Instance.ExecuteNonQuery(query);
 
             return result;
         }
