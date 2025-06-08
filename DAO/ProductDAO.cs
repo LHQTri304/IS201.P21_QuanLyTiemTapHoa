@@ -36,7 +36,7 @@ namespace QuanLyTiemTapHoa.DAO
         {
             List<Product> list = new List<Product>();
 
-            string query = "SELECT * FROM Products WHERE TenSP LIKE '%" + keyword.ToLower() + "%'";
+            string query = "SELECT * FROM quanlytiemtaphoa.sanpham WHERE TenSP LIKE '%" + keyword.ToLower() + "%'";
 
             DataTable result = DataProvider.Instance.ExecuteQuery(query);
 

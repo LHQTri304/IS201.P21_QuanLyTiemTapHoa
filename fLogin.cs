@@ -22,7 +22,7 @@ namespace QuanLyTiemTapHoa
             string password = tbPassword.Text;
             if (Login(username, password))
             {
-                fDashboard f = new fDashboard();
+                fDashboard f = new fDashboard(username);
                 this.Hide();
                 f.ShowDialog();
                 this.Show();

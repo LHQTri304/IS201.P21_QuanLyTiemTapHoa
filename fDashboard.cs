@@ -18,7 +18,7 @@ namespace QuanLyTiemTapHoa
         public string CurrentCategoryID { get => currentCategoryID; private set => currentCategoryID = value; }
         public string CurrentProductID { get => currentProductID; private set => currentProductID = value; }
 
-        public fDashboard()
+        public fDashboard(string username)
         {
             InitializeComponent();
 
@@ -26,6 +26,15 @@ namespace QuanLyTiemTapHoa
             LoadOrder();
             //LoadCategories();
             LoadProductList();
+
+            if (username.ToLower() == "admin")
+            {
+                tsmAdmin.Visible = true;
+            }
+            else
+            {
+                tsmAdmin.Visible = false;
+            }
         }
 
         private void adminToolStripMenuItem_Click(object sender, EventArgs e)
