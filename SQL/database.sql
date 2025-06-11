@@ -24,8 +24,8 @@ INSERT INTO Users (FullName, Username, PasswordHash, Role, Phone, Email) VALUES
 CREATE TABLE Customers (
     CustomerID INT AUTO_INCREMENT PRIMARY KEY,
     FullName VARCHAR(100) NOT NULL,
-    Phone VARCHAR(15) UNIQUE,
-    Email VARCHAR(100) UNIQUE,
+    Phone VARCHAR(15),
+    Email VARCHAR(100),
     CreatedAt TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 

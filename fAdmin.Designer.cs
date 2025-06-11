@@ -122,6 +122,21 @@
             this.label17 = new System.Windows.Forms.Label();
             this.tbOrderID = new System.Windows.Forms.TextBox();
             this.label18 = new System.Windows.Forms.Label();
+            this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.dgvKhuyenMai = new System.Windows.Forms.DataGridView();
+            this.panel9 = new System.Windows.Forms.Panel();
+            this.tbMucKM = new System.Windows.Forms.TextBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.tbTenKM = new System.Windows.Forms.TextBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.button2 = new System.Windows.Forms.Button();
+            this.panel10 = new System.Windows.Forms.Panel();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
+            this.button6 = new System.Windows.Forms.Button();
+            this.panel11 = new System.Windows.Forms.Panel();
+            this.label10 = new System.Windows.Forms.Label();
+            this.tbFindKM = new System.Windows.Forms.TextBox();
             this.tabPage6 = new System.Windows.Forms.TabPage();
             this.panel19 = new System.Windows.Forms.Panel();
             this.label20 = new System.Windows.Forms.Label();
@@ -133,21 +148,6 @@
             this.dtpStart = new System.Windows.Forms.DateTimePicker();
             this.btnExport = new System.Windows.Forms.Button();
             this.dgvCompletedOrders = new System.Windows.Forms.DataGridView();
-            this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.panel9 = new System.Windows.Forms.Panel();
-            this.button2 = new System.Windows.Forms.Button();
-            this.panel10 = new System.Windows.Forms.Panel();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
-            this.panel11 = new System.Windows.Forms.Panel();
-            this.label10 = new System.Windows.Forms.Label();
-            this.tbFindKM = new System.Windows.Forms.TextBox();
-            this.tbMucKM = new System.Windows.Forms.TextBox();
-            this.label11 = new System.Windows.Forms.Label();
-            this.tbTenKM = new System.Windows.Forms.TextBox();
-            this.label12 = new System.Windows.Forms.Label();
-            this.dgvKhuyenMai = new System.Windows.Forms.DataGridView();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAccounts)).BeginInit();
@@ -170,15 +170,15 @@
             this.panel2.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel7.SuspendLayout();
+            this.tabPage3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvKhuyenMai)).BeginInit();
+            this.panel9.SuspendLayout();
+            this.panel10.SuspendLayout();
+            this.panel11.SuspendLayout();
             this.tabPage6.SuspendLayout();
             this.panel19.SuspendLayout();
             this.panel18.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCompletedOrders)).BeginInit();
-            this.tabPage3.SuspendLayout();
-            this.panel9.SuspendLayout();
-            this.panel10.SuspendLayout();
-            this.panel11.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvKhuyenMai)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -1242,6 +1242,176 @@
             this.label18.TabIndex = 3;
             this.label18.Text = "ID:";
             // 
+            // tabPage3
+            // 
+            this.tabPage3.Controls.Add(this.dgvKhuyenMai);
+            this.tabPage3.Controls.Add(this.panel9);
+            this.tabPage3.Location = new System.Drawing.Point(4, 34);
+            this.tabPage3.Name = "tabPage3";
+            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage3.Size = new System.Drawing.Size(978, 679);
+            this.tabPage3.TabIndex = 6;
+            this.tabPage3.Text = "Khuyến mãi";
+            this.tabPage3.UseVisualStyleBackColor = true;
+            // 
+            // dgvKhuyenMai
+            // 
+            this.dgvKhuyenMai.AllowDrop = true;
+            this.dgvKhuyenMai.AllowUserToAddRows = false;
+            this.dgvKhuyenMai.AllowUserToDeleteRows = false;
+            this.dgvKhuyenMai.AllowUserToResizeColumns = false;
+            this.dgvKhuyenMai.AllowUserToResizeRows = false;
+            this.dgvKhuyenMai.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvKhuyenMai.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.dgvKhuyenMai.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvKhuyenMai.Location = new System.Drawing.Point(3, 233);
+            this.dgvKhuyenMai.Margin = new System.Windows.Forms.Padding(2);
+            this.dgvKhuyenMai.Name = "dgvKhuyenMai";
+            this.dgvKhuyenMai.ReadOnly = true;
+            this.dgvKhuyenMai.RowHeadersWidth = 62;
+            this.dgvKhuyenMai.RowTemplate.Height = 28;
+            this.dgvKhuyenMai.Size = new System.Drawing.Size(970, 442);
+            this.dgvKhuyenMai.TabIndex = 22;
+            // 
+            // panel9
+            // 
+            this.panel9.Controls.Add(this.tbMucKM);
+            this.panel9.Controls.Add(this.label11);
+            this.panel9.Controls.Add(this.tbTenKM);
+            this.panel9.Controls.Add(this.label12);
+            this.panel9.Controls.Add(this.button2);
+            this.panel9.Controls.Add(this.panel10);
+            this.panel9.Controls.Add(this.panel11);
+            this.panel9.Location = new System.Drawing.Point(3, 5);
+            this.panel9.Margin = new System.Windows.Forms.Padding(2);
+            this.panel9.Name = "panel9";
+            this.panel9.Size = new System.Drawing.Size(970, 225);
+            this.panel9.TabIndex = 21;
+            // 
+            // tbMucKM
+            // 
+            this.tbMucKM.Location = new System.Drawing.Point(248, 60);
+            this.tbMucKM.Margin = new System.Windows.Forms.Padding(2);
+            this.tbMucKM.Name = "tbMucKM";
+            this.tbMucKM.Size = new System.Drawing.Size(702, 31);
+            this.tbMucKM.TabIndex = 25;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(14, 60);
+            this.label11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(233, 31);
+            this.label11.TabIndex = 24;
+            this.label11.Text = "Mức khuyến mãi:";
+            // 
+            // tbTenKM
+            // 
+            this.tbTenKM.Location = new System.Drawing.Point(247, 18);
+            this.tbTenKM.Margin = new System.Windows.Forms.Padding(2);
+            this.tbTenKM.Name = "tbTenKM";
+            this.tbTenKM.Size = new System.Drawing.Size(703, 31);
+            this.tbTenKM.TabIndex = 23;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Location = new System.Drawing.Point(14, 18);
+            this.label12.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(229, 31);
+            this.label12.TabIndex = 22;
+            this.label12.Text = "Tên khuyến mãi:";
+            // 
+            // button2
+            // 
+            this.button2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button2.BackgroundImage")));
+            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button2.Location = new System.Drawing.Point(2, 173);
+            this.button2.Margin = new System.Windows.Forms.Padding(2);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(50, 50);
+            this.button2.TabIndex = 21;
+            this.button2.UseVisualStyleBackColor = true;
+            // 
+            // panel10
+            // 
+            this.panel10.Controls.Add(this.button3);
+            this.panel10.Controls.Add(this.button4);
+            this.panel10.Controls.Add(this.button6);
+            this.panel10.Location = new System.Drawing.Point(640, 122);
+            this.panel10.Margin = new System.Windows.Forms.Padding(2);
+            this.panel10.Name = "panel10";
+            this.panel10.Size = new System.Drawing.Size(328, 50);
+            this.panel10.TabIndex = 20;
+            // 
+            // button3
+            // 
+            this.button3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button3.BackgroundImage")));
+            this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button3.Location = new System.Drawing.Point(210, 2);
+            this.button3.Margin = new System.Windows.Forms.Padding(2);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(100, 38);
+            this.button3.TabIndex = 2;
+            this.button3.UseVisualStyleBackColor = true;
+            // 
+            // button4
+            // 
+            this.button4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button4.BackgroundImage")));
+            this.button4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button4.Location = new System.Drawing.Point(106, 2);
+            this.button4.Margin = new System.Windows.Forms.Padding(2);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(100, 38);
+            this.button4.TabIndex = 1;
+            this.button4.UseVisualStyleBackColor = true;
+            // 
+            // button6
+            // 
+            this.button6.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button6.BackgroundImage")));
+            this.button6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button6.Location = new System.Drawing.Point(2, 2);
+            this.button6.Margin = new System.Windows.Forms.Padding(2);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(100, 38);
+            this.button6.TabIndex = 0;
+            this.button6.UseVisualStyleBackColor = true;
+            // 
+            // panel11
+            // 
+            this.panel11.Controls.Add(this.label10);
+            this.panel11.Controls.Add(this.tbFindKM);
+            this.panel11.Location = new System.Drawing.Point(472, 174);
+            this.panel11.Margin = new System.Windows.Forms.Padding(2);
+            this.panel11.Name = "panel11";
+            this.panel11.Size = new System.Drawing.Size(496, 50);
+            this.panel11.TabIndex = 17;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(2, 6);
+            this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(140, 31);
+            this.label10.TabIndex = 24;
+            this.label10.Text = "Tìm kiếm:";
+            // 
+            // tbFindKM
+            // 
+            this.tbFindKM.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbFindKM.Location = new System.Drawing.Point(146, 6);
+            this.tbFindKM.Margin = new System.Windows.Forms.Padding(2);
+            this.tbFindKM.Name = "tbFindKM";
+            this.tbFindKM.Size = new System.Drawing.Size(348, 38);
+            this.tbFindKM.TabIndex = 23;
+            this.tbFindKM.TextChanged += new System.EventHandler(this.tbFindKM_TextChanged);
+            // 
             // tabPage6
             // 
             this.tabPage6.Controls.Add(this.panel19);
@@ -1373,176 +1543,6 @@
             this.dgvCompletedOrders.Size = new System.Drawing.Size(969, 483);
             this.dgvCompletedOrders.TabIndex = 18;
             // 
-            // tabPage3
-            // 
-            this.tabPage3.Controls.Add(this.dgvKhuyenMai);
-            this.tabPage3.Controls.Add(this.panel9);
-            this.tabPage3.Location = new System.Drawing.Point(4, 34);
-            this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(978, 679);
-            this.tabPage3.TabIndex = 6;
-            this.tabPage3.Text = "Khuyến mãi";
-            this.tabPage3.UseVisualStyleBackColor = true;
-            // 
-            // panel9
-            // 
-            this.panel9.Controls.Add(this.tbMucKM);
-            this.panel9.Controls.Add(this.label11);
-            this.panel9.Controls.Add(this.tbTenKM);
-            this.panel9.Controls.Add(this.label12);
-            this.panel9.Controls.Add(this.button2);
-            this.panel9.Controls.Add(this.panel10);
-            this.panel9.Controls.Add(this.panel11);
-            this.panel9.Location = new System.Drawing.Point(3, 5);
-            this.panel9.Margin = new System.Windows.Forms.Padding(2);
-            this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(970, 225);
-            this.panel9.TabIndex = 21;
-            // 
-            // button2
-            // 
-            this.button2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button2.BackgroundImage")));
-            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button2.Location = new System.Drawing.Point(2, 173);
-            this.button2.Margin = new System.Windows.Forms.Padding(2);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(50, 50);
-            this.button2.TabIndex = 21;
-            this.button2.UseVisualStyleBackColor = true;
-            // 
-            // panel10
-            // 
-            this.panel10.Controls.Add(this.button3);
-            this.panel10.Controls.Add(this.button4);
-            this.panel10.Controls.Add(this.button6);
-            this.panel10.Location = new System.Drawing.Point(640, 122);
-            this.panel10.Margin = new System.Windows.Forms.Padding(2);
-            this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(328, 50);
-            this.panel10.TabIndex = 20;
-            // 
-            // button3
-            // 
-            this.button3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button3.BackgroundImage")));
-            this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button3.Location = new System.Drawing.Point(210, 2);
-            this.button3.Margin = new System.Windows.Forms.Padding(2);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(100, 38);
-            this.button3.TabIndex = 2;
-            this.button3.UseVisualStyleBackColor = true;
-            // 
-            // button4
-            // 
-            this.button4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button4.BackgroundImage")));
-            this.button4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button4.Location = new System.Drawing.Point(106, 2);
-            this.button4.Margin = new System.Windows.Forms.Padding(2);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(100, 38);
-            this.button4.TabIndex = 1;
-            this.button4.UseVisualStyleBackColor = true;
-            // 
-            // button6
-            // 
-            this.button6.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button6.BackgroundImage")));
-            this.button6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button6.Location = new System.Drawing.Point(2, 2);
-            this.button6.Margin = new System.Windows.Forms.Padding(2);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(100, 38);
-            this.button6.TabIndex = 0;
-            this.button6.UseVisualStyleBackColor = true;
-            // 
-            // panel11
-            // 
-            this.panel11.Controls.Add(this.label10);
-            this.panel11.Controls.Add(this.tbFindKM);
-            this.panel11.Location = new System.Drawing.Point(472, 174);
-            this.panel11.Margin = new System.Windows.Forms.Padding(2);
-            this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(496, 50);
-            this.panel11.TabIndex = 17;
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(2, 6);
-            this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(140, 31);
-            this.label10.TabIndex = 24;
-            this.label10.Text = "Tìm kiếm:";
-            // 
-            // tbFindKM
-            // 
-            this.tbFindKM.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbFindKM.Location = new System.Drawing.Point(146, 6);
-            this.tbFindKM.Margin = new System.Windows.Forms.Padding(2);
-            this.tbFindKM.Name = "tbFindKM";
-            this.tbFindKM.Size = new System.Drawing.Size(348, 38);
-            this.tbFindKM.TabIndex = 23;
-            this.tbFindKM.TextChanged += new System.EventHandler(this.tbFindKM_TextChanged);
-            // 
-            // tbMucKM
-            // 
-            this.tbMucKM.Location = new System.Drawing.Point(248, 60);
-            this.tbMucKM.Margin = new System.Windows.Forms.Padding(2);
-            this.tbMucKM.Name = "tbMucKM";
-            this.tbMucKM.Size = new System.Drawing.Size(702, 31);
-            this.tbMucKM.TabIndex = 25;
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(14, 60);
-            this.label11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(233, 31);
-            this.label11.TabIndex = 24;
-            this.label11.Text = "Mức khuyến mãi:";
-            // 
-            // tbTenKM
-            // 
-            this.tbTenKM.Location = new System.Drawing.Point(247, 18);
-            this.tbTenKM.Margin = new System.Windows.Forms.Padding(2);
-            this.tbTenKM.Name = "tbTenKM";
-            this.tbTenKM.Size = new System.Drawing.Size(703, 31);
-            this.tbTenKM.TabIndex = 23;
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(14, 18);
-            this.label12.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(229, 31);
-            this.label12.TabIndex = 22;
-            this.label12.Text = "Tên khuyến mãi:";
-            // 
-            // dgvKhuyenMai
-            // 
-            this.dgvKhuyenMai.AllowDrop = true;
-            this.dgvKhuyenMai.AllowUserToAddRows = false;
-            this.dgvKhuyenMai.AllowUserToDeleteRows = false;
-            this.dgvKhuyenMai.AllowUserToResizeColumns = false;
-            this.dgvKhuyenMai.AllowUserToResizeRows = false;
-            this.dgvKhuyenMai.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgvKhuyenMai.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
-            this.dgvKhuyenMai.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvKhuyenMai.Location = new System.Drawing.Point(3, 233);
-            this.dgvKhuyenMai.Margin = new System.Windows.Forms.Padding(2);
-            this.dgvKhuyenMai.Name = "dgvKhuyenMai";
-            this.dgvKhuyenMai.ReadOnly = true;
-            this.dgvKhuyenMai.RowHeadersWidth = 62;
-            this.dgvKhuyenMai.RowTemplate.Height = 28;
-            this.dgvKhuyenMai.Size = new System.Drawing.Size(970, 442);
-            this.dgvKhuyenMai.TabIndex = 22;
-            // 
             // fAdmin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1585,19 +1585,19 @@
             this.panel5.ResumeLayout(false);
             this.panel7.ResumeLayout(false);
             this.panel7.PerformLayout();
+            this.tabPage3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvKhuyenMai)).EndInit();
+            this.panel9.ResumeLayout(false);
+            this.panel9.PerformLayout();
+            this.panel10.ResumeLayout(false);
+            this.panel11.ResumeLayout(false);
+            this.panel11.PerformLayout();
             this.tabPage6.ResumeLayout(false);
             this.panel19.ResumeLayout(false);
             this.panel19.PerformLayout();
             this.panel18.ResumeLayout(false);
             this.panel18.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCompletedOrders)).EndInit();
-            this.tabPage3.ResumeLayout(false);
-            this.panel9.ResumeLayout(false);
-            this.panel9.PerformLayout();
-            this.panel10.ResumeLayout(false);
-            this.panel11.ResumeLayout(false);
-            this.panel11.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvKhuyenMai)).EndInit();
             this.ResumeLayout(false);
 
         }

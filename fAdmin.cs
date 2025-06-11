@@ -359,7 +359,7 @@ namespace QuanLyTiemTapHoa
 
         private void btnAddCustomer_Click(object sender, EventArgs e)
         {
-            int result = CustomerDAO.Instance.AddCustomer(tbCusFullName.Text, tbCusPhone.Text, tbCusEmail.Text);
+            int result = CustomerDAO.Instance.AddCustomer(tbCusFullName.Text, tbCusPhone.Text);
 
             if (result != 0)
                 MessageBox.Show("Thêm khách hàng thành công");

@@ -44,7 +44,7 @@ namespace QuanLyTiemTapHoa
             flpBillItems.Controls.Clear();
 
             DataTable billData = OrderDAO.Instance.GetOrderDetailsForBill(this.currentOrderID);
-            MessageBox.Show("Rows count: " + (billData?.Rows.Count.ToString() ?? "NULL"));
+            //MessageBox.Show("Rows count: " + (billData?.Rows.Count.ToString() ?? "NULL"));
             if (billData == null)
             {
                 MessageBox.Show("Không thể tải chi tiết hóa đơn. Dữ liệu trả về null.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -90,7 +90,12 @@ namespace QuanLyTiemTapHoa
             lblGrandTotal.Text = grandTotal.ToString("c0", culture);
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void lblOrderID_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnExport_Click(object sender, EventArgs e)
         {
             FlowLayoutPanel targetControl = this.flpBillItems;
 
@@ -179,5 +184,6 @@ namespace QuanLyTiemTapHoa
                 Application.DoEvents(); // Cho phép UI cập nhật lại
             }
         }
+
     }
 }

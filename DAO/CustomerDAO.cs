@@ -1,7 +1,4 @@
-﻿using Mysqlx.Session;
-using MySqlX.XDevAPI.Common;
-using System.Data;
-using System.Windows.Forms;
+﻿using System.Data;
 
 namespace QuanLyTiemTapHoa.DAO
 {
@@ -33,30 +30,30 @@ namespace QuanLyTiemTapHoa.DAO
             return result;
         }
 
-        public int AddCustomer(string fullName, string phone, string email)
+        public int AddCustomer(string fullName, string phone)
         {
-            string query = "INSERT INTO Customer (FullName, Phone) VALUES ('" + fullName + "', '" + phone + "')";
+            string query = "INSERT INTO Customers (FullName, Phone, Email) VALUES ('"+fullName+"', '"+phone+"', 'test@example.com');";
             int result = DataProvider.Instance.ExecuteNonQuery(query);
             return result;
         }
 
         public int RemoveCustomer(int id)
         {
-            string query = "DELETE FROM Customer WHERE CustomerID = " + id;
+            string query = "DELETE FROM Customers WHERE CustomerID = " + id;
             int result = DataProvider.Instance.ExecuteNonQuery(query);
             return result;
         }
 
         public int UpdateCustomer(int id, string fullName, string phone, string email)
         {
-            string query = "UPDATE Customer SET FullName = '" + fullName + "', Phone = '" + phone + "', Email = '" + email + "' WHERE CustomerID = " + id;
+            string query = "UPDATE Customers SET FullName = '" + fullName + "', Phone = '" + phone + "', Email = '" + email + "' WHERE CustomerID = " + id;
             int result = DataProvider.Instance.ExecuteNonQuery(query);
             return result;
         }
 
         public DataTable GetDataFindCustomer(string keyword)
         {
-            string query = "SELECT * FROM Customer WHERE TenKH LIKE '%" + keyword.ToLower() + "%'";
+            string query = "SELECT * FROM Customers WHERE FullName LIKE '%" + keyword.ToLower() + "%'";
 
             DataTable result = DataProvider.Instance.ExecuteQuery(query);
             return result;
